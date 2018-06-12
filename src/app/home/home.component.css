@@ -1,0 +1,28 @@
+.column {
+    float: left;
+    padding: 3%;
+    text-align: center;
+}
+.left {
+    width: 25%;
+    text-align: center;
+}
+.middle {
+    width: 50%;
+    text-align: center;
+
+}
+.right {
+    width: 25%;
+    text-align: center;
+
+}
+
+.fakulte {
+    height: 40%;
+}
+.fakulteimg {
+    width: 150px;
+    height: 120px;
+}
+
