@@ -4,15 +4,30 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { EducationComponent } from './education/education.component';
+import { StuffComponent } from './stuff/stuff.component';
+import { ResearchesComponent } from './researches/researches.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { InternshipComponent } from './internship/internship.component';
+import { ProjectLessonsComponent } from './project-lessons/project-lessons.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'education', component: EducationComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    EducationComponent,
+    StuffComponent,
+    ResearchesComponent,
+    ArticlesComponent,
+    InternshipComponent,
+    ProjectLessonsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

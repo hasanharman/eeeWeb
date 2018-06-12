@@ -21,18 +21,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li id="borderForm" class="nav-item active">
-            <a class="nav-link" href="#">Anasayfa
+            <a class="nav-link" routerLink="home" >Anasayfa
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li id="borderForm" class="nav-item">
-            <a class="nav-link" href="#">Eğitim</a>
+            <a class="nav-link" routerLink="education">Eğitim</a>
           </li>
           <li id="borderForm" class="nav-item">
-            <a class="nav-link" href="#">Personel</a>
+            <a class="nav-link" routerLink="stuff">Personel</a>
           </li>
           <li id="borderForm" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle" routerLink="researches" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               Araştırmalarımız
             </a>
@@ -44,7 +44,7 @@
             </div>
           </li>
           <li id="borderForm" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle" routerLink="articles" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               Yayınlarımız
             </a>
@@ -56,13 +56,13 @@
             </div>
           </li>
           <li id="borderForm" class="nav-item">
-            <a class="nav-link" href="#">Staj</a>
+            <a class="nav-link" routerLink="internship">Staj</a>
           </li>
           <li id="borderForm" class="nav-item">
-            <a class="nav-link" href="#">Proje Dersi</a>
+            <a class="nav-link" routerLink="projectLessons">Proje Dersi</a>
           </li>
           <li id="borderForm" class="nav-item">
-            <a class="nav-link" href="#">İletişim</a>
+            <a class="nav-link" routerLink="contact">İletişim</a>
           </li>
         </ul>
         <form id="borderForm" class="form-inline my-2 my-lg-0">
@@ -73,6 +73,8 @@
     </nav>
   </div>
 </div>
+
+<router-outlet></router-outlet>
 
 <div class="altmenu">
 
