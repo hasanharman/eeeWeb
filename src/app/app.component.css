@@ -13,6 +13,7 @@ img {
     float: left;
     padding: 3%;
     text-align: center;
+    font-family: 'PT Sans', sans-serif;
 
 }
 .left, .right {
@@ -32,4 +33,14 @@ img {
 
 #borderForm {
     margin-left: 2vw;
+}
+a {
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+
+
+.searchInput {
+    display: none;
 }

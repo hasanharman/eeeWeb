@@ -21,7 +21,8 @@ const appRoutes: Routes = [
   { path: 'articles', component: ArticlesComponent},
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
+  { path: '**', redirectTo: 'home'},
 
 
 
