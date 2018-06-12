@@ -15,7 +15,18 @@ import { ContactComponent } from './contact/contact.component';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
-  { path: 'education', component: EducationComponent}
+  { path: 'education', component: EducationComponent},
+  { path: 'stuff', component: StuffComponent},
+  { path: 'researches', component: ResearchesComponent},
+  { path: 'articles', component: ArticlesComponent},
+  { path: 'internship', component: InternshipComponent},
+  { path: 'projectLesson', component: ProjectLessonsComponent},
+  { path: 'contact', component: ContactComponent}
+
+
+
+
+
 ]
 @NgModule({
   declarations: [
