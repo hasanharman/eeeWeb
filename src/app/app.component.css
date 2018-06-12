@@ -1,3 +1,10 @@
+
+.ustmenu {
+    height: 25%;
+}
+.altmenu {
+    height: 75%;
+}
 img {
     width: 40%;
     height: 40%;
@@ -17,4 +24,12 @@ img {
 
 .menubar {
     clear: both;
+}
+
+.navbar {
+    background-color: #9A1220;
+}
+
+a {
+    color: white;
 }
