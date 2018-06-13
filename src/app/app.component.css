@@ -43,4 +43,8 @@ a {
 
 .searchInput {
     display: none;
+}  .title {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 3vw;
+    color: rgb(25, 25, 34);
 }
