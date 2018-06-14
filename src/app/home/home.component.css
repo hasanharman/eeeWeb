@@ -1,11 +1,10 @@
 .column {
     float: left;
     padding: 3%;
-    text-align: center;
 }
 .left {
     width: 25%;
-    text-align: center;
+    text-align: left; 
 }
 .middle {
     width: 50%;
@@ -14,7 +13,7 @@
 }
 .right {
     width: 25%;
-    text-align: center;
+    text-align: left;
 
 }
 
@@ -24,5 +23,9 @@
 .fakulteimg {
     width: 150px;
     height: 120px;
+}
+
+.mezun {
+    height: 40%;
 }
 
