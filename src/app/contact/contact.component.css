@@ -1,0 +1,20 @@
+.column {
+    float: left;
+    padding: 3%;
+}
+.left {
+    width: 15%;
+    text-align: left; 
+}
+.middle {
+    width: 70%;
+    text-align: left;
+
+}
+.right {
+    width: 15%;
+    text-align: left;
+
+}
+
+
