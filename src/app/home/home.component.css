@@ -3,18 +3,18 @@
     padding: 3%;
 }
 .left {
-    width: 25%;
+    width: 24%;
     text-align: left; 
+    margin-left: 1%;
 }
 .middle {
     width: 50%;
     text-align: center;
-
 }
 .right {
-    width: 25%;
+    width: 24%;
     text-align: left;
-
+    margin-right: 1%;
 }
 
 .fakulte {
