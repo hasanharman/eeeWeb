@@ -1,21 +1,20 @@
 .column {
     float: left;
     padding: 3%;
-    text-align: center;
 }
 .left {
-    width: 25%;
-    text-align: center;
+    width: 24%;
+    text-align: left; 
+    margin-left: 1%;
 }
 .middle {
     width: 50%;
     text-align: center;
-
 }
 .right {
-    width: 25%;
-    text-align: center;
-
+    width: 24%;
+    text-align: left;
+    margin-right: 1%;
 }
 
 .fakulte {
@@ -24,5 +23,28 @@
 .fakulteimg {
     width: 150px;
     height: 120px;
+    margin: 1%;
 }
+
+.mezun {
+    height: 40%;
+}
+ 
+h2 {
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1vw;
+}
+    .box{
+        width:70px;
+        height:100px;
+        background: #9A1220;
+        margin-right: 5%;
+        float: left;
+        color: white;
+        text-align: center;
+      }
+      
 
