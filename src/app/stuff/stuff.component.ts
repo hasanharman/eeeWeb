@@ -10,6 +10,7 @@ export class StuffComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
