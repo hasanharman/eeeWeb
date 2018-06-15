@@ -23,9 +23,28 @@
 .fakulteimg {
     width: 150px;
     height: 120px;
+    margin: 1%;
 }
 
 .mezun {
     height: 40%;
 }
+ 
+h2 {
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1vw;
+}
+    .box{
+        width:70px;
+        height:100px;
+        background: #9A1220;
+        margin-right: 5%;
+        float: left;
+        color: white;
+        text-align: center;
+      }
+      
 
