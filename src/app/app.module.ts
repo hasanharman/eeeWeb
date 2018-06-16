@@ -1,3 +1,4 @@
+import { AngularFirestore } from 'angularfire2/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,21 @@ import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
 import { ProjectLessonsComponent } from './project-lessons/project-lessons.component';
 import { ContactComponent } from './contact/contact.component';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyB8kG6xZmz7PgQ1JaBFjaM8C16PmCJI5AA",
+    authDomain: "eeeweb-c2788.firebaseapp.com",
+    databaseURL: "https://eeeweb-c2788.firebaseio.com",
+    projectId: "eeeweb-c2788",
+    storageBucket: "eeeweb-c2788.appspot.com",
+    messagingSenderId: "1089413896706"
+};
+firebase.initializeApp(firebaseConfig);
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -43,9 +59,12 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [    AngularFireDatabase,AngularFirestore ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
