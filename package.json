@@ -24,7 +24,8 @@
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "bourbon": "5.0.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
