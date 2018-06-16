@@ -3,31 +3,31 @@
     padding: 3%;
 }
 .left {
-    width: 15%;
-    text-align: left; 
+    width: 7.5%;
 }
 .middle {
-    width: 70%;
+    width: 85%;
     text-align: left;
-
 }
 .right {
-    width: 15%;
-    text-align: left;
-
+    width: 7.5%;
 }
 
 .flip-container {
-    margin: 50px;
+    margin-right: 40px;
+    margin-left: 0%;
+    margin-bottom: 20px;
+    margin-top: 20px;
     perspective: 1000;
     display: inline-block;
+    float: left;
 }
 .flip-container:hover .card {
     transform: rotateY(180deg);
 }
 .card, .front, .back {
-    width: 130px;
-    height: 195px;
+    width: 150px;
+    height: 200px;
 }
 .card {
     transition: 0.5s;
@@ -38,15 +38,12 @@
     backface-visibility: hidden;
     position: absolute;
 }
-.front {
+.back {
     z-index: 1;
     transform: rotateY(180deg);
-    background: url("https://media.licdn.com/dms/image/C4E03AQF6fXH7okxOzA/profile-displayphoto-shrink_200_200/0?e=1529881200&v=beta&t=o1NHrCTmWPzUXiMfLGqtWo_H4KzubuWyFPdLsi--hvk") no-repeat;  /* BURAYA ARKA YUZ RESMİ EKLEYEBİLİRSİN*/
 }
-.back {
-    z-index: 2; /* back side, placed above front */
+.front {
+    z-index: 2;
     transform: rotateY(0deg);
-    background: url("https://akimg0.ask.fm/assets/104/736/816/normal/as.jpg") no-repeat; /* BURAYA ON YUZ RESMİ EKLEYEBİLİRSİN*/
-    background-size: 130px 200px ;
 }
 
