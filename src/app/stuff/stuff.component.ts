@@ -1,4 +1,6 @@
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-stuff',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stuff.component.css']
 })
 export class StuffComponent implements OnInit {
-
-  constructor() { }
+  stuffs;
+  constructor(afDB: AngularFireDatabase) { 
+    this.stuffs = afDB.list('stuffs').valueChanges();
+    console.log(this.stuffs);
+    
+  }
 
   ngOnInit() {
     

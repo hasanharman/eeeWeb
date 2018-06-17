@@ -1,14 +1,32 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
   <title>EEE İYTE</title>
-  <base href="/">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="src/styles.css">
+
+  <link rel="stylesheet" type="text/css" href="src/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="src/slick/slick-theme.css" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 </head>
+
 <body>
   <app-root></app-root>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="src/slick/slick.min.js">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        autoplay:true,
+        arrows:true,
+        dots:true,
+      });
+    });</script>
 </body>
+
 </html>

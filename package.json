@@ -20,12 +20,15 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "angularfire2": "^5.0.0-rc.10",
     "bootstrap": "4.1.1",
+    "bourbon": "5.0.1",
     "core-js": "^2.5.4",
+    "firebase": "^5.0.4",
     "jquery": "^3.3.1",
+    "promise-polyfill": "^8.0.0",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26",
-    "bourbon": "5.0.1"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
