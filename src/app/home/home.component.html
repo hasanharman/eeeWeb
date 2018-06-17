@@ -21,10 +21,17 @@
 </div>
 <div class="column middle">
 
-  <div class="your-class">
-    <div><img src="../assets/image/news/1.png"></div>
-    <div><img src="../assets/image/news/2.jpg"></div>
-    <div><img src="../assets/image/news/3.jpeg"></div>
+  <div >
+    <ngb-carousel >
+      <ng-template ngbSlide *ngFor="let new of news |async let i = index" >
+        <img  src="{{new.newsPhoto}}" alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>{{new.newsTitle}}</h3>
+          <p>{{new.newsText}}</p>
+        </div>
+      </ng-template>
+      
+    </ngb-carousel>
   </div>
 
 </div>
