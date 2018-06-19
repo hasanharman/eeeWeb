@@ -12,13 +12,16 @@
 .right {
     width: 7.5%;
 }
+.asistant {
+  clear: left;
+}
 .flip-container {
     perspective: 1000;
     float: left;
     margin-right: 40px;
     margin-left: 0%;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);

@@ -7,18 +7,19 @@
         <input placeholder="surname" class="surnameF"/>
         <input placeholder="pp"  class="ppF"/>
         <button (click)="addToFirebase()"> Firebaseye ekle!</button>
+<div class="fakulty">
     <h2>Faculty</h2>
     <div *ngFor="let faculty of faculties | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
         <div class="flipper">
             <div class="front">
                 <img src="{{faculty.pp}}" alt="{{faculty.name}}" width="150" height="200">
-                <p>{{faculty.name}} {{faculty.surname}}</p>
+                <p>{{faculty.name | titlecase }} {{faculty.surname | uppercase}}</p>
             </div>
             <div class="back">
                 <a class="icon-link round-corner facebook fill">
                     <i class="fab fa-facebook-square fa-3x"></i>
                 </a>
-                <a href="{{faculty.socialMedias.linkedIn}}" target="_blank" class="icon-link round-corner linkedin fill">
+                <a target="_blank" class="icon-link round-corner linkedin fill">
                     <i class="fab fa-linkedin fa-3x"></i>
                 </a>
                 <a class="icon-link round-corner twitter fill">
@@ -42,7 +43,10 @@
             </div>
         </div>
     </div>
+    </div> 
+<div class="asistant">
     <h2>Research Asistans</h2>
+</div>
     <div *ngFor="let asistant of asistants | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
         <div class="flipper">
             <div class="front">

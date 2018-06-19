@@ -24,7 +24,7 @@ addToFirebase () {
   let surname = $('.surnameF').val();
   let pp = $('.ppF').val();
 
-  firebase.database().ref().child('personels').child('faculty').child(username.toString()).update({
+  firebase.database().ref().child('personels').child('asistants').child(username.toString()).update({
     name : name,
     surname:surname,
     pp:pp,
