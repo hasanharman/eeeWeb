@@ -21,17 +21,17 @@ export class StuffComponent implements OnInit {
   ngOnInit() {
     
   }
-addToFirebase () {
-  let name = $('.nameF').val();
-  let username = $('.usernameF').val( );
-  let surname = $('.surnameF').val();
-  let pp = $('.ppF').val();
+//   addToFirebase () {
+//     let name = $('.nameF').val();
+//     let username = $('.usernameF').val( );
+//     let surname = $('.surnameF').val();
+//     let pp = $('.ppF').val();
+  
+//     firebase.database().ref().child('personels').child('asistants').child(username.toString()).update({
+//       name : name,
+//       surname:surname,
+//       pp:pp,
+//     }) 
+// }
 
-  firebase.database().ref().child('personels').child('asistants').child(username.toString()).update({
-    name : name,
-    surname:surname,
-    pp:pp,
-  }) 
-
-}
 }
