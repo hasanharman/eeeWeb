@@ -10,9 +10,12 @@ import * as firebase from 'firebase/app';
 export class StuffComponent implements OnInit {
   faculties;
   asistants;
+  staffs;
   constructor(afDB: AngularFireDatabase) { 
     this.faculties = afDB.list('personels/faculty').valueChanges();
     this.asistants = afDB.list('personels/asistants').valueChanges();
+    this.staffs = afDB.list('personels/staff').valueChanges();
+
   }
 
   ngOnInit() {
@@ -28,7 +31,7 @@ addToFirebase () {
     name : name,
     surname:surname,
     pp:pp,
-  }) // bu kod satırını düze
+  }) 
 
 }
 }

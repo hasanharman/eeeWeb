@@ -12,7 +12,7 @@
 .right {
     width: 7.5%;
 }
-.asistant {
+.asistant, .staff {
   clear: left;
 }
 .flip-container {
