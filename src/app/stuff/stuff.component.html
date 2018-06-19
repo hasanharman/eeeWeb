@@ -1,20 +1,59 @@
 <div class="column left">
 </div>
-<div class="column middle">
-    <h2>Personel</h2>
+<div class="column middle">    
+    <input placeholder="username"  class="usernameF"/>  
 
- 
-    <div *ngFor="let stuff of stuffs | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    <input placeholder="name"  class="nameF"/>  
+        <input placeholder="surname" class="surnameF"/>
+        <input placeholder="pp"  class="ppF"/>
+        <button (click)="addToFirebase()"> Firebaseye ekle!</button>
+    <h2>Faculty</h2>
+    <div *ngFor="let faculty of faculties | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
         <div class="flipper">
             <div class="front">
-                <img src="{{stuff.pp}}" alt="muraterten" width="150" height="200">
-                <p>{{stuff.name | titlecase}} {{stuff.surname | uppercase}}</p>
+                <img src="{{faculty.pp}}" alt="{{faculty.name}}" width="150" height="200">
+                <p>{{faculty.name}} {{faculty.surname}}</p>
             </div>
             <div class="back">
                 <a class="icon-link round-corner facebook fill">
                     <i class="fab fa-facebook-square fa-3x"></i>
                 </a>
-                <a href="{{stuff.linkedIn}}" target="_blank" class="icon-link round-corner linkedin fill">
+                <a href="{{faculty.socialMedias.linkedIn}}" target="_blank" class="icon-link round-corner linkedin fill">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+                <a class="icon-link round-corner twitter fill">
+                    <i class="fab fa-twitter-square fa-3x"></i>
+                </a>
+                <a class="icon-link round-corner youtube fill">
+                    <i class="fab fa-youtube-square fa-3x"></i>
+                </a>
+                <a class="icon-link round-corner reddit fill">
+                    <i class="fab fa-reddit-square fa-3x"></i>
+                </a>
+                <a class="icon-link round-corner github fill">
+                    <i class="fab fa-github-square fa-3x"></i>
+                </a>
+                <a class="icon-link round-corner pinterest fill">
+                    <i class="fab fa-pinterest-square fa-3x"></i>
+                </a>
+                <a class="icon-link round-corner envelope fill">
+                    <i class="fas fa-envelope-square fa-3x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <h2>Research Asistans</h2>
+    <div *ngFor="let asistant of asistants | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+            <div class="front">
+                <img src="{{asistant.pp}}" alt="{{asistant.name}} " width="150" height="200">
+                <p>{{asistant.name | titlecase}} {{asistant.surname | uppercase}}</p>
+            </div>
+            <div class="back">
+                <a class="icon-link round-corner facebook fill">
+                    <i class="fab fa-facebook-square fa-3x"></i>
+                </a>
+                <a href="" target="_blank" class="icon-link round-corner linkedin fill">
                     <i class="fab fa-linkedin fa-3x"></i>
                 </a>
                 <a class="icon-link round-corner twitter fill">
@@ -39,5 +78,8 @@
         </div>
     </div>
 
-    <div class="column right">    
+    </div>
+
+    <div class="column right">   
+        
     </div>

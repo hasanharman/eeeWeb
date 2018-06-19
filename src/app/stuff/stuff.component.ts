@@ -8,15 +8,27 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./stuff.component.css']
 })
 export class StuffComponent implements OnInit {
-  stuffs;
+  faculties;
+  asistants;
   constructor(afDB: AngularFireDatabase) { 
-    this.stuffs = afDB.list('stuffs').valueChanges();
-    console.log(this.stuffs);
-    
+    this.faculties = afDB.list('personels/faculty').valueChanges();
+    this.asistants = afDB.list('personels/asistants').valueChanges();
   }
 
   ngOnInit() {
     
   }
+addToFirebase () {
+  let name = $('.nameF').val();
+  let username = $('.usernameF').val( );
+  let surname = $('.surnameF').val();
+  let pp = $('.ppF').val();
 
+  firebase.database().ref().child('personels').child('faculty').child(username.toString()).update({
+    name : name,
+    surname:surname,
+    pp:pp,
+  }) // bu kod satırını düze
+
+}
 }
