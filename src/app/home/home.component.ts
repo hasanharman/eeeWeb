@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-home',
@@ -9,21 +10,36 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
   news;
-  facultynews;
-  announcements;
-  events;
-  graduates;
+  eventText;
+  eventTitle;
+  facultyText;
+  annoText;
+
   constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig) { 
     this.news = afDB.list('home/news').valueChanges();
     config.interval = 4000;
     config.wrap = true;
     config.keyboard = true;
-    this.facultynews = afDB.list('home/facultynews').valueChanges();
-    this.announcements = afDB.list('home/announcements').valueChanges();
-    this.events = afDB.list('home/events').valueChanges();
-    this.graduates = afDB.list('home/graduates').valueChanges();
     
+    let eventRef = firebase.database().ref().child('home').child('events');
+    eventRef.once('value', data => {
+      this.eventText = data.child('eventText').val();
+      this.eventTitle = data.child('eventTitle').val();
+    })
+
+    let facultyRef = firebase.database().ref().child('home').child('facultynews');
+    facultyRef.once('value', data => {
+      this.facultyText = data.child('facultyText').val();
+    })
+
+    let announcementsRef = firebase.database().ref().child('home').child('announcements');
+    announcementsRef.once('value', data => {
+      this.annoText = data.child('annoText').val();
+    })
+
+
   }
+
   ngOnInit() {
   }
 }
