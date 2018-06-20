@@ -13,15 +13,14 @@ export class HomeComponent implements OnInit {
   announcements;
   events;
   graduates;
-  constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig,db: AngularFireDatabase) { 
+  constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig) { 
     this.news = afDB.list('home/news').valueChanges();
     config.interval = 4000;
     config.wrap = true;
     config.keyboard = true;
     this.facultynews = afDB.list('home/facultynews').valueChanges();
     this.announcements = afDB.list('home/announcements').valueChanges();
-    this.events = db.database.ref("home/events");
-    // afDB.list('home/events').valueChanges();
+    this.events = afDB.list('home/events').valueChanges();
     this.graduates = afDB.list('home/graduates').valueChanges();
     
   }
