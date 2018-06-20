@@ -41,10 +41,6 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: '**', redirectTo: 'home'},
 
-
-
-
-
 ]
 @NgModule({
   declarations: [
