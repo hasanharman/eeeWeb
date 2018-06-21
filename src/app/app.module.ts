@@ -18,6 +18,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB8kG6xZmz7PgQ1JaBFjaM8C16PmCJI5AA",
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
   { path: 'contact', component: ContactComponent},
+  { path: 'admin', component: AdminComponent},
   { path: '**', redirectTo: 'home'},
 
 ]
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     ArticlesComponent,
     InternshipComponent,
     ProjectLessonsComponent,
-    ContactComponent
+    ContactComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

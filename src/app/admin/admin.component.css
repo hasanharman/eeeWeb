@@ -1,0 +1,22 @@
+.column {
+    float: left;
+    padding: 3%;
+}
+.left {
+    width: 10%;
+    text-align: left; 
+}
+.middle {
+    width: 80%;
+    text-align: left;
+
+}
+.right {
+    width: 10%;
+    text-align: left;
+
+}
+
+button {
+    margin-right: 5px;
+}
