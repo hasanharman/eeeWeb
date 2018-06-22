@@ -22,5 +22,7 @@ fonksiyon() {
         container.hide(300);
     }
 });
-}}
+}
+
+}
 
