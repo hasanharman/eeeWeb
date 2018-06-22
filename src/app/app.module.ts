@@ -12,13 +12,16 @@ import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
 import { ProjectLessonsComponent } from './project-lessons/project-lessons.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminComponent } from './admin/admin.component';
+import { ArastirmaalanlariComponent } from './researches/arastirmaalanlari/arastirmaalanlari.component';
+import { LablarComponent } from './researches/lablar/lablar.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { AdminComponent } from './admin/admin.component';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB8kG6xZmz7PgQ1JaBFjaM8C16PmCJI5AA",
@@ -35,7 +38,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'education', component: EducationComponent},
   { path: 'stuff', component: StuffComponent},
-  { path: 'researches', component: ResearchesComponent},
+  { path: 'arastirmaalanlari', component: ArastirmaalanlariComponent},
+  { path: 'lablar', component: LablarComponent},
   { path: 'articles', component: ArticlesComponent},
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
@@ -55,7 +59,9 @@ const appRoutes: Routes = [
     InternshipComponent,
     ProjectLessonsComponent,
     ContactComponent,
-    AdminComponent
+    AdminComponent,
+    ArastirmaalanlariComponent,
+    LablarComponent
   ],
   imports: [
     BrowserModule,
