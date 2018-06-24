@@ -21,6 +21,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PersondetailComponent } from './stuff/persondetail/persondetail.component';
 
 
 export const firebaseConfig = {
@@ -60,7 +61,8 @@ const appRoutes: Routes = [
     ContactComponent,
     AdminComponent,
     ArastirmaalanlariComponent,
-    LablarComponent
+    LablarComponent,
+    PersondetailComponent
   ],
   imports: [
     BrowserModule,
