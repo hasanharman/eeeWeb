@@ -1,50 +1,67 @@
 .column {
-    float: left;
-    padding: 3%;
+  float: left;
+  padding: 3%;
 }
+
 .left {
-    width: 24%;
-    text-align: left; 
-    margin-left: 1%;
+  width: 24%;
+  text-align: left;
+  margin-left: 1%;
 }
+
 .middle {
-    width: 50%;
-    text-align: center;
+  width: 50%;
+  text-align: center;
 }
+
 .right {
-    width: 24%;
-    text-align: left;
-    margin-right: 1%;
+  width: 24%;
+  text-align: left;
+  margin-right: 1%;
 }
 
 .fakulte {
-    height: 40%;
+  height: 40%;
+}
+.socialmedia{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.feys {
+ margin-right: 15px;
 }
 .fakulteimg {
-    width: 150px;
-    height: 120px;
-    margin: 1%;
+  width: 150px;
+  height: 120px;
+  margin: 1%;
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+}
+
+.fa-twitter-square {
+  color: #00aced;
 }
 
 .mezun {
-    height: 40%;
+  height: 30%;
 }
- 
+
 h2 {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 
 p {
-    font-size: 1vw;
+  font-size: 1vw;
 }
-    .box{
-        width:70px;
-        height:100px;
-        background: #9A1220;
-        margin-right: 5%;
-        float: left;
-        color: white;
-        text-align: center;
-      }
-      
 
+.box {
+  width: 70px;
+  height: 100px;
+  background: #9A1220;
+  margin-right: 5%;
+  float: left;
+  color: white;
+  text-align: center;
+}
