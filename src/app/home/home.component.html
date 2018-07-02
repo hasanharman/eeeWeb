@@ -24,7 +24,7 @@
   <div >
     <ngb-carousel >
       <ng-template ngbSlide *ngFor="let new of news |async let i = index" >
-        <img  src="{{new.photo}}" alt="{{new.title}}">
+        <img style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{new.title}}</h3>
           <p>{{new.text}}</p>

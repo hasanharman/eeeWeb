@@ -22,7 +22,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PersondetailComponent } from './stuff/persondetail/persondetail.component';
-
+import { NewsComponent } from './news/news.component';
+ 
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB8kG6xZmz7PgQ1JaBFjaM8C16PmCJI5AA",
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'stuff/:id', component: PersondetailComponent},
+  { path: 'news/:newsId', component: NewsComponent},
   { path: '**', redirectTo: 'home'}
 
 ];
@@ -63,11 +65,12 @@ const appRoutes: Routes = [
     AdminComponent,
     ArastirmaalanlariComponent,
     LablarComponent,
-    PersondetailComponent
+    PersondetailComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {enableTracing: true }),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
