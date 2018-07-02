@@ -45,9 +45,10 @@ const appRoutes: Routes = [
   { path: 'projectLesson', component: ProjectLessonsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'admin', component: AdminComponent},
-  { path: '**', redirectTo: 'home'},
+  { path: 'stuff/:id', component: PersondetailComponent},
+  { path: '**', redirectTo: 'home'}
 
-]
+];
 @NgModule({
   declarations: [
     AppComponent,
