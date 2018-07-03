@@ -3,17 +3,20 @@
     padding: 3%;
 }
 .left {
-    width: 15%;
+    width: 0%;
     text-align: left; 
 }
 .middle {
-    width: 70%;
+    width: 50%;
     text-align: left;
+    padding-right: 0;
 
 }
 .right {
-    width: 15%;
+    width: 40%;
     text-align: left;
+    padding-left: 0;
+    padding-top: 10vh;
 
 }
 

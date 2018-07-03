@@ -47,7 +47,7 @@ const appRoutes: Routes = [
   { path: 'projectLesson', component: ProjectLessonsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'admin', component: AdminComponent},
-  { path: 'stuff/:id', component: PersondetailComponent},
+  { path: 'staff/:id', component: PersondetailComponent},
   { path: 'news/:newsId', component: NewsComponent},
   { path: '**', redirectTo: 'home'}
 
