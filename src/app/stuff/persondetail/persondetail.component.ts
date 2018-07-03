@@ -8,6 +8,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   templateUrl: './persondetail.component.html',
   styleUrls: ['./persondetail.component.css']
 })
+
 export class PersondetailComponent implements OnInit {
   allStuffs;
   name;
@@ -23,7 +24,7 @@ export class PersondetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       console.log(params['id']);
       this.allStuffs = afDB.list('personels/faculty').valueChanges().subscribe(data => {
-        data.forEach(element => {
+        data.forEach((element:any) => {
           if(params['id'] == element.userId){
             this.pp = element.pp;
             this.name = element.name;
