@@ -23,7 +23,8 @@ import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PersondetailComponent } from './stuff/persondetail/persondetail.component';
 import { NewsComponent } from './news/news.component';
- 
+import { NotTurkishPipe } from './not-turkish.pipe';
+  
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB8kG6xZmz7PgQ1JaBFjaM8C16PmCJI5AA",
@@ -66,11 +67,12 @@ const appRoutes: Routes = [
     ArastirmaalanlariComponent,
     LablarComponent,
     PersondetailComponent,
-    NewsComponent
-  ],
+    NewsComponent,
+    NotTurkishPipe,
+   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true }),
+    RouterModule.forRoot(appRoutes ),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
