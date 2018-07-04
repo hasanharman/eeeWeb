@@ -5,13 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { EducationComponent } from './education/education.component';
+import { ContactComponent } from './about/contact/contact.component';
+import { HistoryComponent } from './about/history/history.component';
 import { StuffComponent } from './stuff/stuff.component';
 import { ResearchesComponent } from './researches/researches.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
 import { ProjectLessonsComponent } from './project-lessons/project-lessons.component';
-import { ContactComponent } from './contact/contact.component';
 import { AdminComponent } from './admin/admin.component';
 import { ArastirmaalanlariComponent } from './researches/arastirmaalanlari/arastirmaalanlari.component';
 import { LablarComponent } from './researches/lablar/lablar.component';
@@ -24,6 +24,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PersondetailComponent } from './stuff/persondetail/persondetail.component';
 import { NewsComponent } from './news/news.component';
 import { NotTurkishPipe } from './not-turkish.pipe';
+import { AboutComponent } from './about/about.component';
+import { FastfactsComponent } from './about/fastfacts/fastfacts.component';
+import { AdministrationComponent } from './about/administration/administration.component';
   
 
 export const firebaseConfig = {
@@ -39,13 +42,13 @@ firebase.initializeApp(firebaseConfig);
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
-  { path: 'education', component: EducationComponent},
   { path: 'stuff', component: StuffComponent},
   { path: 'arastirmaalanlari', component: ArastirmaalanlariComponent},
   { path: 'lablar', component: LablarComponent},
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
   { path: 'contact', component: ContactComponent},
+  { path: 'history', component: HistoryComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'staff/:id', component: PersondetailComponent},
   { path: 'news/:newsId', component: NewsComponent},
@@ -56,7 +59,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    EducationComponent,
     StuffComponent,
     ResearchesComponent,
     ArticlesComponent,
@@ -69,6 +71,10 @@ const appRoutes: Routes = [
     PersondetailComponent,
     NewsComponent,
     NotTurkishPipe,
+    AboutComponent,
+    HistoryComponent,
+    FastfactsComponent,
+    AdministrationComponent,
    ],
   imports: [
     BrowserModule,
