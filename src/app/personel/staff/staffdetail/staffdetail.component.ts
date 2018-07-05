@@ -4,12 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-persondetail',
-  templateUrl: './persondetail.component.html',
-  styleUrls: ['./persondetail.component.css']
+  selector: 'app-staffdetail',
+  templateUrl: './staffdetail.component.html',
+  styleUrls: ['./staffdetail.component.css']
 })
-
-export class PersondetailComponent implements OnInit {
+export class StaffdetailComponent implements OnInit {
   allStuffs;
   name;
   surname;
@@ -39,8 +38,6 @@ export class PersondetailComponent implements OnInit {
           }
         });
       })
-
-
     });
   }
 

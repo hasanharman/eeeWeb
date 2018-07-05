@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './about/contact/contact.component';
 import { HistoryComponent } from './about/history/history.component';
-import { StuffComponent } from './stuff/stuff.component';
 import { ResearchesComponent } from './researches/researches.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
@@ -15,18 +14,25 @@ import { ProjectLessonsComponent } from './project-lessons/project-lessons.compo
 import { AdminComponent } from './admin/admin.component';
 import { ArastirmaalanlariComponent } from './researches/arastirmaalanlari/arastirmaalanlari.component';
 import { LablarComponent } from './researches/lablar/lablar.component';
+import { AboutComponent } from './about/about.component';
+import { FastfactsComponent } from './about/fastfacts/fastfacts.component';
+import { AdministrationComponent } from './about/administration/administration.component';
+import { PersonelComponent } from './personel/personel.component';
+import { FacultyComponent } from './personel/faculty/faculty.component';
+import { AsistantComponent } from './personel/asistant/asistant.component';
+import { StaffComponent } from './personel/staff/staff.component';
+import { FacultydetailComponent } from './personel/faculty/facultydetail/facultydetail.component';
+import { AsistantdetailComponent } from './personel/asistant/asistantdetail/asistantdetail.component';
+import { StaffdetailComponent } from './personel/staff/staffdetail/staffdetail.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { PersondetailComponent } from './stuff/persondetail/persondetail.component';
 import { NewsComponent } from './news/news.component';
 import { NotTurkishPipe } from './not-turkish.pipe';
-import { AboutComponent } from './about/about.component';
-import { FastfactsComponent } from './about/fastfacts/fastfacts.component';
-import { AdministrationComponent } from './about/administration/administration.component';
+
   
 
 export const firebaseConfig = {
@@ -42,7 +48,12 @@ firebase.initializeApp(firebaseConfig);
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
-  { path: 'stuff', component: StuffComponent},
+  { path: 'faculty', component: FacultyComponent},
+  { path: 'faculty/:id', component: FacultydetailComponent},
+  { path: 'asistant', component: AsistantComponent},
+  { path: 'asistant/:id', component: AsistantdetailComponent},
+  { path: 'staff', component: StaffComponent},
+  { path: 'staff/:id', component: StaffdetailComponent},
   { path: 'arastirmaalanlari', component: ArastirmaalanlariComponent},
   { path: 'lablar', component: LablarComponent},
   { path: 'internship', component: InternshipComponent},
@@ -50,7 +61,6 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'history', component: HistoryComponent},
   { path: 'admin', component: AdminComponent},
-  { path: 'staff/:id', component: PersondetailComponent},
   { path: 'news/:newsId', component: NewsComponent},
   { path: '**', redirectTo: 'home'}
 
@@ -59,7 +69,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    StuffComponent,
     ResearchesComponent,
     ArticlesComponent,
     InternshipComponent,
@@ -68,13 +77,19 @@ const appRoutes: Routes = [
     AdminComponent,
     ArastirmaalanlariComponent,
     LablarComponent,
-    PersondetailComponent,
     NewsComponent,
     NotTurkishPipe,
     AboutComponent,
     HistoryComponent,
     FastfactsComponent,
     AdministrationComponent,
+    PersonelComponent,
+    FacultyComponent,
+    AsistantComponent,
+    StaffComponent,
+    FacultydetailComponent,
+    AsistantdetailComponent,
+    StaffdetailComponent,
    ],
   imports: [
     BrowserModule,

@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
 
 @Component({
-  selector: 'app-stuff',
-  templateUrl: './stuff.component.html',
-  styleUrls: ['./stuff.component.css']
+  selector: 'app-personel',
+  templateUrl: './personel.component.html',
+  styleUrls: ['./personel.component.css']
 })
-export class StuffComponent implements OnInit {
+export class PersonelComponent implements OnInit {
   faculties;
   asistants;
   staffs;
@@ -15,13 +15,11 @@ export class StuffComponent implements OnInit {
     this.faculties = afDB.list('personels/faculty').valueChanges();
     this.asistants = afDB.list('personels/asistants').valueChanges();
     this.staffs = afDB.list('personels/staff').valueChanges();
-
   }
 
   ngOnInit() {
-    
   }
-//   addToFirebase () {
+  //   addToFirebase () {
 //     let name = $('.nameF').val();
 //     let username = $('.usernameF').val( );
 //     let surname = $('.surnameF').val();

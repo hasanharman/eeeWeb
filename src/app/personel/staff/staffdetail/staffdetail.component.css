@@ -1,0 +1,24 @@
+.column {
+    float: left;
+    padding: 3%;
+}
+.left {
+    width: 0%;
+    text-align: left; 
+}
+.middle {
+    width: 50%;
+    text-align: left;
+    padding-right: 0;
+
+}
+.right {
+    width: 40%;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 10vh;
+
+}
+
+
+
