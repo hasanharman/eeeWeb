@@ -19,6 +19,10 @@ export class FacultydetailComponent implements OnInit {
   ms;
   bs;
   pp;
+  title;
+  lessons;
+  researches;
+
   constructor(private route: ActivatedRoute, afDB: AngularFireDatabase) {
     this.route.params.subscribe(params => {
       console.log(params['id']);
@@ -34,13 +38,14 @@ export class FacultydetailComponent implements OnInit {
             this.phd = element.phd;
             this.ms = element.ms;
             this.bs = element.bs;
-            
+            this.title = element.title;
+            this.lessons = element.lessons;
+            this.researches = element.researches;           
           }
         });
       })
     });
   }
-
   ngOnInit() {
   }
 
