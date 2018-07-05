@@ -2,14 +2,10 @@
     float: left;
     padding: 3%;
 }
-.left {
-    width: 0%;
-    text-align: left; 
-}
+
 .middle {
     width: 40%;
     text-align: left;
-    padding-right: 0;
 
 }
 .right {
@@ -53,11 +49,66 @@
     justify-content: center;
 }
 
-#myDIV {
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-    background-color: lightblue;
-    margin-top: 20px;
+.profile{
+    width: 33vw;
+    height: 50vw;
+    background-color: #edeaec;
+    margin-bottom: 3vw ;
 }
 
+.profile-photo{
+    display:inline-block;
+    margin-left: 4vw;
+    margin-top:1vw;
+    height: 18vw;
+}
+
+.profile-info{
+    position: static;
+    margin-top:3vw;
+    height: 20vw;
+    font-size: 1.3vw;
+    
+}
+
+.profile-info ul{
+    position: static;
+    list-style-type: none;
+    margin: 0;
+    padding: 3vw;
+}
+
+.profile-info ul li{
+    margin-bottom: 1vw;
+}
+
+.icons{
+    display: inline-block;
+    margin-top: 1vw;
+    margin-left: 1vw;
+
+}
+
+.fa-facebook-square {
+    color: #3b5998;
+  }
+  .fa-twitter-square {
+    color: #00aced;
+  }
+  .fa-linkedin {
+    color: #007bb6;
+  }
+  
+  .fa-youtube-square {
+    color: #df1c31;
+  }
+  .fa-reddit-square {
+    color: #8bbbe3;
+  }
+  .fa-github-square {
+    color:#444;
+  }
+  .fa-pinterest-square {
+    color: #b81621;
+  
+  }

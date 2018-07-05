@@ -1,18 +1,72 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+        $("#show").click(function(){
+            $("p").show();
+        });
+    });
+    </script>
+</head>
 
 <div class="column left">
 </div>
 <div class="column middle">
   <h2>{{name}} {{surname}}</h2>
   <p>{{title}}</p>
-  <img src="{{pp}}" width="400" />
+
+
+<div class="profile">
+    <div class="profile-photo">
+      <img src="{{pp}}" class="profile-photo"/>
+    </div>
+    <div class="profile-info">
+        <ul>
+            <li><i class="fas fa-phone"></i> {{number}}</li>
+            <li><i class="far fa-envelope"></i> {{email}}</li>
+            <li>Ph.D. : {{phd}}</li>
+            <li>M.S. : {{ms}}</li>
+            <li>B.S. : {{bs}}</li>
+        </ul>
+    </div>
+    <div style="height: 2vw;">
+      <a class="icon-link round-corner facebook fill" class="icons">
+        <i class="fab fa-facebook-square fa-3x"></i>
+      </a>
+      <a target="_blank" class="icon-link round-corner linkedin fill" class="icons">
+        <i class="fab fa-linkedin fa-3x"></i>
+      </a>
+      <a class="icon-link round-corner twitter fill" class="icons">
+          <i class="fab fa-twitter-square fa-3x"></i>
+      </a>
+      <a class="icon-link round-corner youtube fill" class="icons">
+          <i class="fab fa-youtube-square fa-3x"></i>
+      </a>
+      <a class="icon-link round-corner reddit fill" class="icons">
+          <i class="fab fa-reddit-square fa-3x"></i>
+      </a>
+      <a class="icon-link round-corner github fill" class="icons">
+          <i class="fab fa-github-square fa-3x"></i>
+      </a>
+      <a class="icon-link round-corner pinterest fill" class="icons">
+          <i class="fab fa-pinterest-square fa-3x"></i>
+      </a>
+    </div>
+    
+  </div>
+  
 </div>
 
 <div class="column right">
+    <p>If you click on the "Hide" button, I will disappear.</p>
 
   <div class="btn-group" role="group">
-    <button type="button" class="button button1">
+    <button type="button" class="button button1" id="hide">
     <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
-    <button type="button" class="button button1">
+    <button type="button" class="button button1" id="show">
       <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
     <button type="button" class="button button1">
       <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
