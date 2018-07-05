@@ -2,6 +2,7 @@ import { element } from 'protractor';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ElementRef } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-facultydetail',
@@ -48,5 +49,13 @@ export class FacultydetailComponent implements OnInit {
   }
   ngOnInit() {
   }
+
+lessonFunction() {
+  $('.lesson').toggle()
+}
+
+researchFunction() {
+  $('.research').toggle()
+}
 
 }

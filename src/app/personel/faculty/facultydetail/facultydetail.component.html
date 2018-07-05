@@ -1,16 +1,3 @@
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#hide").click(function(){
-            $("p").hide();
-        });
-        $("#show").click(function(){
-            $("p").show();
-        });
-    });
-    </script>
-</head>
 
 <div class="column left">
 </div>
@@ -59,17 +46,20 @@
 </div>
 
 <div class="column right">
-    <p>If you click on the "Hide" button, I will disappear.</p>
-
   <div class="btn-group" role="group">
-    <button type="button" class="button button1" id="hide">
+    <button class="button button1" (click)='lessonFunction()'>
     <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
-    <button type="button" class="button button1" id="show">
+    <button class="button button1" (click)='researchFunction()'>
       <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
-    <button type="button" class="button button1">
+    <button class="button button1 son">
       <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
+</div>
 
-  </div>
+<p class="lesson">EE315 - Elektronik Laboratuvarı</p>
+<p class="research">Biyoteknoloji</p>
+
+
+
 
   <!-- <p>Telefon: {{number}}</p>
 
