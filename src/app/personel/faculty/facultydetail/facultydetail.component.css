@@ -58,8 +58,10 @@
 
 .profile-photo{
     display:inline-block;
-    margin-left: 4vw;
     margin-top:1vw;
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
     height: 18vw;
 }
 
