@@ -21,8 +21,10 @@ export class FacultydetailComponent implements OnInit {
   bs;
   pp;
   title;
-  lessons;
   researches;
+  lessons;
+  
+
 
   constructor(private route: ActivatedRoute, afDB: AngularFireDatabase) {
     this.route.params.subscribe(params => {
@@ -40,8 +42,13 @@ export class FacultydetailComponent implements OnInit {
             this.ms = element.ms;
             this.bs = element.bs;
             this.title = element.title;
-            this.lessons = element.lessons;
-            this.researches = element.researches;           
+              
+            this.lessons = Object.keys(element.lessons).map(function(key){
+              return [element.lessons[key]]
+            });
+            this.researches = Object.keys(element.researches).map(function(key){
+              return [element.researches[key]]
+            });
           }
         });
       })

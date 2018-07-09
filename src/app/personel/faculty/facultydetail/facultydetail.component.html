@@ -3,6 +3,7 @@
 </div>
 <div class="column middle">
   <h2>{{name}} {{surname}}</h2>
+
   <p>{{title}}</p>
 
 
@@ -55,8 +56,11 @@
       <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
 </div>
 
-<p class="lesson">EE315 - Elektronik Laboratuvarı</p>
-<p class="research">Biyoteknoloji</p>
+<p *ngFor="let lesson of lessons" class="lesson" >{{lesson}}</p>
+<p *ngFor="let research of researches" class="research" >{{research}}</p>
+
+
+
 
 
 
