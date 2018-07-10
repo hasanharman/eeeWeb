@@ -23,15 +23,14 @@ export class FacultydetailComponent implements OnInit {
   title;
   researches;
   lessons;
-  
-
+  publications;
 
   constructor(private route: ActivatedRoute, afDB: AngularFireDatabase) {
     this.route.params.subscribe(params => {
       console.log(params['id']);
       this.allStuffs = afDB.list('personels/faculty').valueChanges().subscribe(data => {
-        data.forEach((element:any) => {
-          if(params['id'] == element.userId){
+        data.forEach((element: any) => {
+          if (params['id'] == element.userId) {
             this.pp = element.pp;
             this.name = element.name;
             this.surname = element.surname;
@@ -42,12 +41,15 @@ export class FacultydetailComponent implements OnInit {
             this.ms = element.ms;
             this.bs = element.bs;
             this.title = element.title;
-              
-            this.lessons = Object.keys(element.lessons).map(function(key){
+
+            this.lessons = Object.keys(element.lessons).map(function (key) {
               return [element.lessons[key]]
             });
-            this.researches = Object.keys(element.researches).map(function(key){
+            this.researches = Object.keys(element.researches).map(function (key) {
               return [element.researches[key]]
+            });
+            this.publications = Object.keys(element.publications).map(function (key) {
+              return [element.publications[key]]
             });
           }
         });
@@ -57,12 +59,23 @@ export class FacultydetailComponent implements OnInit {
   ngOnInit() {
   }
 
-lessonFunction() {
-  $('.lesson').toggle()
-}
+  lessonFunction() {
+    $('.publication').hide()
+    $('.research').hide()
+    $('.lesson').toggle()
+  }
 
-researchFunction() {
-  $('.research').toggle()
-}
+  researchFunction() {
+    $('.publication').hide()
+    $('.lesson').hide()
+    $('.research').toggle()
+  }
+
+  publicationFunction() {
+    $('.research').hide()
+    $('.lesson').hide()
+    $('.publication').toggle()
+
+  }
 
 }

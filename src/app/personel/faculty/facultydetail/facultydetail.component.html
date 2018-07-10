@@ -52,28 +52,12 @@
     <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
     <button class="button button1" (click)='researchFunction()'>
       <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
-    <button class="button button1 son">
+    <button class="button button1 son" (click)='publicationFunction()'>
       <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
 </div>
 
-<p *ngFor="let lesson of lessons" class="lesson" >{{lesson}}</p>
-<p *ngFor="let research of researches" class="research" >{{research}}</p>
+<li *ngFor="let lesson of lessons" class="lesson" >{{lesson}}</li>
+<li *ngFor="let research of researches" class="research">{{research}}</li>
+<li *ngFor="let publication of publications" class="publication">{{publication}}</li>
 
-
-
-
-
-
-
-  <!-- <p>Telefon: {{number}}</p>
-
-   <p>E-mail: {{email}} </p> 
-    
-   <p>Kişisel Web Adresi: {{webLink}}</p>    
-    
-    <p>Ph.D. : {{phd}}</p> 
-    
-    <p>M.S. : {{ms}}</p> 
-    
-    <p>B.S. : {{bs}}</p> -->
 </div>

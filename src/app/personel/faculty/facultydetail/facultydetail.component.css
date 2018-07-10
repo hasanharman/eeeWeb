@@ -1,119 +1,135 @@
 .column {
-    float: left;
-    padding: 3%;
+  float: left;
+  padding: 3%;
 }
 
 .middle {
-    width: 40%;
-    text-align: left;
+  width: 40%;
+  text-align: left;
+}
 
-}
 .right {
-    width: 50%;
-    text-align: left;
-    padding-left: 0;
-    padding-top: 10vh;
+  width: 50%;
+  text-align: left;
+  padding-left: 0;
+  padding-top: 10vh;
 }
+
 .lesson {
-text-align: left;
-margin-top: 3vw;
+  text-align: left;
+  margin-top: 1.5vw;
+  display: none;
 }
+
+.research {
+  text-align: left;
+  margin-top: 1.5vw;
+  display: none;
+}
+.publication {
+    text-align: left;
+    margin-top: 1.5vw;
+    display: none;
+  }
 
 .button {
-    background-color: #9A1220;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-    width: 40%;
+  background-color: #9A1220;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 40%;
 }
 
 .button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #9A1220;
+  background-color: white;
+  color: black;
+  border: 2px solid #9A1220;
 }
 
 .button1:hover {
-    background-color: #9A1220;
-    color: white;
+  background-color: #9A1220;
+  color: white;
 }
 
 .icon {
-    float: left;
-    vertical-align: middle;
-    justify-content: center;
+  float: left;
+  vertical-align: middle;
+  justify-content: center;
 }
 
-.profile{
-    width: 33vw;
-    height: 50vw;
-    background-color: #edeaec;
-    margin-bottom: 3vw ;
+.profile {
+  width: 33vw;
+  height: 50vw;
+  background-color: #edeaec;
+  margin-bottom: 3vw;
 }
 
-.profile-photo{
-    display:inline-block;
-    margin-top:1vw;
-    align-items: center;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    height: 18vw;
+.profile-photo {
+  display: inline-block;
+  margin-top: 1vw;
+  align-items: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  height: 18vw;
 }
 
-.profile-info{
-    position: static;
-    margin-top:3vw;
-    height: 20vw;
-    font-size: 1.3vw;
-    
+.profile-info {
+  position: static;
+  margin-top: 3vw;
+  height: 20vw;
+  font-size: 1.3vw;
 }
 
-.profile-info ul{
-    position: static;
-    list-style-type: none;
-    margin: 0;
-    padding: 3vw;
+.profile-info ul {
+  position: static;
+  list-style-type: none;
+  margin: 0;
+  padding: 3vw;
 }
 
-.profile-info ul li{
-    margin-bottom: 1vw;
+.profile-info ul li {
+  margin-bottom: 1vw;
 }
 
-.icons{
-    display: inline-block;
-    margin-top: 1vw;
-    margin-left: 1vw;
-
+.icons {
+  display: inline-block;
+  margin-top: 1vw;
+  margin-left: 1vw;
 }
 
 .fa-facebook-square {
-    color: #3b5998;
-  }
-  .fa-twitter-square {
-    color: #00aced;
-  }
-  .fa-linkedin {
-    color: #007bb6;
-  }
-  
-  .fa-youtube-square {
-    color: #df1c31;
-  }
-  .fa-reddit-square {
-    color: #8bbbe3;
-  }
-  .fa-github-square {
-    color:#444;
-  }
-  .fa-pinterest-square {
-    color: #b81621;
-  
-  }
+  color: #3b5998;
+}
+
+.fa-twitter-square {
+  color: #00aced;
+}
+
+.fa-linkedin {
+  color: #007bb6;
+}
+
+.fa-youtube-square {
+  color: #df1c31;
+}
+
+.fa-reddit-square {
+  color: #8bbbe3;
+}
+
+.fa-github-square {
+  color: #444;
+}
+
+.fa-pinterest-square {
+  color: #b81621;
+}
