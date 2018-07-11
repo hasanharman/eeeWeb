@@ -2,6 +2,12 @@
   float: left;
   padding: 5%;
 }
+.right {
+  width: 70vw;
+  text-align: left;
+  margin-right: 1%;
+}
+
 .lesson {
   text-align: left;
   margin-top: 1.5vw;
@@ -58,7 +64,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 25vw;
   max-height: 50vw;
-  margin: 0;
+  margin-left: 0;
   text-align: left;
   font-family: arial;
 }
