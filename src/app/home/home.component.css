@@ -14,33 +14,6 @@
   text-align: center;
 }
 
-.right {
-  width: 24%;
-  text-align: left;
-  margin-right: 1%;
-}
-
-.socialmedia{
-    position: absolute;
-    backface-visibility: hidden;
-}
-.feys {
- margin-right: 15px;
-}
-.fakulteimg {
-  width: 150px;
-  height: 120px;
-  margin: 1%;
-}
-
-.fa-facebook-square {
-  color: #3b5998;
-}
-
-.fa-twitter-square {
-  color: #00aced;
-}
-
 .mezun {
   height: 30%;
   margin-top: 1vw;

@@ -1,24 +1,19 @@
-
 <div class="column left">
-</div>
-<div class="column middle">
   <h2>{{name}} {{surname}}</h2>
-
   <p>{{title}}</p>
 
-
-<div class="profile">
-      <img src="{{pp}}" class="profile-photo">
-    <div class="profile-info">
-        <ul>
-            <li><i class="fas fa-phone"></i> {{number}}</li>
-            <li><i class="far fa-envelope"></i> {{email}}</li>
-            <li>Ph.D. : {{phd}}</li>
-            <li>M.S. : {{ms}}</li>
-            <li>B.S. : {{bs}}</li>
-        </ul>
-    </div>
-    <div style="height: 2vw;">
+  <div class="card">
+    <img src="{{pp}}" style="width:100%">
+    <ul>
+      <li>
+        <i class="fas fa-phone"></i> {{number}}</li>
+      <li>
+        <i class="far fa-envelope"></i> {{email}}</li>
+      <li>Ph.D. : {{phd}}</li>
+      <li>M.S. : {{ms}}</li>
+      <li>B.S. : {{bs}}</li>
+    </ul>
+    <div class="social">
       <a class="icon-link round-corner facebook fill" class="icons">
         <i class="fab fa-facebook-square fa-3x"></i>
       </a>
@@ -26,38 +21,36 @@
         <i class="fab fa-linkedin fa-3x"></i>
       </a>
       <a class="icon-link round-corner twitter fill" class="icons">
-          <i class="fab fa-twitter-square fa-3x"></i>
+        <i class="fab fa-twitter-square fa-3x"></i>
       </a>
       <a class="icon-link round-corner youtube fill" class="icons">
-          <i class="fab fa-youtube-square fa-3x"></i>
+        <i class="fab fa-youtube-square fa-3x"></i>
       </a>
       <a class="icon-link round-corner reddit fill" class="icons">
-          <i class="fab fa-reddit-square fa-3x"></i>
+        <i class="fab fa-reddit-square fa-3x"></i>
       </a>
       <a class="icon-link round-corner github fill" class="icons">
-          <i class="fab fa-github-square fa-3x"></i>
+        <i class="fab fa-github-square fa-3x"></i>
       </a>
       <a class="icon-link round-corner pinterest fill" class="icons">
-          <i class="fab fa-pinterest-square fa-3x"></i>
+        <i class="fab fa-pinterest-square fa-3x"></i>
       </a>
     </div>
-    
   </div>
-  
-</div>
 
-<div class="column right">
-  <div class="btn-group" role="group">
-    <button class="button button1" (click)='lessonFunction()'>
-    <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
-    <button class="button button1" (click)='researchFunction()'>
-      <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
-    <button class="button button1 son" (click)='publicationFunction()'>
-      <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
-</div>
 
-<li *ngFor="let lesson of lessons" class="lesson" >{{lesson}}</li>
-<li *ngFor="let research of researches" class="research">{{research}}</li>
-<li *ngFor="let publication of publications" class="publication">{{publication}}</li>
+  <div class="column right">
+    <div class="btn-group" role="group">
+      <button class="button button1" (click)='lessonFunction()'>
+        <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
+      <button class="button button1" (click)='researchFunction()'>
+        <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
+      <button class="button button1 son" (click)='publicationFunction()'>
+        <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
+    </div>
 
-</div>
+    <li *ngFor="let lesson of lessons" class="lesson">{{lesson}}</li>
+    <li *ngFor="let research of researches" class="research">{{research}}</li>
+    <li *ngFor="let publication of publications" class="publication">{{publication}}</li>
+
+  </div>

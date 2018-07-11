@@ -1,20 +1,7 @@
 .column {
   float: left;
-  padding: 3%;
+  padding: 5%;
 }
-
-.middle {
-  width: 40%;
-  text-align: left;
-}
-
-.right {
-  width: 50%;
-  text-align: left;
-  padding-left: 0;
-  padding-top: 10vh;
-}
-
 .lesson {
   text-align: left;
   margin-top: 1.5vw;
@@ -26,11 +13,12 @@
   margin-top: 1.5vw;
   display: none;
 }
+
 .publication {
-    text-align: left;
-    margin-top: 1.5vw;
-    display: none;
-  }
+  text-align: left;
+  margin-top: 1.5vw;
+  display: none;
+}
 
 .button {
   background-color: #9A1220;
@@ -66,40 +54,21 @@
   justify-content: center;
 }
 
-.profile {
-  width: 33vw;
-  height: 50vw;
-  background-color: #edeaec;
-  margin-bottom: 3vw;
-}
-
-.profile-photo {
-  display: inline-block;
-  margin-top: 1vw;
-  align-items: center;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  height: 18vw;
-}
-
-.profile-info {
-  position: static;
-  margin-top: 3vw;
-  height: 20vw;
-  font-size: 1.3vw;
-}
-
-.profile-info ul {
-  position: static;
-  list-style-type: none;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 25vw;
+  max-height: 50vw;
   margin: 0;
-  padding: 3vw;
+  text-align: left;
+  font-family: arial;
 }
 
-.profile-info ul li {
-  margin-bottom: 1vw;
+.card ul {
+  list-style-type: none;
 }
-
+.card social {
+  display: inline-block;
+}
 .icons {
   display: inline-block;
   margin-top: 1vw;
@@ -133,3 +102,4 @@
 .fa-pinterest-square {
   color: #b81621;
 }
+
