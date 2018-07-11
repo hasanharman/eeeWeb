@@ -20,9 +20,6 @@
   margin-right: 1%;
 }
 
-.fakulte {
-  height: 40%;
-}
 .socialmedia{
     position: absolute;
     backface-visibility: hidden;
@@ -46,6 +43,10 @@
 
 .mezun {
   height: 30%;
+  margin-top: 1vw;
+}
+.spotlight {
+  margin-bottom: 2vw;
 }
 
 h2 {
@@ -64,4 +65,40 @@ p {
   float: left;
   color: white;
   text-align: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 10px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 4px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 11px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
 }

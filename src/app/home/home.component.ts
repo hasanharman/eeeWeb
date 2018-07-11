@@ -27,11 +27,6 @@ export class HomeComponent implements OnInit {
       this.eventTitle = data.child('eventTitle').val();
     })
 
-    let facultyRef = firebase.database().ref().child('home').child('facultynews');
-    facultyRef.once('value', data => {
-      this.facultyText = data.child('facultyText').val();
-    })
-
     let announcementsRef = firebase.database().ref().child('home').child('announcements');
     announcementsRef.once('value', data => {
       this.annoText = data.child('annoText').val();

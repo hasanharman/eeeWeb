@@ -1,43 +1,54 @@
 <div class="column left">
-  <div class="fakulte">
-    <h2>Fakülte Haberleri</h2>
-    <img class="fakulteimg" src="assets/image/news/ehm.jpg" alt="fakulte">
-    <p>{{facultyText}}</p>
-  </div>
   <div class="duyurular">
     <h2>Duyurular</h2>
     <p>{{annoText}}</p>
+    <p href="">Tümünü gör</p>
   </div>
+  <div class="dropdown-divider"></div>
   <h2>Etkinlikler</h2>
   <div class="box">
     <p style="font-size:40px;">2</p>
     <p>AGU</p>
   </div>
   <div class="etkinlikler">
-    <p><b>{{eventTitle}}</b></p>
+    <p>
+      <b>{{eventTitle}}</b>
+    </p>
     <p>{{eventText}}</p>
+    <p href="">Tümünü gör</p>
   </div>
-
 </div>
+
 <div class="column middle">
 
-  <div >
-    <ngb-carousel >
-      <ng-template ngbSlide *ngFor="let new of news |async let i = index" >
+  <div>
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let new of news |async let i = index">
         <img style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{new.title}}</h3>
           <p>{{new.text}}</p>
         </div>
       </ng-template>
-      
     </ngb-carousel>
   </div>
-
 </div>
+
 <div class="column right">
+  <div class="spotlight">
+    <h2>Mezun Profilleri</h2>
+    <div class="card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/faculty%2Fbilgekarac%CC%A7al%C4%B1.jpg?alt=media&token=cf55b0e8-efb8-448e-915a-8d5c3422a9f2"
+        alt="John" style="width:100%">
+      <h2>John Doe</h2>
+      <p class="title">CEO & Founder, Example</p>
+    </div>
+  </div>
+  <div class="dropdown-divider"></div>
   <div class="mezun">
     <h2>EHM Öğrenci Adayları</h2>
-    <p>İYTE ailesine katılmayı düşnüyorsun ama hala karar veremedin mi? Senin için hazırlanan siteye <a href="http://aday.iyte.edu.tr/">bakabilirsin</a></p>
+    <p>İYTE ailesine katılmayı düşnüyorsun ama hala karar veremedin mi? Senin için hazırlanan siteye
+      <a href="http://aday.iyte.edu.tr/">bakabilirsin</a>
+    </p>
   </div>
 </div>
