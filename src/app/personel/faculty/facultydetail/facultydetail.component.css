@@ -1,13 +1,18 @@
 .column {
-  float: left;
   padding: 5%;
 }
 .right {
-  width: 70vw;
+  float: right;
+  width: 60vw;
   text-align: left;
-  margin-right: 1%;
+  margin-right: 1vw;
 }
-
+.left {
+  float: left;
+  width: 30vw;
+  text-align: left;
+  margin-right: 1vw;
+}
 .lesson {
   text-align: left;
   margin-top: 1.5vw;
@@ -72,7 +77,11 @@
 .card ul {
   list-style-type: none;
 }
-.card social {
+.social {
+  overflow: hidden;
+}
+.social a {
+  width: 6vw;
   display: inline-block;
 }
 .icons {
