@@ -13,7 +13,7 @@
             <div class="flipper">
                 <div class="front">
                     <img src="{{spotlight.pp}}" alt="{{spotlight.name}}" width="150" height="200">
-                    <p>{{spotlight.name | titlecase }}</p>
+                    <p>{{spotlight.name | titlecase }} {{spotlight.surname | titlecase }}</p>
                 </div>
                 <div class="back">
                     <a class="icon-link round-corner facebook fill">
@@ -41,7 +41,7 @@
                         <i class="fas fa-envelope-square fa-3x"></i>
                     </a>
                     <a class="icon-link">
-                        <i style="cursor: pointer;" routerLink="/faculty/{{(spotlights.name | lowercase) |notTurkish}}" class="fas fa-info-circle fa-3x"></i>
+                        <i style="cursor: pointer;" routerLink="/spotlights/{{(spotlight.name | lowercase) | notTurkish}}{{(spotlight.surname |lowercase)|notTurkish }}" class="fas fa-info-circle fa-3x"></i>
                     </a>
                 </div>
             </div>

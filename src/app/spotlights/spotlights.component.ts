@@ -15,7 +15,6 @@ spotlights;
 
   constructor(afDB: AngularFireDatabase) {
     this.spotlights = afDB.list('personels/spotlights').valueChanges();
-
   }
 
   ngOnInit() {

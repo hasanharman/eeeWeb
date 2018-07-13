@@ -13,6 +13,7 @@ import * as $ from 'jquery';
 export class SpotlightsdetailComponent implements OnInit {
   allStuffs;
   name;
+  surname;
   pp;
   email;
   text;
@@ -31,6 +32,7 @@ export class SpotlightsdetailComponent implements OnInit {
             this.text = element.text;
             this.year = element.year;
             this.title = element.title;
+            this.surname = element.surname;
           }
         });
       })
