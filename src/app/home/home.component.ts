@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
   eventText;
   eventTitle;
   facultyText;
-  annoText;
-
+  annoText;annoText2;annoText3;
+ 
   constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig) { 
     this.news = afDB.list('home/news').valueChanges();
     config.interval = 4000;
@@ -32,7 +32,18 @@ export class HomeComponent implements OnInit {
       this.annoText = data.child('annoText').val();
     })
 
-
+    announcementsRef.child('home').child('announcements');
+    announcementsRef.once('value', data => {
+      this.annoText2 = data.child('annoText2').val();
+    })
+    announcementsRef.child('home').child('announcements');
+    announcementsRef.once('value', data => {
+      this.annoText2 = data.child('annoText2').val();
+    })
+    announcementsRef.child('home').child('announcements');
+    announcementsRef.once('value', data => {
+      this.annoText3 = data.child('annoText3').val();
+    })
   }
 
   ngOnInit() {

@@ -2,7 +2,8 @@
   <div class="duyurular">
     <h2>Duyurular</h2>
     <p>{{annoText}}</p>
-    <p href="">Tümünü gör</p>
+    <p>{{annoText2}}</p>
+    <a routerLink="/announcements">Tümünü gör</a>
   </div>
   <div class="dropdown-divider"></div>
   <h2>Etkinlikler</h2>
@@ -15,16 +16,15 @@
       <b>{{eventTitle}}</b>
     </p>
     <p>{{eventText}}</p>
-    <p href="">Tümünü gör</p>
+    <a routerLink="/announcements">Tümünü gör</a>
   </div>
 </div>
 
 <div class="column middle">
-
   <div>
     <ngb-carousel>
       <ng-template ngbSlide *ngFor="let new of news |async let i = index">
-        <img style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
+        <img width="600" height="450" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{new.title}}</h3>
           <p>{{new.text}}</p>
@@ -38,10 +38,10 @@
   <div class="spotlight">
     <h2>Mezun Profilleri</h2>
     <div class="card">
-      <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/faculty%2Fbilgekarac%CC%A7al%C4%B1.jpg?alt=media&token=cf55b0e8-efb8-448e-915a-8d5c3422a9f2"
-        alt="John" style="width:100%">
-      <h2>John Doe</h2>
-      <p class="title">CEO & Founder, Example</p>
+      <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/spotlights%2Fniyazi.jpeg?alt=media&token=8b4aca96-70b7-4591-a1e1-94860b58339e"
+        alt="name" style="width:100%">
+      <h2>Niyazi Toker</h2>
+      <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
     </div>
   </div>
   <div class="dropdown-divider"></div>

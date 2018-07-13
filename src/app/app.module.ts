@@ -24,6 +24,7 @@ import { StaffComponent } from './personel/staff/staff.component';
 import { FacultydetailComponent } from './personel/faculty/facultydetail/facultydetail.component';
 import { AsistantdetailComponent } from './personel/asistant/asistantdetail/asistantdetail.component';
 import { StaffdetailComponent } from './personel/staff/staffdetail/staffdetail.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
@@ -32,6 +33,7 @@ import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NewsComponent } from './news/news.component';
 import { NotTurkishPipe } from './not-turkish.pipe';
+
 
   
 
@@ -48,6 +50,7 @@ firebase.initializeApp(firebaseConfig);
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
+  { path: 'announcements', component: AnnouncementsComponent},
   { path: 'faculty', component: FacultyComponent},
   { path: 'faculty/:id', component: FacultydetailComponent},
   { path: 'asistant', component: AsistantComponent},
@@ -90,6 +93,7 @@ const appRoutes: Routes = [
     FacultydetailComponent,
     AsistantdetailComponent,
     StaffdetailComponent,
+    AnnouncementsComponent,
    ],
   imports: [
     BrowserModule,
