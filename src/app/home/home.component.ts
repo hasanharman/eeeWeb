@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute } from '@angular/router';
 import * as firebase from 'firebase/app';
 
 @Component({
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   eventTitle;
   facultyText;
   annoText;annoText2;annoText3;
+  spotlights;
  
   constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig) { 
     this.news = afDB.list('home/news').valueChanges();
@@ -21,6 +23,8 @@ export class HomeComponent implements OnInit {
     config.wrap = true;
     config.keyboard = true;
     
+    this.spotlights = afDB.list('personels/spotlights').valueChanges();
+
     let eventRef = firebase.database().ref().child('home').child('events');
     eventRef.once('value', data => {
       this.eventText = data.child('eventText').val();

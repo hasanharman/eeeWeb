@@ -33,6 +33,7 @@ import * as firebase from 'firebase/app';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NewsComponent } from './news/news.component';
 import { NotTurkishPipe } from './not-turkish.pipe';
+import { SpotlightsComponent } from './spotlights/spotlights.component';
 
 
   
@@ -57,6 +58,7 @@ const appRoutes: Routes = [
   { path: 'asistant/:id', component: AsistantdetailComponent},
   { path: 'staff', component: StaffComponent},
   { path: 'staff/:id', component: StaffdetailComponent},
+  { path: 'spotlights/:id', component: SpotlightsComponent},
   { path: 'arastirmaalanlari', component: ArastirmaalanlariComponent},
   { path: 'lablar', component: LablarComponent},
   { path: 'internship', component: InternshipComponent},
@@ -94,6 +96,7 @@ const appRoutes: Routes = [
     AsistantdetailComponent,
     StaffdetailComponent,
     AnnouncementsComponent,
+    SpotlightsComponent,
    ],
   imports: [
     BrowserModule,

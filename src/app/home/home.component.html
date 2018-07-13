@@ -1,15 +1,17 @@
 <div class="column left">
   <div class="duyurular">
     <h2>Duyurular</h2>
-    <p>{{annoText}}</p>
-    <p>{{annoText2}}</p>
-    <p>{{annoText3}}</p>
+    <ul>
+      <li>{{annoText}}</li>
+      <li>{{annoText2}}</li>
+      <li>{{annoText3}}</li>
+    </ul>
     <a routerLink="/announcements">Tümünü gör</a>
   </div>
   <div class="dropdown-divider"></div>
   <h2>Etkinlikler</h2>
   <div class="box">
-    <p style="font-size:40px;">2</p>
+    <p style="font-size:30px;">2</p>
     <p>AGU</p>
   </div>
   <div class="etkinlikler">
@@ -44,6 +46,7 @@
       <h2>Niyazi Toker</h2>
       <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
     </div>
+    <a style='margin-left:11vw;' style="cursor: pointer;" routerLink="/spotlights/{{(spotlights.name | lowercase) |notTurkish}}">Tümünü gör</a>
   </div>
   <div class="dropdown-divider"></div>
   <div class="mezun">

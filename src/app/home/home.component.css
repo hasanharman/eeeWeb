@@ -24,7 +24,7 @@
   margin-top: 1vw;
 }
 .spotlight {
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 }
 
 h2 {
@@ -33,6 +33,13 @@ h2 {
 
 p {
   font-size: 1vw;
+}
+ul {
+  list-style-type: circle;
+}
+li {
+  font-size: 1vw;
+  margin-left: -3vw;
 }
 
 .box {
