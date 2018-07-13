@@ -42,11 +42,12 @@
     <h2>Mezun Profilleri</h2>
     <div class="card">
       <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/spotlights%2Fniyazi.jpeg?alt=media&token=8b4aca96-70b7-4591-a1e1-94860b58339e"
-        alt="name" style="width:100%">
+        alt="name" style="width:100%"
+        routerLink="/spotlights/{{(spotlights.name | lowercase) |notTurkish}}">
       <h2>Niyazi Toker</h2>
       <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
     </div>
-    <a style='margin-left:11vw;' style="cursor: pointer;" routerLink="/spotlights/{{(spotlights.name | lowercase) |notTurkish}}">Tümünü gör</a>
+    <a style='margin-left:11vw;' routerLink="/spotlights" >Tümünü gör</a>
   </div>
   <div class="dropdown-divider"></div>
   <div class="mezun">

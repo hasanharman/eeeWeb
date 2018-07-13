@@ -11,23 +11,11 @@ import * as $ from 'jquery';
   styleUrls: ['./spotlights.component.css']
 })
 export class SpotlightsComponent implements OnInit {
-  allStuffs;
-  name;
-  pp;
-  
+spotlights;
 
-  constructor(private route: ActivatedRoute, afDB: AngularFireDatabase) {
-    this.route.params.subscribe(params => {
-      console.log(params['id']);
-      this.allStuffs = afDB.list('personels/spotlights').valueChanges().subscribe(data => {
-        data.forEach((element: any) => {
-          if (params['id'] == element.userId) {
-            this.pp = element.pp;
-            this.name = element.name;
-          }
-        });
-      })
-    });
+  constructor(afDB: AngularFireDatabase) {
+    this.spotlights = afDB.list('personels/spotlights').valueChanges();
+
   }
 
   ngOnInit() {

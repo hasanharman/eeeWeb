@@ -1,10 +1,11 @@
 .column {
   float: left;
-  padding: 3%;
+  padding-top: 1vw !important; 
+  padding: 3vw;
 }
 
 .left {
-  width: 20vw;
+  width: 24vw;
   text-align: left;
   margin-left: 1vw;
 }
