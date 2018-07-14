@@ -1,25 +1,25 @@
 <div class="column left">
   <div class="duyurular">
-    <h2>Duyurular</h2>
+    <h2>{{'home.announcements.title' | translate}}</h2>
     <ul>
-      <li>{{annoText}}</li>
-      <li>{{annoText2}}</li>
-      <li>{{annoText3}}</li>
+      <li>{{'home.announcements.annoText' | translate}}</li>
+      <li>{{'home.announcements.annoText2' | translate}}</li>
+      <li>{{'home.announcements.annoText3' | translate}}</li>
     </ul>
-    <a routerLink="/announcements">Tümünü gör</a>
+    <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>
-  <h2>Etkinlikler</h2>
+  <h2>E{{'home.events.title' | translate}}</h2>
   <div class="box">
     <p style="font-size:30px;">2</p>
     <p>AGU</p>
   </div>
   <div class="etkinlikler">
     <p>
-      <b>{{eventTitle}}</b>
+      <b>{{'home.events.eventTitle' | translate}}</b>
     </p>
-    <p>{{eventText}}</p>
-    <a routerLink="/announcements">Tümünü gör</a>
+    <p>{{'home.events.eventText' | translate}}</p>
+    <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
   </div>
 </div>
 
@@ -29,8 +29,8 @@
       <ng-template ngbSlide *ngFor="let new of news |async let i = index">
         <img width="600" height="450" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
-          <h3>{{new.title}}</h3>
-          <p>{{new.text}}</p>
+          <h3>{{'home.news.title' | translate}}</h3>
+          <p>{{'home.new.text' | translate}}</p>
         </div>
       </ng-template>
     </ngb-carousel>
@@ -39,15 +39,15 @@
 
 <div class="column right">
   <div class="spotlight">
-    <h2>Mezun Profilleri</h2>
+    <h2>{{'home.spotlightProfiles.title' | translate}}</h2>
     <div class="card">
       <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/spotlights%2Fniyazi.jpeg?alt=media&token=8b4aca96-70b7-4591-a1e1-94860b58339e"
         alt="name" style="width:100%"
-        routerLink="/spotlights/{{(spotlights.name | lowercase) |notTurkish}}">
+        routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish }}">
       <h2>Niyazi Toker</h2>
       <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
     </div>
-    <a style='margin-left:11vw;' routerLink="/spotlights" >Tümünü gör</a>
+    <a style='margin-left:11vw;' routerLink="/spotlights" >{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>
   <div class="mezun">
