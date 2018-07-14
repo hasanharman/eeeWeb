@@ -5,6 +5,14 @@
 .altmenu {
   height: 40vw;
 }
+.lang {
+  border-radius: 50%;
+  height: 3vw;
+  width: 3vw;
+background-repeat: no-repeat;
+background-size: 3vw;
+
+}
 
 img {
   width: 40%;
@@ -20,13 +28,18 @@ img {
   font-family: 'PT Sans', sans-serif;
 }
 
-.left,
+.left {
+  width: 25vw;
+  float: left;
+}
 .right {
   width: 25vw;
+  float: right!important;
+
 }
 
 .middle {
-  width: 50vw;
+  width: 45vw;
 }
 
 .menubar {

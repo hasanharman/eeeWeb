@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './about/contact/contact.component';
@@ -35,6 +38,7 @@ import { NewsComponent } from './news/news.component';
 import { NotTurkishPipe } from './not-turkish.pipe';
 import { SpotlightsComponent } from './spotlights/spotlights.component';
 import { SpotlightsdetailComponent } from './spotlights/spotlightsdetail/spotlightsdetail.component';
+import { Http } from '../../node_modules/@angular/http';
 
 
   
@@ -107,7 +111,12 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (http: Http) => new TranslateStaticLoader(http, 'https://eeeweb-c2788.firebaseio.com', '.json'),
+      deps: [Http]
+  })
   ],
   providers: [    AngularFireDatabase,AngularFirestore ],
   bootstrap: [AppComponent]

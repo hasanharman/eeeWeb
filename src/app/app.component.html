@@ -6,7 +6,7 @@
           </a>     
     </div>
     <div class="column middle">
-      <h1 class="title" routerLink='home'>ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ BÖLÜMÜ</h1>
+      <h1 class="title" routerLink='home'>{{ 'header.title' | translate}}</h1>
     </div>
     <div class="column right">
       <img src="assets/image/header/iyteehm.png" alt="eeelogo" routerLink='home'>
@@ -23,13 +23,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto multi-level">
           <li id="borderForm" class="nav-item active">
-            <a class="nav-link" routerLink="home">Anasayfa
+            <a class="nav-link" routerLink="home">{{'navbar.home' | translate}}
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li id="borderForm" class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Hakkında
+              {{'navbar.about' | translate}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li class="dropdown-item" href="#">Welcome From the Chair</li>
@@ -46,7 +46,7 @@
           </li>
           <li id="borderForm" class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Personel
+              {{'navbar.personel' | translate}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" routerLink="faculty">Öğretim Üyeleri</a>
@@ -163,6 +163,7 @@
             </div>
           </li>
         </ul>
+        <button (click)="changeLanguage(lang)" class="lang" [ngStyle]="{'background-image': 'url(' + langToogleImg + ')'}" ></button>
         <form id="borderForm" class="form-inline my-2 my-lg-0 searchIt">
           <input class="form-control mr-sm-2 searchInput" placeholder="Bul" aria-label="Search">
           <button type="button" class="btn btn-default btn-sm" (click)="fonksiyon()">
