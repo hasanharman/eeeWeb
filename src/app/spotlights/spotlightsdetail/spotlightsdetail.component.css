@@ -1,17 +1,19 @@
 .column {
-    padding: 5%;
+    padding: 3%;
   }
   .right {
     float: right;
-    width: 60vw;
+    width: 57vw;
     text-align: left;
-    margin-right: 1vw;
+    margin-right: 3vw;
+    margin-top: 1.9vw;
   }
   .left {
     float: left;
     width: 30vw;
     text-align: left;
-    margin-right: 1vw;
+    margin-top: -4vw;
+    margin-left: 5vw;
   }
   .icon {
     float: left;

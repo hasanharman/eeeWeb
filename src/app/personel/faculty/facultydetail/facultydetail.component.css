@@ -1,17 +1,20 @@
 .column {
-  padding: 5%;
+  padding: 3vw;
 }
 .right {
   float: right;
-  width: 60vw;
+  width: 45vw;
   text-align: left;
-  margin-right: 1vw;
+  margin-right: 10vw;
+  margin-top: 2vw;
+  
 }
 .left {
   float: left;
-  width: 30vw;
+  width: 37vw;
   text-align: left;
-  margin-right: 1vw;
+  margin-top: -4vw;
+  margin-left: 4vw;
 }
 .lesson {
   text-align: left;
