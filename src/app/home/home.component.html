@@ -1,6 +1,6 @@
 <div class="column left">
   <div class="duyurular">
-    <h2>{{'home.announcements.title' | translate}}</h2>
+    <p class="baslıklar">{{'home.announcements.title' | translate}}</p>
     <ul>
       <li>{{'home.announcements.annoText' | translate}}</li>
       <li>{{'home.announcements.annoText2' | translate}}</li>
@@ -9,9 +9,9 @@
     <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>
-  <h2>E{{'home.events.title' | translate}}</h2>
+  <p class="baslıklar">E{{'home.events.title' | translate}}</p>
   <div class="box">
-    <p style="font-size:30px;">2</p>
+    <p>2</p>
     <p>AGU</p>
   </div>
   <div class="etkinlikler">
@@ -19,15 +19,15 @@
       <b>{{'home.events.eventTitle' | translate}}</b>
     </p>
     <p>{{'home.events.eventText' | translate}}</p>
-    <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
   </div>
+  <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
 </div>
 
 <div class="column middle">
   <div>
-    <ngb-carousel>
-      <ng-template ngbSlide *ngFor="let new of news |async let i = index">
-        <img width="600" height="450" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
+    <ngb-carousel >
+      <ng-template  width="50vw" height="50vw" ngbSlide *ngFor="let new of news |async let i = index">
+        <img  width="600vw" height="300vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{'home.news.title' | translate}}</h3>
           <p>{{'home.new.text' | translate}}</p>
@@ -39,19 +39,19 @@
 
 <div class="column right">
   <div class="spotlight">
-    <h2>{{'home.spotlightProfiles.title' | translate}}</h2>
+    <p class="baslıklar">{{'home.spotlightProfiles.title' | translate}}</p>
     <div class="card">
       <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/spotlights%2Fniyazi.jpeg?alt=media&token=8b4aca96-70b7-4591-a1e1-94860b58339e"
-        alt="name" style="width:100%"
+        alt="name" width="100%"
         routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish }}">
-      <h2>Niyazi Toker</h2>
+      <p class="baslıklar" >Niyazi Toker</p>
       <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
     </div>
-    <a style='margin-left:11vw;' routerLink="/spotlights" >{{'home.seeall' | translate}}</a>
+    <a routerLink="/spotlights" >{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>
   <div class="mezun">
-    <h2>EHM Öğrenci Adayları</h2>
+    <p class="baslıklar" >EHM Öğrenci Adayları</p>
     <p>İYTE ailesine katılmayı düşnüyorsun ama hala karar veremedin mi? Senin için hazırlanan siteye
       <a href="http://aday.iyte.edu.tr/">bakabilirsin</a>
     </p>
