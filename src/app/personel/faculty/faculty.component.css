@@ -1,4 +1,4 @@
-.column {
+/* .column {
     float: left;
     padding: 3%;
 }
@@ -50,7 +50,8 @@
 }
 
 .back {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  margin-left: -40px;
 }
 img {
     border-radius: 5px;
@@ -84,5 +85,108 @@ img {
 }
 .fa-pinterest-square {
   color: #b81621;
+
+}
+
+@media (max-width:533px) {
+  .flip-container {
+    margin-right:10vw;
+    margin-left: 10vw;
+  }
+  .column {
+    padding: 0%;
+  }
+  .left {
+    width: 0%;
+  }
+  .middle {
+    width: 100%;
+  }
+  .right {
+    width: 0%;
+  }
+
+} */
+.proCart {
+
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: arial;
+  border-radius: 2px;
+  padding: 5px;
+  width: 160px;
+  height: 270px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  margin-left: -50px;
+}
+
+.flip-container {
+  perspective: 1000;
+  float: left;
+  margin-right: 40px;
+  margin-left: 0%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 150px;
+	height: 260px;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+
+.flipper {
+transition: 0.6s;
+transform-style: preserve-3d;
+position: relative;
+}
+
+.icon-link {
+  margin-right: 5px;
+}
+.twitter, github {
+  float: left;
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+}
+.fa-twitter-square {
+  color: #00aced;
+}
+.fa-linkedin {
+  color: #007bb6;
+}
+
+.fa-youtube-square {
+  color: #df1c31;
+}
+.fa-reddit-square {
+  color: #8bbbe3;
+}
+.fa-github-square {
+  color:#444;
+}
+.fa-pinterest-square {
+  color: #b81621;
+
+}
+
+@media (max-width: 394px) {
+
+  .flip-container {
+    margin-left: 20%;
+  }
 
 }
