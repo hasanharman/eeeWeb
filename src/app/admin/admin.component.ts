@@ -53,60 +53,48 @@ export class AdminComponent implements OnInit {
   addToFaculty() {
     let bs = $('.bsF').val();
     let email = $('.emailF').val();
-    let dr = $('.drF').val();
-    let lessons = $('.lessonsF').val();
     let ms = $('.msF').val();
     let name = $('.nameF').val();
     let number = $('.numberF').val();
-    let phd = $('.phdF').val();
-    let postdr = $('.postdrF').val();
     let pp = $('.ppF').val();
-    let publications = $('.publicationsF').val();
-    let researches = $('.researchesF').val();
     let username = $('.usernameF').val();
-    let title = $('.titleF').val();
     let surname = $('.surnameF').val();
     let socialMedias = $('.socialMediasF').val();
-    let userId = $('.userId').val();
-
-    firebase.database().ref().child('tr').child('personels').child('faculty').child(username.toString()).update({
-      name: name,
-      surname: surname,
-      pp: pp, socialMedias: socialMedias,
-      bs: bs,
-      researches: researches,
-      title: title,
-      email: email,
-      dr: dr,
-      lessons: lessons,
-      ms: ms,
-      number: number,
-      phd: phd,
-      postdr: postdr,
-      publications: publications,
-      userId: userId
-    })
-  }
-
-  removeToFaculty() {
-    let name = $('.nameF').val();
-    let username = $('.usernameF').val();
-    let surname = $('.surnameF').val();
-    let pp = $('.ppF').val();
-
-    firebase.database().ref().child('tr').child('personels').child('faculty').child(username.toString()).remove()
-  }
-
-  addToAsistant() {
-    let name = $('.nameF').val();
-    let username = $('.usernameF').val();
-    let surname = $('.surnameF').val();
-    let pp = $('.ppF').val();
+    let userId = $('.userIdF').val();
 
     firebase.database().ref().child('tr').child('personels').child('asistants').child(username.toString()).update({
       name: name,
       surname: surname,
-      pp: pp,
+      pp: pp, 
+      socialMedias: socialMedias,
+      bs: bs,
+      email: email,
+      ms: ms,
+      number: number,
+      userId: userId
+    })
+  }
+
+  addToAsistant() {
+    let bs = $('.bsF').val();
+    let email = $('.emailF').val();
+    let ms = $('.msF').val();
+    let name = $('.nameF').val();
+    let pp = $('.ppF').val();
+    let username = $('.usernameF').val();
+    let surname = $('.surnameF').val();
+    let socialMedias = $('.socialMediasF').val();
+    let userId = $('.userIdF').val();
+
+    firebase.database().ref().child('tr').child('personels').child('asistants').child(username.toString()).update({
+      name: name,
+      surname: surname,
+      pp: pp, 
+      socialMedias: socialMedias,
+      bs: bs,
+      email: email,
+      ms: ms,
+      userId: userId
     })
   }
 

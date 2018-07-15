@@ -11,7 +11,7 @@ export class FacultyComponent implements OnInit {
   faculties;
 
   constructor(afDB: AngularFireDatabase) { 
-  this.faculties = afDB.list('personels/faculty').valueChanges();
+  this.faculties = afDB.list('/tr/personels/faculty').valueChanges();
   }
   ngOnInit() {
   }
