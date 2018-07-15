@@ -14,6 +14,7 @@ export class FacultyComponent implements OnInit {
   this.faculties = afDB.list('/tr/personels/faculty').valueChanges();
   }
   ngOnInit() {
+
   }
 
 }

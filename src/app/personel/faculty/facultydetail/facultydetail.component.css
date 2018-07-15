@@ -80,27 +80,21 @@
 .card ul {
   list-style-type: none;
 }
-.social {
-  overflow: hidden;
+
+
+.icon-link {
+  margin-right: 5px;
 }
-.social a {
-  width: 6vw;
-  display: inline-block;
-}
-.icons {
-  display: inline-block;
-  margin-top: 1vw;
-  margin-left: 1vw;
+.twitter, github {
+  float: left;
 }
 
 .fa-facebook-square {
   color: #3b5998;
 }
-
 .fa-twitter-square {
   color: #00aced;
 }
-
 .fa-linkedin {
   color: #007bb6;
 }
@@ -108,16 +102,13 @@
 .fa-youtube-square {
   color: #df1c31;
 }
-
 .fa-reddit-square {
   color: #8bbbe3;
 }
-
 .fa-github-square {
-  color: #444;
+  color:#444;
 }
-
 .fa-pinterest-square {
   color: #b81621;
-}
 
+}
