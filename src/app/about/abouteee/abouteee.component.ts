@@ -15,11 +15,7 @@ export class AbouteeeComponent implements OnInit {
   starterLang = 'tr'
 
   constructor(afDB: AngularFireDatabase, translateService: TranslateService) { 
-    let eventRef = firebase.database().ref().child('navbar').child('abouteee');
-    eventRef.once('value', data => {
-      this.text = data.child('text').val();
-      this.title = data.child('title').val();
-    })
+     
   }
 
   ngOnInit() {

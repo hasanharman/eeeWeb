@@ -8,7 +8,7 @@
         <input placeholder="pp"  class="ppF"/>
         <button (click)="addToFirebase()"> Firebaseye ekle!</button> -->
 <div class="fakulty">
-    <h2>Öğretim Üyeleri</h2>
+    <h2>{{'personels.facultyName' |translate}}</h2>
     <div *ngFor="let faculty of faculties | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
         <div class="flipper">
             <div class="front">
