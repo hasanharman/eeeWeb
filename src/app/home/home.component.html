@@ -25,9 +25,9 @@
 
 <div class="column middle">
   <div>
-    <ngb-carousel >
-      <ng-template  width="50vw" height="50vw" ngbSlide *ngFor="let new of news |async let i = index">
-        <img  width="600vw" height="300vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
+    <ngb-carousel>
+      <ng-template width="50vw" height="50vw" ngbSlide *ngFor="let new of news |async let i = index">
+        <img width="600vw" height="300vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{new.title}}</h3>
           <p>{{new.text}}</p>
@@ -42,16 +42,15 @@
     <p class="baslıklar">{{'home.spotlightProfiles.title' | translate}}</p>
     <div class="card">
       <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/spotlights%2Fniyazi.jpeg?alt=media&token=8b4aca96-70b7-4591-a1e1-94860b58339e"
-        alt="name" width="100%"
-        routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish }}">
-      <p class="baslıklar" >Niyazi Toker</p>
+        alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish }}">
+      <p class="baslıklar">Niyazi Toker</p>
       <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
     </div>
-    <a routerLink="/spotlights" >{{'home.seeall' | translate}}</a>
+    <a routerLink="/spotlights">{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>
   <div class="mezun">
-    <p class="baslıklar" >{{'home.quickLinks.title' | translate}}</p>
+    <p class="baslıklar">{{'home.quickLinks.title' | translate}}</p>
     <p>{{'home.quickLinks.calender.title' | translate}}</p>
   </div>
 </div>

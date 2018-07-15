@@ -15,23 +15,23 @@ export class HomeComponent implements OnInit {
   eventText;
   eventTitle;
   facultyText;
-  annoText;annoText2;annoText3;
+  annoText; annoText2; annoText3;
   spotlights;
 
   starterLang = 'tr'
- 
-  constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig,translateService: TranslateService) { 
+
+  constructor(afDB: AngularFireDatabase, config: NgbCarouselConfig, translateService: TranslateService) {
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
-        console.log(event.lang);
-        this.starterLang = event.lang;
-        this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
-      })
-    
+      console.log(event.lang);
+      this.starterLang = event.lang;
+      this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+    })
+
     this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
     config.interval = 4000;
     config.wrap = true;
     config.keyboard = true;
-    
+
     this.spotlights = afDB.list('personels/spotlights').valueChanges();
 
     let eventRef = firebase.database().ref().child('home').child('events');
@@ -61,4 +61,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
 }
