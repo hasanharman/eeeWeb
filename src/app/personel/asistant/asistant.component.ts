@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
 export class AsistantComponent implements OnInit {
   asistants;
   constructor(afDB: AngularFireDatabase) {
-    this.asistants = afDB.list('personels/asistants').valueChanges();
+    this.asistants = afDB.list('/tr/personels/asistants').valueChanges();
    }
   ngOnInit() {
   }

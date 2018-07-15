@@ -51,27 +51,25 @@ export class AdminComponent implements OnInit {
     })
   }
   addToFaculty() {
-    let bs = $('.bsF').val();
     let email = $('.emailF').val();
     let ms = $('.msF').val();
     let name = $('.nameF').val();
-    let number = $('.numberF').val();
     let pp = $('.ppF').val();
     let username = $('.usernameF').val();
     let surname = $('.surnameF').val();
     let socialMedias = $('.socialMediasF').val();
     let userId = $('.userIdF').val();
+    let text = $('.textF').val();
 
-    firebase.database().ref().child('tr').child('personels').child('asistants').child(username.toString()).update({
+    firebase.database().ref().child('tr').child('personels').child('spotlights').child(username.toString()).update({
       name: name,
       surname: surname,
       pp: pp, 
       socialMedias: socialMedias,
-      bs: bs,
       email: email,
       ms: ms,
-      number: number,
-      userId: userId
+      userId: userId,
+      text: text,
     })
   }
 

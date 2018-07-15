@@ -9,7 +9,6 @@ import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-tra
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './about/contact/contact.component';
-import { HistoryComponent } from './about/history/history.component';
 import { ResearchesComponent } from './researches/researches.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
@@ -38,6 +37,7 @@ import { NotTurkishPipe } from './not-turkish.pipe';
 import { SpotlightsComponent } from './spotlights/spotlights.component';
 import { SpotlightsdetailComponent } from './spotlights/spotlightsdetail/spotlightsdetail.component';
 import { Http } from '../../node_modules/@angular/http';
+import { AbouteeeComponent } from './about/abouteee/abouteee.component';
 
 
   
@@ -69,7 +69,7 @@ const appRoutes: Routes = [
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'history', component: HistoryComponent},
+  { path: 'abouteee', component: AbouteeeComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'news/:newsId', component: NewsComponent},
   { path: '**', redirectTo: 'home'}
@@ -90,7 +90,6 @@ const appRoutes: Routes = [
     NewsComponent,
     NotTurkishPipe,
     AboutComponent,
-    HistoryComponent,
     AdministrationComponent,
     PersonelComponent,
     FacultyComponent,
@@ -102,6 +101,7 @@ const appRoutes: Routes = [
     AnnouncementsComponent,
     SpotlightsComponent,
     SpotlightsdetailComponent,
+    AbouteeeComponent,
    ],
   imports: [
     BrowserModule,

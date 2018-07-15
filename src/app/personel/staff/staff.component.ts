@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
 export class StaffComponent implements OnInit {
   staffs;
   constructor(afDB: AngularFireDatabase) { 
-    this.staffs = afDB.list('personels/staff').valueChanges();
+    this.staffs = afDB.list('/tr/personels/staff').valueChanges();
   }
 
   ngOnInit() {

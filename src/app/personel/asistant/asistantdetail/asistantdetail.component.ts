@@ -22,7 +22,7 @@ export class AsistantdetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, afDB: AngularFireDatabase) {
     this.route.params.subscribe(params => {
       console.log(params['id']);
-      this.allStuffs = afDB.list('personels/asistants').valueChanges().subscribe(data => {        
+      this.allStuffs = afDB.list('/tr/personels/asistants').valueChanges().subscribe(data => {        
         data.forEach((element:any) => {
           if(params['id'] == element.userId){
             this.pp = element.pp;
@@ -33,8 +33,7 @@ export class AsistantdetailComponent implements OnInit {
             this.webLink = element.webLink;
             this.phd = element.phd;
             this.ms = element.ms;
-            this.bs = element.bs;
-            
+            this.bs = element.bs;   
           }
         });
       })
