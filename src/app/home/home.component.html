@@ -29,8 +29,8 @@
       <ng-template  width="50vw" height="50vw" ngbSlide *ngFor="let new of news |async let i = index">
         <img  width="600vw" height="300vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
-          <h3>{{'home.news.title' | translate}}</h3>
-          <p>{{'home.new.text' | translate}}</p>
+          <h3>{{new.title}}</h3>
+          <p>{{new.text}}</p>
         </div>
       </ng-template>
     </ngb-carousel>

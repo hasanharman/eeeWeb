@@ -3,6 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
 import * as firebase from 'firebase/app';
+import { TranslateService, LangChangeEvent } from '../../../node_modules/ng2-translate';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,17 @@ export class HomeComponent implements OnInit {
   facultyText;
   annoText;annoText2;annoText3;
   spotlights;
+
+  starterLang = 'tr'
  
-  constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig) { 
-    this.news = afDB.list('home/news').valueChanges();
+  constructor(afDB: AngularFireDatabase,config: NgbCarouselConfig,translateService: TranslateService) { 
+    translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+        console.log(event.lang);
+        this.starterLang = event.lang;
+        this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+      })
+    
+    this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
     config.interval = 4000;
     config.wrap = true;
     config.keyboard = true;
