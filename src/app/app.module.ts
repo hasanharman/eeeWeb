@@ -18,7 +18,6 @@ import { AdminComponent } from './admin/admin.component';
 import { ArastirmaalanlariComponent } from './researches/arastirmaalanlari/arastirmaalanlari.component';
 import { LablarComponent } from './researches/lablar/lablar.component';
 import { AboutComponent } from './about/about.component';
-import { FastfactsComponent } from './about/fastfacts/fastfacts.component';
 import { AdministrationComponent } from './about/administration/administration.component';
 import { PersonelComponent } from './personel/personel.component';
 import { FacultyComponent } from './personel/faculty/faculty.component';
@@ -92,7 +91,6 @@ const appRoutes: Routes = [
     NotTurkishPipe,
     AboutComponent,
     HistoryComponent,
-    FastfactsComponent,
     AdministrationComponent,
     PersonelComponent,
     FacultyComponent,
