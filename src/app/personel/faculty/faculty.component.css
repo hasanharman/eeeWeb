@@ -107,6 +107,10 @@ img {
   }
 
 } */
+.heading {
+  text-align: center;
+  margin-top: 1vw;
+}
 .proCart {
 
   margin: 10px;

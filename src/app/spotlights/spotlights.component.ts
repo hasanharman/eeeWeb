@@ -12,9 +12,10 @@ import * as $ from 'jquery';
 })
 export class SpotlightsComponent implements OnInit {
 spotlights;
+starterLang = 'tr'
 
   constructor(afDB: AngularFireDatabase) {
-    this.spotlights = afDB.list('personels/spotlights').valueChanges();
+    this.spotlights = afDB.list('tr/personels/spotlights').valueChanges();
   }
 
   ngOnInit() {

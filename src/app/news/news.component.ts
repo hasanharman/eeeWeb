@@ -8,6 +8,7 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+  starterLang = 'tr'
   routerDirective;
   title:string;
   text:string;
@@ -17,7 +18,7 @@ export class NewsComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.routerDirective = params['newsId'];
 
-      firebase.database().ref().child('home').child('news').child(this.routerDirective)
+      firebase.database().ref().child('tr').child('home').child('news').child(this.routerDirective)
       .once('value',news => {
         this.title = news.child('newsDetails').child('title').val(); 
         this.text = news.child('newsDetails').child('text').val();

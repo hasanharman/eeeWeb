@@ -22,7 +22,7 @@ export class StaffdetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, afDB: AngularFireDatabase) {
     this.route.params.subscribe(params => {
       console.log(params['id']);
-      this.allStuffs = afDB.list('/tr/personels/faculty').valueChanges().subscribe(data => {
+      this.allStuffs = afDB.list('/tr/personels/staff').valueChanges().subscribe(data => {
         data.forEach((element:any) => {
           if(params['id'] == element.userId){
             this.pp = element.pp;
