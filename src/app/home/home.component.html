@@ -40,12 +40,12 @@
 <div class="column right">
   <div class="spotlight">
     <p class="baslıklar">{{'home.spotlightProfiles.title' | translate}}</p>
-    <div class="card">
-      <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/spotlights%2Fniyazi.jpeg?alt=media&token=8b4aca96-70b7-4591-a1e1-94860b58339e"
-        alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish }}">
-      <p class="baslıklar">Niyazi Toker</p>
-      <p class="title">Junior Embedded Software Engineer at Red Pine Software</p>
-    </div>
+    <div class="card" *ngIf="spotlights">
+      <img src="{{spotlights.pp}}"
+        alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish  }}">
+      <p class="baslıklar">{{spotlights.name}} {{spotlights.surname}}</p>
+      <p class="title">{{spotlights.text}}</p>
+    </div> 
     <a routerLink="/spotlights">{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>

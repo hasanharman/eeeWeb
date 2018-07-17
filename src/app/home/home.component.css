@@ -67,8 +67,11 @@ li {
   width: 16vw;
   text-align: center;
   font-family: arial;
+  height: 50vh;
+   overflow: hidden;
+  
 }
-
+ 
 .title {
   color: grey;
   font-size: 1vw;

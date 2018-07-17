@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+      this.spotlights = afDB.list(this.starterLang +'/personels/spotlights').valueChanges().subscribe(data =>{
+        console.log(data);
+      });
+
     })
 
     this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
@@ -32,7 +36,13 @@ export class HomeComponent implements OnInit {
     config.wrap = true;
     config.keyboard = true;
 
-    this.spotlights = afDB.list('personels/spotlights').valueChanges();
+    afDB.list(this.starterLang +'/personels/spotlights').valueChanges().subscribe(data=> {
+      console.log(data);
+      let randomNumber = Math.floor(Math.random() * data.length) 
+      console.warn(data[randomNumber]);
+      
+      this.spotlights = data[randomNumber];
+    })
 
     let eventRef = firebase.database().ref().child('home').child('events');
     eventRef.once('value', data => {
