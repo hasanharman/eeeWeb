@@ -1,12 +1,12 @@
 <div class="column left">
   <div class="duyurular">
-    <p class="baslıklar">{{'home.announcements.title' | translate}}</p>
+    <p class="baslıklar">{{'home.annoTitle' | translate}}</p>
     <ul>
-      <li>{{'home.announcements.annoText' | translate}}</li>
-      <li>{{'home.announcements.annoText2' | translate}}</li>
-      <li>{{'home.announcements.annoText3' | translate}}</li>
+      <li>{{'home.announcements.text' | translate}}</li>
+      <li>{{'home.announcements.text2' | translate}}</li>
+      <li>{{'home.announcements.text3' | translate}}</li>
     </ul>
-    <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
+    <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
   </div>
   <div class="dropdown-divider"></div>
   <p class="baslıklar">{{'home.events.title' | translate}}</p>
@@ -20,14 +20,14 @@
     </p>
     <p>{{'home.events.eventText' | translate}}</p>
   </div>
-  <a routerLink="/announcements">{{'home.seeall' | translate}}</a>
+  <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
 </div>
 
 <div class="column middle">
   <div>
     <ngb-carousel>
       <ng-template width="50vw" height="50vw" ngbSlide *ngFor="let new of news |async let i = index">
-        <img width="600vw" height="300vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
+        <img width="600vw" height="430vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{new.title}}</h3>
           <p>{{new.text}}</p>
@@ -35,22 +35,36 @@
       </ng-template>
     </ngb-carousel>
   </div>
+  <a class="see">{{'home.seeall' | translate}}</a>
 </div>
 
 <div class="column right">
-  <div class="spotlight">
-    <p class="baslıklar">{{'home.spotlightProfiles.title' | translate}}</p>
-    <div class="card" *ngIf="spotlights">
-      <img src="{{spotlights.pp}}"
-        alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish  }}">
-      <p class="baslıklar">{{spotlights.name}} {{spotlights.surname}}</p>
-      <p class="title">{{spotlights.text}}</p>
-    </div> 
-    <a routerLink="/spotlights">{{'home.seeall' | translate}}</a>
-  </div>
-  <div class="dropdown-divider"></div>
   <div class="mezun">
     <p class="baslıklar">{{'home.quickLinks.title' | translate}}</p>
-    <p>{{'home.quickLinks.calender.title' | translate}}</p>
+    <div class='altmezun'>
+    <a href="http://www.iyte.edu.tr/AltSayfa.aspx?m=52" target="_blank">
+      <p>{{'home.quickLinks.calender.title' | translate}}</p>
+    </a>
+      <p routerLink='/internship' style="cursor: pointer;">{{'home.quickLinks.intern.title' | translate}}</p>
+      <p routerLink='/projectLesson' style="cursor: pointer;" >{{'home.quickLinks.projectL.title' | translate}}</p>
+      <a href="https://cms.iyte.edu.tr/login/index.php" target="_blank">
+        <p>{{'home.quickLinks.cms.title' | translate}}</p>
+      </a>
+      <a href="https://obs.iyte.edu.tr/oibs/ogrenci/login.aspx" target="_blank">
+        <p>{{'home.quickLinks.obs.title' | translate}}</p>
+      </a>
+    </div>
   </div>
+  <div class="dropdown-divider"></div>
+
+  <div class="spotlight">
+    <p class="baslıklar">{{'personels.spotlightName' | translate}}</p>
+    <div class="card" *ngIf="spotlights">
+      <img src="{{spotlights.pp}}" alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish  }}">
+      <p class="baslıklar">{{spotlights.name}} {{spotlights.surname}}</p>
+      <p class="title">{{spotlights.title}}</p>
+    </div>
+    <a class="see" routerLink="/spotlights">{{'home.seeall' | translate}}</a>
+  </div>
+
 </div>

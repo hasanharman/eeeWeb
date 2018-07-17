@@ -1,3 +1,11 @@
-<p>
-  announcements works!
-</p>
+<div class='general'>
+  <h1>{{'home.generalTitle' |translate}}</h1>
+  <h4 class="heading">{{'home.annoTitle' |translate}}</h4>
+  <div class="container">
+    <div class="row">
+      <ul *ngFor="let anno of announcements | async let i = index">
+        <li>{{'announcements.text' | translate}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

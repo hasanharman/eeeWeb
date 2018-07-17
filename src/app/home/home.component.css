@@ -21,8 +21,18 @@
 }
 
 .mezun {
-  height: 10vw;
+  height: 11vw;
   margin-top: 1vw;
+}
+
+.altmezun p,a {
+  line-height: 0.5vw;
+}
+
+.see {
+  font-size: 0.9vw;
+  color: darkblue;
+  text-align: left !important;
 }
 .spotlight {
   margin-bottom: 1vw;
@@ -64,10 +74,10 @@ li {
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 16vw;
+  width: 14vw;
   text-align: center;
   font-family: arial;
-  height: 50vh;
+  height: 40vh;
    overflow: hidden;
   
 }

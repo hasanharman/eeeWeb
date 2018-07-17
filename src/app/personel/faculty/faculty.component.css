@@ -120,7 +120,7 @@ img {
   border-radius: 2px;
   padding: 5px;
   width: 160px;
-  height: 270px;
+  height: 250px;
   backface-visibility: hidden;
   position: absolute;
 }
@@ -159,7 +159,7 @@ position: relative;
 .icon-link {
   margin-right: 5px;
 }
-.twitter, github {
+.twitter, .github {
   float: left;
 }
 
@@ -182,8 +182,9 @@ position: relative;
 .fa-github-square {
   color:#444;
 }
-.fa-pinterest-square {
-  color: #b81621;
+.fa-researchgate {
+  color:  #66ffcc
+  ;
 
 }
 

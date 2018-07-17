@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+
       this.spotlights = afDB.list(this.starterLang +'/personels/spotlights').valueChanges().subscribe(data =>{
         console.log(data);
       });
@@ -52,20 +53,16 @@ export class HomeComponent implements OnInit {
 
     let announcementsRef = firebase.database().ref().child('home').child('announcements');
     announcementsRef.once('value', data => {
-      this.annoText = data.child('annoText').val();
+      this.annoText = data.child('text').val();
     })
 
     announcementsRef.child('home').child('announcements');
     announcementsRef.once('value', data => {
-      this.annoText2 = data.child('annoText2').val();
+      this.annoText2 = data.child('text2').val();
     })
     announcementsRef.child('home').child('announcements');
     announcementsRef.once('value', data => {
-      this.annoText2 = data.child('annoText2').val();
-    })
-    announcementsRef.child('home').child('announcements');
-    announcementsRef.once('value', data => {
-      this.annoText3 = data.child('annoText3').val();
+      this.annoText3 = data.child('text3').val();
     })
   }
 
