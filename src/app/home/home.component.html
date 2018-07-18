@@ -27,7 +27,7 @@
   <div>
     <ngb-carousel>
       <ng-template width="50vw" height="50vw" ngbSlide *ngFor="let new of news |async let i = index">
-        <img width="600vw" height="430vw" style="cursor: pointer;" routerLink="/news/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
+        <img width="600vw" height="430vw" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}" alt="{{new.title}}">
         <div class="carousel-caption">
           <h3>{{new.title}}</h3>
           <p>{{new.text}}</p>
@@ -35,7 +35,7 @@
       </ng-template>
     </ngb-carousel>
   </div>
-  <a class="see">{{'home.seeall' | translate}}</a>
+  <a class="see" routerLink='/news'>{{'home.seeall' | translate}}</a>
 </div>
 
 <div class="column right">

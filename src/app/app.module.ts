@@ -38,6 +38,7 @@ import { SpotlightsComponent } from './spotlights/spotlights.component';
 import { SpotlightsdetailComponent } from './spotlights/spotlightsdetail/spotlightsdetail.component';
 import { Http } from '../../node_modules/@angular/http';
 import { AbouteeeComponent } from './about/abouteee/abouteee.component';
+import { NewsdetailComponent } from './news/newsdetail/newsdetail.component';
 
 
   
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'announcements', component: AnnouncementsComponent},
+  { path: 'administration', component: AdministrationComponent},
   { path: 'faculty', component: FacultyComponent},
   { path: 'faculty/:id', component: FacultydetailComponent},
   { path: 'asistant', component: AsistantComponent},
@@ -71,7 +73,8 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'abouteee', component: AbouteeeComponent},
   { path: 'admin', component: AdminComponent},
-  { path: 'news/:newsId', component: NewsComponent},
+  { path: 'news', component: NewsComponent},
+  { path: 'newsdetail/:newsId', component: NewsdetailComponent},
   { path: '**', redirectTo: 'home'}
 
 ];
@@ -102,6 +105,7 @@ const appRoutes: Routes = [
     SpotlightsComponent,
     SpotlightsdetailComponent,
     AbouteeeComponent,
+    NewsdetailComponent,
    ],
   imports: [
     BrowserModule,

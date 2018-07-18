@@ -107,6 +107,7 @@ img {
   }
 
 } */
+
 .heading {
   text-align: center;
   margin-top: 1vw;
@@ -120,7 +121,7 @@ img {
   border-radius: 2px;
   padding: 5px;
   width: 160px;
-  height: 250px;
+  height: 260px;
   backface-visibility: hidden;
   position: absolute;
 }
