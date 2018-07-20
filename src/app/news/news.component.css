@@ -3,20 +3,47 @@
     padding: 3%;
 }
 .left {
-    width: 15%;
+    width: 15vw;
     text-align: left; 
 }
 .middle {
-    width: 70%;
+    width: 70vw;
     text-align: left;
-
 }
 .right {
-    width: 15%;
+    width: 15vw;
     text-align: left;
-
 }
-
-.file {
+.top {
+    padding: 1vw;
+    border-radius: 0.2vw;
+    margin-bottom: 1vw;
+    height: 1vw;
+}
+.topFirst {
     float: left;
+    border-radius: 0.2vw;
+    padding: 0.2vw;
+}
+.bottomLast {
+    float: right;
+    border-radius: 0.2vw;
+    padding: 0.2vw;
+}
+.loopBoxes {
+    height: 20vw;
+    border-radius: 0.2vw;
+    padding: 1vw;
+}
+.picture {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 0.2vw;
+    float: right;
+    background-color: rgb(116, 225, 233);
+}
+.text { 
+    height: 20vw;
+    width: 50vw;
+    background-color: #E6E6E6;
 }
