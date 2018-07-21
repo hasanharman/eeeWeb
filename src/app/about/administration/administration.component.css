@@ -135,6 +135,9 @@ img {
     transform: rotateY(180deg);
     margin-left: -50px;
   }
+  .container {
+    
+  }
   
   .flip-container {
     perspective: 1000;

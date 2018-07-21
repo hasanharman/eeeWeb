@@ -9,12 +9,8 @@ import * as firebase from 'firebase/app';
 })
 export class AdministrationComponent implements OnInit {
 starterLang = 'tr'
-head;
-vice1;
-vice2;
+
   constructor(afDB: AngularFireDatabase) { 
-  this.head = afDB.list('/tr/personels/faculty/person1').valueChanges();
-  this.vice1 = afDB.list('/tr/personels/faculty').valueChanges();
 
   let headName;
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
