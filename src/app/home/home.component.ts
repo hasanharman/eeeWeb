@@ -27,8 +27,10 @@ export class HomeComponent implements OnInit {
       this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
 
       this.spotlights = afDB.list(this.starterLang +'/personels/spotlights').valueChanges().subscribe(data =>{
-        console.log(data);
-      });
+        let randomNumber = Math.floor(Math.random() * data.length) 
+        console.warn(data[randomNumber]);
+        
+        this.spotlights = data[randomNumber];      });
 
     })
 
@@ -43,6 +45,12 @@ export class HomeComponent implements OnInit {
       console.warn(data[randomNumber]);
       
       this.spotlights = data[randomNumber];
+    })
+    let adaminDibiAd;
+    firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+      adaminDibiAd = faculty.child('person1').child('name').val();
+      console.log(adaminDibiAd);
+      
     })
 
     let eventRef = firebase.database().ref().child('home').child('events');

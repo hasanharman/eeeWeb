@@ -12,11 +12,21 @@ export class AnnouncementsComponent implements OnInit {
   starterLang = 'tr';
   announcements;
 
-  constructor(afDB: AngularFireDatabase,translateService: TranslateService) { 
-    this.announcements = afDB.list(this.starterLang + '/home/announcements').valueChanges();
+  constructor(private afDB: AngularFireDatabase, translateService: TranslateService) {
+    translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+      console.log(event.lang);
+      this.starterLang = event.lang;
+      this.announcements = this.afDB.list(this.starterLang + '/announcements').valueChanges();
+
+    });
   }
 
   ngOnInit() {
+    this.announcements = this.afDB.list(this.starterLang + '/announcements').valueChanges();
+   
   }
+
+
+ 
 
 }

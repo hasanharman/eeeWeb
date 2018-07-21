@@ -3,3 +3,24 @@
     margin-right:5vw;
     margin-top:1vw;
 }
+@media (max-width: 400px) {
+    .imgText    {
+        font-size: 4vw;
+    }
+ }
+ .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+ @media (max-width: 768px) {
+    .titleText    {
+        font-size: 0.5em;
+    }
+
+ }
+ @media (max-width: 500px) {
+    .titleText    {
+        font-size: 0.4em!important;
+    }
+
+ }

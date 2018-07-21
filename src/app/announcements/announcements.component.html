@@ -1,4 +1,4 @@
-<div class='general'>
+<!-- <div class='general'>
   <h1>{{'home.generalTitle' |translate}}</h1>
   <h4 class="heading">{{'home.annoTitle' |translate}}</h4>
   <div class="container">
@@ -8,4 +8,62 @@
       </ul>
     </div>
   </div>
+</div>
+ -->
+ 
+<div class="accordion" id="accordion">
+  <section class="header container">
+    <div class="card-header" id="headingOne">
+      <h5>Duyurular ve Etkinlikler</h5>
+    </div>
+  </section>
+
+  <section class="body container">
+   <!--  <div class="card">
+      <h4>
+        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+          aria-controls="collapseOne">
+          Yüksek Lisans Öğrencimize CERN’den Burs
+        </button>
+      </h4>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <img class="img-thumbnail" src="http://eee.iyte.edu.tr/wp-content/uploads/2017/02/hikmet_bursali-660x220.png" />
+
+                <p class="imgText">Lisans eğitimini bölümümüzde tamamladıktan sonra yüksek lisans eğitimine başlayıp, tez çalışmalarını Yrd.Doç.Dr.
+                  Fatih Yaman danışmanlığında sürdüren Hikmet Bursalı, İsviçre’de bulunan Avrupa Nükleer Araştırma Merkezi
+                  (CERN) ‘nde yüksek lisans çalışmalarını yapmak için burs kazandı. 6 aylık program ile teknik öğrenci olarak
+                  CERN’de BE-RF-MK(Beams Department- Radio Frequency Group- Modulators and Klystrons Section) grubunda Dr.
+                  Nuria Catalan Lasheras danışmanlığında çalışacak olan öğrencimizin bölümümüzü en iyi şekilde temsil edeceğine
+                  inanıyor ve onu tebrik ediyoruz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div *ngFor="let item of announcements | async; let i = index"  class="card">
+      <h4>
+        <button  class="btn btn-block text-left titleText" type="button" data-toggle="collapse" [attr.data-target]="'#collapse'+item.key"  aria-expanded="true"
+        [attr.aria-controls]="'#collapse'+item.key"  >
+{{item.title}}        </button>
+      </h4>
+      <div id="collapse{{item.key}}" [ngClass]="{'show':i==0 }" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <img class="img-thumbnail" src="{{item.pp}}" />
+
+                <p class="imgText">{{item.text}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
