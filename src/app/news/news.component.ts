@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import * as firebase from 'firebase/app';
 import { TranslateService, LangChangeEvent } from '../../../node_modules/ng2-translate';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-news',
@@ -9,48 +10,19 @@ import { TranslateService, LangChangeEvent } from '../../../node_modules/ng2-tra
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+  news;
   starterLang = 'tr'
-  routerDirective;
-  title:string;
-  text:string;
-  photoUrl:string;
-  subtitle:string;
-  constructor(private route: ActivatedRoute,translateService:TranslateService ) {
+ 
+  constructor(afDB: AngularFireDatabase, translateService:TranslateService ) {
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
+      this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
       
-      firebase.database().ref().child(this.starterLang).child('home').child('news').child(this.routerDirective)
-      .once('value',news => {
-        console.log(news.val());
-        
-        this.title = news.child('newsDetail').child('title').val(); 
-        this.text = news.child('newsDetail').child('text').val();
-        this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
-        this.subtitle = news.child('newsDetail').child('subtitle').val(); 
-        console.log(this.title);
-        
-      })
+   })
+   this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
 
-    });
-
-    this.route.params.subscribe(params => {
-      this.routerDirective = params['newsId'];
-      console.log(this.routerDirective);
-      
-      firebase.database().ref().child(this.starterLang).child('home').child('news').child(this.routerDirective)
-      .once('value',news => {
-        console.log(news.val());
-        
-        this.title = news.child('newsDetail').child('title').val(); 
-        this.text = news.child('newsDetail').child('text').val();
-        this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
-        this.subtitle = news.child('newsDetail').child('subtitle').val(); 
-        console.log(this.title);
-        
-      })
-    });
-   }
+  };
 
   ngOnInit() {
   }

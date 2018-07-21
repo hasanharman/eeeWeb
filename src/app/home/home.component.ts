@@ -46,12 +46,7 @@ export class HomeComponent implements OnInit {
       
       this.spotlights = data[randomNumber];
     })
-    let adaminDibiAd;
-    firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-      adaminDibiAd = faculty.child('person1').child('name').val();
-      console.log(adaminDibiAd);
-      
-    })
+
 
     let eventRef = firebase.database().ref().child('home').child('events');
     eventRef.once('value', data => {

@@ -27,13 +27,12 @@
 }
 .bottomLast {
     float: right;
-    border-radius: 0.2vw;
-    padding: 0.2vw;
 }
 .loopBoxes {
     height: 20vw;
     border-radius: 0.2vw;
     padding: 1vw;
+    margin-bottom: 1vw;
 }
 .picture {
     height: 20vw;
