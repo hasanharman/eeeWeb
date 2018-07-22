@@ -16,7 +16,8 @@ export class SpotlightsdetailComponent implements OnInit {
   surname;
   pp;
   email;
-  text;
+  h1;h2;h3;h4;h5;
+  text1;text2;text3;text4;text5;
   year;
   title;
 
@@ -29,7 +30,16 @@ export class SpotlightsdetailComponent implements OnInit {
             this.pp = element.pp;
             this.name = element.name;
             this.email = element.email;
-            this.text = element.text;
+            this.h1 = element.h1;
+            this.h2 = element.h2;
+            this.h3 = element.h3;
+            this.h4 = element.h4;
+            this.h5 = element.h5;
+            this.text1 = element.text1;
+            this.text2 = element.text2;
+            this.text3 = element.text3;
+            this.text4 = element.text4;
+            this.text5 = element.text5;
             this.year = element.year;
             this.title = element.title;
             this.surname = element.surname;
