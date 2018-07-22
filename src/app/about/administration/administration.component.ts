@@ -12,23 +12,42 @@ starterLang = 'tr'
 headpp;
 headSurname; 
 headName;
+vice1name;vice1surname;vice1pp;
+vice2name;vice2surname;vice2pp;
+
  constructor(afDB: AngularFireDatabase) { 
 
 
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
     this.headName = faculty.child('person24').child('name').val();
-    console.log(this.headName);  
   })
-
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
     this.headSurname = faculty.child('person24').child('surname').val();
-    console.log(this.headSurname);  
+  })
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.headpp = faculty.child('person24').child('pp').val();
+  })
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice1name = faculty.child('person25').child('name').val();
   })
 
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    this.headpp = faculty.child('person24').child('pp').val();
-    console.log(this.headpp);
-    
+    this.vice1surname = faculty.child('person25').child('surname').val();
+  })
+
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice1pp = faculty.child('person25').child('pp').val();    
+  })
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice2name = faculty.child('person29').child('name').val();
+  })
+
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice2surname = faculty.child('person29').child('surname').val();
+  })
+
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice2pp = faculty.child('person29').child('pp').val();    
   })
   }
   

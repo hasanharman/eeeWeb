@@ -4,7 +4,7 @@
   <h1>Haberler</h1>
   <div class="loopBoxes" *ngFor="let new of news |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
     <div class="picture">
-      <img src="{{new.photo}}" alt="{{new.title}}" width="100%" height="100%">
+      <img src="{{new.photo}}" width="100%" height="100%">
     </div>
     <div class="text">
       <h5>{{'new.title' | translate}}</h5>
