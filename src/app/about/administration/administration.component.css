@@ -135,14 +135,11 @@ img {
     transform: rotateY(180deg);
     margin-left: -50px;
   }
-  .container {
-    
-  }
+   
   
   .flip-container {
     perspective: 1000;
-    float: left;
-    margin-right: 40px;
+     margin-right: 40px;
     margin-left: 0%;
     margin-bottom: 30px;
     margin-top: 30px;

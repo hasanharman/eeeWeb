@@ -47,7 +47,7 @@
     </div> -->
     <div *ngFor="let item of announcements | async; let i = index"  class="card">
       <h4>
-        <button  class="btn btn-block text-left titleText" type="button" data-toggle="collapse" [attr.data-target]="'#collapse'+item.key"  aria-expanded="true"
+        <button  [ngClass]="{  'anno':item.type === 0 }" class="btn btn-block text-left titleText" type="button" data-toggle="collapse" [attr.data-target]="'#collapse'+item.key"  aria-expanded="true"
         [attr.aria-controls]="'#collapse'+item.key"  >
 {{item.title}}        </button>
       </h4>

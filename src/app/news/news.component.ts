@@ -17,10 +17,10 @@ export class NewsComponent implements OnInit {
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
-      this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+      this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
       
    })
-   this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+   this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
 
   };
 

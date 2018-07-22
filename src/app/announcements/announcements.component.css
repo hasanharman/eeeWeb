@@ -3,6 +3,9 @@
     margin-right:5vw;
     margin-top:1vw;
 }
+.anno{
+    background-color: rgb(129, 196, 113);
+}
 @media (max-width: 400px) {
     .imgText    {
         font-size: 4vw;

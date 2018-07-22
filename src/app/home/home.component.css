@@ -20,10 +20,7 @@
   text-align: center;
 }
 
-.mezun {
-  height: 13vw;
-}
-
+ 
 .altmezun p,a {
   line-height: 0.5vw;
 }
@@ -60,8 +57,7 @@ li {
 
 .box {
   width: 4.9vw;
-  height: 7vw;
-  background: #9A1220;
+   background: #9A1220;
   margin-right: 5%;
   float: left;
   color: white;
@@ -76,8 +72,7 @@ li {
   width: 14vw;
   text-align: center;
   font-family: arial;
-  height: 40vh;
-   overflow: hidden;
+    overflow: hidden;
   
 }
  
@@ -108,8 +103,15 @@ a {
 button:hover, a:hover {
   opacity: 0.7;
 }
-
+@media (max-width: 1100px) and (min-width: 990px){
+  .see {
+    font-size: 1vw;
+  }
+}
 @media (max-width: 991px) and (min-width: 700px){
+  .see {
+    font-size: 1.2vw;
+  }
   .column {
     padding: 0.5vw;
   }
@@ -143,7 +145,9 @@ button:hover, a:hover {
 }
 
 @media (max-width: 800px) and (min-width: 700px){
-
+  .see {
+    font-size: 1.3vw;
+  }
   p.baslıklar {
     font-size: 2vw;
   }
@@ -162,7 +166,9 @@ button:hover, a:hover {
 }
 
 @media (max-width: 699px){
-
+  .see {
+    font-size: 1.8vw;
+  }
   .column {
     padding: 0vw;
   }
@@ -215,8 +221,7 @@ button:hover, a:hover {
 
   .box {
     width: 15vw;
-    height: 22vw;
-    padding: 2vw;
+     padding: 2vw;
   }
   .box p:first-child {
     font-size: 5vw;

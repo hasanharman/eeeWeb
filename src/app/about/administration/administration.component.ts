@@ -9,24 +9,26 @@ import * as firebase from 'firebase/app';
 })
 export class AdministrationComponent implements OnInit {
 starterLang = 'tr'
+headpp;
+headSurname; 
+headName;
+ constructor(afDB: AngularFireDatabase) { 
 
-  constructor(afDB: AngularFireDatabase) { 
 
-  let headName;
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    headName = faculty.child('person24').child('name').val();
-    console.log(headName);  
+    this.headName = faculty.child('person24').child('name').val();
+    console.log(this.headName);  
   })
 
-  let headSurname;
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    headSurname = faculty.child('person24').child('surname').val();
-    console.log(headSurname);  
+    this.headSurname = faculty.child('person24').child('surname').val();
+    console.log(this.headSurname);  
   })
 
-  let headpp;
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    headpp = faculty.child('person24').child('pp').val();
+    this.headpp = faculty.child('person24').child('pp').val();
+    console.log(this.headpp);
+    
   })
   }
   

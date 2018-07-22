@@ -26,11 +26,12 @@ export class HomeComponent implements OnInit {
       this.starterLang = event.lang;
       this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
 
-      this.spotlights = afDB.list(this.starterLang +'/personels/spotlights').valueChanges().subscribe(data =>{
-        let randomNumber = Math.floor(Math.random() * data.length) 
+      this.spotlights = afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
+        let randomNumber = Math.floor(Math.random() * data.length)
         console.warn(data[randomNumber]);
-        
-        this.spotlights = data[randomNumber];      });
+
+        this.spotlights = data[randomNumber];
+      });
 
     })
 
@@ -39,11 +40,11 @@ export class HomeComponent implements OnInit {
     config.wrap = true;
     config.keyboard = true;
 
-    afDB.list(this.starterLang +'/personels/spotlights').valueChanges().subscribe(data=> {
+    afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
       console.log(data);
-      let randomNumber = Math.floor(Math.random() * data.length) 
+      let randomNumber = Math.floor(Math.random() * data.length)
       console.warn(data[randomNumber]);
-      
+
       this.spotlights = data[randomNumber];
     })
 
@@ -72,5 +73,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+ /*  copy() {
+    firebase.database().ref().child('tr').child('home').child('news').once('value', data => {
+      const myData = data.val();
+      firebase.database().ref().child('tr').child('home').child('newsRegular').update(myData)
 
+    })
+  } */
 }
