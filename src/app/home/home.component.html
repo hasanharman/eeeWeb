@@ -40,10 +40,9 @@
 
 <div class="container">
   <div class="row">
-
     <div class="col-md-8">
       <div>
-        <ngb-carousel>
+        <ngb-carousel class="caraouselDen">
           <ng-template ngbSlide *ngFor="let new of news |async let i = index">
             <img width="700vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
               alt="{{new.title}}">
@@ -83,18 +82,18 @@
     </div>
   </div>
 
-  <div class="row row2 text-center">
+  <div class="row row2">
     <div class="col-md-6">
       <div class="littleNews">
-          <div class="loopBoxes" *ngFor="let new of news |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
-            <div class="picture">
-              <img src="{{new.photo}}" width="100%" height="100%">
-            </div>
-            <div class="text">
-              <h5>{{'new.title' | translate}}</h5>
-              <p>{{'new.text' | translate}}</p>
-            </div>
+        <div class="loopBoxes" *ngFor="let new of news |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
+          <div class="picture">
+            <img class='imgNews' src="{{new.photo}}" width="100%" height="100%">
           </div>
+          <div class="text">
+            <h5>{{'new.title' | translate}}</h5>
+            <p>{{'new.text' | translate}}</p>
+          </div>
+        </div>
       </div>
       <a class="see" routerLink="/news">{{'home.seeall' | translate}}</a>
     </div>
@@ -114,25 +113,26 @@
     </div>
 
     <div class="col-md-4">
-      <div class="duyurular">
-        <p class="baslıklar">{{'home.annoTitle' | translate}}</p>
-        <ul>
-          <li>{{'home.announcements.text' | translate}}</li>
-          <li>{{'home.announcements.text2' | translate}}</li>
-          <li>{{'home.announcements.text3' | translate}}</li>
-        </ul>
-        <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
-      </div>
-      <div class="spotlight">
-        <p class="baslıklar">{{'personels.spotlightName' | translate}}</p>
-        <div class="card" *ngIf="spotlights">
-          <img src="{{spotlights.pp}}" alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish  }}">
-          <p class="baslıklar">{{spotlights.name}} {{spotlights.surname}}</p>
-          <p class="title">{{spotlights.title}}</p>
+      <div class="row">
+        <div class="duyurular">
+          <p class="baslıklar">{{'home.annoTitle' | translate}}</p>
+          <ul>
+            <li>{{'home.announcements.text' | translate}}</li>
+            <li>{{'home.announcements.text2' | translate}}</li>
+            <li>{{'home.announcements.text3' | translate}}</li>
+          </ul>
+          <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
         </div>
-        <a class="see" routerLink="/spotlights">{{'home.seeall' | translate}}</a>
+        <div class="spotlight">
+          <p class="baslıklar">{{'personels.spotlightName' | translate}}</p>
+          <div class="card" *ngIf="spotlights">
+            <img src="{{spotlights.pp}}" alt="name" width="100%" routerLink="/spotlights/{{(spotlights.name | lowercase) | notTurkish}}{{(spotlights.surname |lowercase)|notTurkish  }}">
+            <p class="baslıklar">{{spotlights.name}} {{spotlights.surname}}</p>
+            <p class="title">{{spotlights.title}}</p>
+          </div>
+          <a class="see" routerLink="/spotlights">{{'home.seeall' | translate}}</a>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-
+</div>

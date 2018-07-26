@@ -44,7 +44,6 @@
 }
 
 .loopBoxes {
-  border: 3px solid #9A1220;
   height: 10vw;
   margin-bottom: 1vw;
   overflow: auto;
@@ -53,6 +52,14 @@
   height: 10vw;
   width: 10vw;
   float: left;
+}
+
+.imgNews {
+  border: 3px solid #9A1220;
+}
+
+.caraouselDen {
+  border: 3px solid #9A1220;
 }
 
 .spotlight {
