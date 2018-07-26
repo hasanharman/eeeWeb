@@ -59,6 +59,10 @@
   margin-bottom: 1vw;
 }
 
+.row2 {
+  margin-top: 3vh;
+  float: left;
+}
 .spotlight a {
   margin-top: 1vw;
   display: block;
