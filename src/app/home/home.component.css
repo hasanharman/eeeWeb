@@ -1,25 +1,27 @@
 .column {
   float: left;
-  padding-top: 1vw !important; 
+  padding-top: 1vw !important;
   padding: 3vw;
 }
 
- .carText {
-  height:10vh ;
-  border:0!important;
-  padding:0.5vh 0 0 0 ;
-   margin:0 0 0 0;
-   left: 0;
-   float: left; 
-   margin-left: 0;
-   bottom: 0;  
-   background-color: rgba(0, 0, 0, 0.658)
- }
+.carText {
+  height: 10vh;
+  border: 0 !important;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  left: 0;
+  float: left;
+  margin-left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.658)
+}
+
 .left {
   width: 22vw;
   text-align: left;
   margin-left: 1.5vw;
 }
+
 .right {
   width: 22vw;
   text-align: left;
@@ -31,19 +33,29 @@
   text-align: center;
 }
 
- 
-.altmezun p,a {
-  line-height: 0.5vw;
-}
-
 .see {
   font-size: 0.9vw;
   color: darkblue;
   text-align: left !important;
 }
+
+.quickLinks {
+  text-align: left;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.img2 {
+  float: left;
+  border: 3px solid #9A1220;
+}
+
 .spotlight {
   margin-bottom: 1vw;
 }
+
 .spotlight a {
   margin-top: 1vw;
   display: block;
@@ -58,9 +70,11 @@ p.baslıklar {
 p {
   font-size: 1vw;
 }
+
 ul {
   list-style-type: circle;
 }
+
 li {
   font-size: 1vw;
   margin-left: -3vw;
@@ -68,7 +82,7 @@ li {
 
 .box {
   width: 4.9vw;
-   background: #9A1220;
+  background: #9A1220;
   margin-right: 5%;
   float: left;
   color: white;
@@ -78,15 +92,15 @@ li {
 .box p:first-child {
   font-size: 2.1vw;
 }
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 14vw;
   text-align: center;
   font-family: arial;
-    overflow: hidden;
-  
+  overflow: hidden;
 }
- 
+
 .title {
   color: grey;
   font-size: 1vw;
@@ -111,15 +125,18 @@ a {
   color: black;
 }
 
-button:hover, a:hover {
+button:hover,
+a:hover {
   opacity: 0.7;
 }
-@media (max-width: 1100px) and (min-width: 990px){
+
+@media (max-width: 1100px) and (min-width: 990px) {
   .see {
     font-size: 1vw;
   }
 }
-@media (max-width: 991px) and (min-width: 700px){
+
+@media (max-width: 991px) and (min-width: 700px) {
   .see {
     font-size: 1.2vw;
   }
@@ -141,67 +158,57 @@ button:hover, a:hover {
   p.baslıklar {
     font-size: 1.8vw;
   }
-  
   p {
     font-size: 1.2vw;
   }
-  
   li {
     font-size: 1.2vw;
   }
   .title {
     font-size: 1.2vw;
   }
-
 }
 
-@media (max-width: 800px) and (min-width: 700px){
+@media (max-width: 800px) and (min-width: 700px) {
   .see {
     font-size: 1.3vw;
   }
   p.baslıklar {
     font-size: 2vw;
   }
-  
   p {
     font-size: 1.4vw;
   }
-  
   li {
     font-size: 1.4vw;
   }
   .title {
     font-size: 1.4vw;
   }
-
 }
 
-@media (max-width: 699px){
+@media (max-width: 699px) {
   .see {
     font-size: 1.8vw;
   }
   .column {
     padding: 0vw;
   }
-
   .left {
     width: 94vw;
     margin: 3vw;
     float: left;
   }
-
   .right {
     width: 94vw;
     margin: 3vw;
     float: left;
   }
-
   .middle {
     width: 94vw;
     margin: 3vw;
     float: left;
   }
-
   .card {
     padding-top: 3vw;
     width: 94vw;
@@ -213,29 +220,23 @@ button:hover, a:hover {
     text-align: center;
     font-size: 4vw;
   }
-  
   p {
     font-size: 3.2vw;
   }
-
   li {
     font-size: 3.2vw;
   }
-
   .title {
     font-size: 3.2vw;
   }
-  
   a {
-    font-size:  3.2vw;
+    font-size: 3.2vw;
   }
-
   .box {
     width: 15vw;
-     padding: 2vw;
+    padding: 2vw;
   }
   .box p:first-child {
     font-size: 5vw;
   }
-
 }
