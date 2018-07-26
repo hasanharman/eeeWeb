@@ -4,6 +4,17 @@
   padding: 3vw;
 }
 
+ .carText {
+  height:10vh ;
+  border:0!important;
+  padding:0.5vh 0 0 0 ;
+   margin:0 0 0 0;
+   left: 0;
+   float: left; 
+   margin-left: 0;
+   bottom: 0;  
+   background-color: rgba(0, 0, 0, 0.658)
+ }
 .left {
   width: 22vw;
   text-align: left;
