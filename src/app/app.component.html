@@ -6,10 +6,10 @@
           </a>     
     </div>
     <div class="column middle">
-      <h1 class="title" routerLink='home'>{{ 'header.title' | translate}}</h1>
+      <h1 class="title" style="cursor: pointer;" routerLink='home'>{{ 'header.title' | translate}}</h1>
     </div>
     <div class="column right">
-      <img src="assets/image/header/iyteehm.png" alt="eeelogo" routerLink='home'>
+      <img src="assets/image/header/iyteehm.png" alt="eeelogo" routerLink='home' style="cursor: pointer;">
     </div>
   </div>
 
@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto multi-level">
           <li id="borderForm" class="nav-item active">
-            <a class="nav-link" routerLink="home">{{'navbar.home' | translate}}
+            <a class="nav-link" routerLink="home">{{'navbar.home' | translate}} 
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -32,11 +32,11 @@
               {{'navbar.about' | translate}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li class="dropdown-item" routerLink="abouteee">{{'navbar.abouteee.title' | translate}}</li>
+              <li class="dropdown-item" style="cursor: pointer;" routerLink="abouteee">{{'navbar.abouteee.title' | translate}}</li>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" routerLink="administration">{{'navbar.administration' | translate}}</a>
+              <a class="dropdown-item" style="cursor: pointer;" routerLink="administration">{{'navbar.administration' | translate}}</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" routerLink="contact">{{'navbar.contact' | translate}}</a>
+              <a class="dropdown-item" style="cursor: pointer;" routerLink="contact">{{'navbar.contact' | translate}}</a>
 
             </div>
           </li>
@@ -45,11 +45,11 @@
               {{'navbar.people' | translate}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" routerLink="faculty">{{'navbar.faculty' | translate}}</a>
+              <a class="dropdown-item" style="cursor: pointer;" routerLink="faculty">{{'navbar.faculty' | translate}}</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" routerLink='asistant'>{{'navbar.asistant' | translate}}</a>
+              <a class="dropdown-item" style="cursor: pointer;" routerLink='asistant'>{{'navbar.asistant' | translate}}</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" routerLink='staff'>{{'navbar.staff' | translate}}</a>
+              <a class="dropdown-item" style="cursor: pointer;" routerLink='staff'>{{'navbar.staff' | translate}}</a>
             </div>
           </li>
           <li id="borderForm" class="nav-item dropdown">

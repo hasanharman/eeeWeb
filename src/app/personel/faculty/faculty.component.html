@@ -54,13 +54,14 @@
     <h2 class="heading">{{'personels.facultyName' |translate}}</h2>
 <div class="container">
     <div class="row">
-        <div class="flip-container " *ngFor="let faculty of faculties | async" ontouchstart="this.classList.toggle('hover');">
-            <div class="flipper col">
+        <div class="flip-container " *ngFor="let faculty of faculties | async">
+            <div class="flipper col"
+            style="cursor: pointer;" routerLink="/faculty/{{(faculty.name | lowercase) |notTurkish}}{{(faculty.surname |lowercase)|notTurkish }}">
             <div class="front proCart">
                 <img src="{{faculty.pp}}" alt="{{faculty.name}}" width="150" height="200" style="margin-bottom:5px">
                 <p>{{faculty.name | titlecase }} {{faculty.surname | uppercase}}</p>
             </div>
-            <div class="back proCart">
+            <!-- <div class="back proCart">
                 <a class="icon-link round-corner facebook fill">
                     <i class="fab fa-facebook-square fa-3x"></i>
                 </a>
@@ -88,7 +89,7 @@
                 <a class="icon-link info">
                     <i style="cursor: pointer;" routerLink="/faculty/{{(faculty.name | lowercase) |notTurkish}}{{(faculty.surname |lowercase)|notTurkish }}" class="fas fa-info-circle fa-3x"></i>
                 </a>
-            </div>
+            </div> -->
         </div>
         </div>
     </div>
