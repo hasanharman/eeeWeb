@@ -44,7 +44,6 @@
 }
 
 .loopBoxes {
-  height: 10vw;
   margin-bottom: 1vw;
   overflow: auto;
 }
@@ -56,6 +55,10 @@
 
 .imgNews {
   border: 3px solid #9A1220;
+}
+.text2 {
+  float: left;
+  padding: 2vw 1vw 2vw 1vw;
 }
 
 .caraouselDen {
