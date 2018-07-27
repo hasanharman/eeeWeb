@@ -1,7 +1,5 @@
-.column {
-  float: left;
-  padding-top: 1vw !important;
-  padding: 3vw;
+.events {
+  margin-top: 1vw;
 }
 
 .carText {
@@ -16,23 +14,6 @@
   background-color: rgba(0, 0, 0, 0.658)
 }
 
-.left {
-  width: 22vw;
-  text-align: left;
-  margin-left: 1.5vw;
-}
-
-.right {
-  width: 22vw;
-  text-align: left;
-  margin-right: 1.5vw;
-}
-
-.middle {
-  width: 50vw;
-  text-align: center;
-}
-
 .see {
   font-size: 0.9vw;
   color: darkblue;
@@ -44,8 +25,11 @@
 }
 
 .loopBoxes {
-  margin-bottom: 1vw;
+  margin-top: 1vw;
   overflow: auto;
+}
+.newsimage{
+  max-width: 100%;
 }
 .picture {
   height: 10vw;
@@ -61,9 +45,6 @@
   padding: 2vw 1vw 2vw 1vw;
 }
 
-.caraouselDen {
-  border: 3px solid #9A1220;
-}
 
 .spotlight {
   margin-bottom: 1vw;
@@ -121,19 +102,6 @@ li {
 .title {
   color: grey;
   font-size: 1vw;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 0.28vw;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 0.7vw;
 }
 
 a {
