@@ -1,5 +1,11 @@
 .events {
-  margin-top: 1vw;
+  margin-top: 2vw;
+}
+.carousel-control-next-icon {
+  color: black!important;
+}
+.newsborder {
+  border: 0.5vw solid #d9d4c7;
 }
 
 .carText {
@@ -23,37 +29,43 @@
 .quickLinks {
   text-align: left;
 }
- 
+
 .loopBoxes {
   margin-top: 1vw;
   overflow: auto;
+  clear: both;
 }
-.newsimage{
+
+.newsimage {
   max-width: 100%;
 }
+
+.leftpart {
+  margin-top: 2vw;
+}
+
 .picture {
   height: 10vw;
   width: 10vw;
   float: left;
+  padding: 0 0 0 0!important;
 }
 
 .imgNews {
-  border: 3px solid #9A1220;
-}
-.text2 {
-  float: left;
-  padding: 2vw 1vw 2vw 1vw;
+  border: 0.5vw solid #d9d4c7;
 }
 
+.text2 {
+  float: left;
+}
 
 .spotlight {
   margin-bottom: 1vw;
 }
-
-.row2 {
-  margin-top: 3vh;
-  float: left;
+.badge {
+  background-color:#9A1220;
 }
+
 .spotlight a {
   margin-top: 1vw;
   display: block;
@@ -62,7 +74,9 @@
 }
 
 p.baslıklar {
-  font-size: 1.5vw;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: -1vw!important;
 }
 
 p {
@@ -76,19 +90,6 @@ ul {
 li {
   font-size: 1vw;
   margin-left: -3vw;
-}
-
-.box {
-  width: 4.9vw;
-  background: #9A1220;
-  margin-right: 5%;
-  float: left;
-  color: white;
-  text-align: center;
-}
-
-.box p:first-child {
-  font-size: 2.1vw;
 }
 
 .card {
