@@ -1,22 +1,20 @@
-.column {
+p.baslıklar {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    margin-bottom: -1vw !important;
+  }
+
+  .picture {
+    height: 25vw;
+    width: 35vw;
+    border: 0.5vw solid #d9d4c7;
     float: left;
-    padding: 3%;
-}
-.left {
-    width: 15%;
-    text-align: left; 
-}
-.middle {
-    width: 70%;
-    text-align: left;
+    padding: 0 0 0 0 !important;
+  }
 
-}
-.right {
-    width: 15%;
-    text-align: left;
-
-}
-
-.file {
-    float: left;
-}
+  .sub {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #9A1220;
+  }

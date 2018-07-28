@@ -58,8 +58,8 @@
             <div class="flipper col"
             style="cursor: pointer;" routerLink="/faculty/{{(faculty.name | lowercase) |notTurkish}}{{(faculty.surname |lowercase)|notTurkish }}">
             <div class="front proCart">
-                <img src="{{faculty.pp}}" alt="{{faculty.name}}" width="150" height="200" style="margin-bottom:5px">
-                <p>{{faculty.name | titlecase }} {{faculty.surname | uppercase}}</p>
+                <img src="{{faculty.pp}}" alt="{{faculty.name}}" width="100%" height="200" class="image">
+                <p>{{faculty.title}} {{faculty.name | titlecase }} {{faculty.surname | uppercase}}</p>
             </div>
             <!-- <div class="back proCart">
                 <a class="icon-link round-corner facebook fill">

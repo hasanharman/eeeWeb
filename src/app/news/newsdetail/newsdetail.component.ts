@@ -20,7 +20,7 @@ export class NewsdetailComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       
-      firebase.database().ref().child(this.starterLang).child('home').child('news').child(this.routerDirective)
+      firebase.database().ref().child(this.starterLang).child('home').child('newsRegular').child(this.routerDirective)
       .once('value',news => {
         console.log(news.val());
         
@@ -38,7 +38,7 @@ export class NewsdetailComponent implements OnInit {
       this.routerDirective = params['newsId'];
       console.log(this.routerDirective);
       
-      firebase.database().ref().child(this.starterLang).child('home').child('news').child(this.routerDirective)
+      firebase.database().ref().child(this.starterLang).child('home').child('newsRegular').child(this.routerDirective)
       .once('value',news => {
         console.log(news.val());
         

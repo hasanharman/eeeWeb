@@ -8,12 +8,16 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   font-family: arial;
-  border-radius: 2px;
-  padding: 5px;
+  border-radius: 5px;
   width: 160px;
   height: 260px;
   backface-visibility: hidden;
   position: absolute;
+}
+
+.image {
+  margin-bottom:5px;
+  border-radius: 5px 5px 0 0;
 }
 
 .flip-container {
