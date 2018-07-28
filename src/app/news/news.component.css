@@ -1,4 +1,4 @@
-.column {
+/* .column {
     float: left;
     padding: 3%;
 }
@@ -45,4 +45,37 @@
     height: 20vw;
     width: 50vw;
     background-color: #E6E6E6;
+} */
+
+.leftpart {
+  margin-top: 2vw;
+  margin-left: 10vw;
+}
+
+p.baslıklar {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: -1vw !important;
+}
+
+.loopBoxes {
+  border: 0.5vw solid #ebebeb;
+  margin-top: 1vw;
+  overflow: auto;
+  clear: both;
+}
+
+.picture {
+  height: 15vw;
+  width: 25vw;
+  float: left;
+  padding: 0 0 0 0 !important;
+}
+
+.imgNews {
+  border: 0.5vw solid #d9d4c7;
+}
+
+.text2 {
+  float: left;
 }
