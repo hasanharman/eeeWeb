@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as $ from 'jquery';
 import { TranslateService } from 'ng2-translate'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,6 +18,7 @@ export class AppComponent {
     let browserLang = translate.getBrowserLang(); // detech which lang. user is using
    // translate.use(browserLang.match(/en|tr/) ?  browserLang : "tr")
   }
+
   changeLanguage(lang) {
     if( lang == "tr") {
           this.translate.use("en");
