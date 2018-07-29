@@ -39,6 +39,7 @@ import { SpotlightsdetailComponent } from './spotlights/spotlightsdetail/spotlig
 import { Http } from '../../node_modules/@angular/http';
 import { AbouteeeComponent } from './about/abouteee/abouteee.component';
 import { NewsdetailComponent } from './news/newsdetail/newsdetail.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
   
@@ -68,6 +69,7 @@ const appRoutes: Routes = [
   { path: 'spotlights/:id', component: SpotlightsdetailComponent},
   { path: 'arastirmaalanlari', component: ArastirmaalanlariComponent},
   { path: 'lablar', component: LablarComponent},
+  { path: 'projects', component: ProjectsComponent},
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
   { path: 'contact', component: ContactComponent},
@@ -106,6 +108,7 @@ const appRoutes: Routes = [
     SpotlightsdetailComponent,
     AbouteeeComponent,
     NewsdetailComponent,
+    ProjectsComponent,
    ],
   imports: [
     BrowserModule,

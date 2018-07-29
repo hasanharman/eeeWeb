@@ -1,9 +1,9 @@
 <div class="ustmenu">
   <div class="header">
     <div class="column left">
-        <a href="http://www.iyte.edu.tr/" target="_blank">
-          <img src="assets/image/header/iyte.png" alt="iytelogo">
-          </a>     
+      <a href="http://www.iyte.edu.tr/" target="_blank">
+        <img src="assets/image/header/iyte.png" alt="iytelogo">
+      </a>
     </div>
     <div class="column middle">
       <h1 class="title" style="cursor: pointer;" routerLink='home'>{{ 'header.title' | translate}}</h1>
@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto multi-level">
           <li id="borderForm" class="nav-item active">
-            <a class="nav-link" routerLink="home">{{'navbar.home' | translate}} 
+            <a class="nav-link" routerLink="home">{{'navbar.home' | translate}}
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -59,13 +59,13 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li class="dropdown-submenu">
-                <a style="cursor: pointer" class="dropdown-item"> {{'navbar.projectsAndResearches' | translate}}</a>
+                <a style="cursor: pointer" class="dropdown-item"> {{'navbar.researchAreas' | translate}}</a>
                 <ul class="dropdown-menu">
                   <li class="dropdown-item">
-                    <a style="cursor: pointer" >{{'navbar.antenna' | translate}}</a>
+                    <a style="cursor: pointer">{{'navbar.antenna' | translate}}</a>
                   </li>
                   <li class="dropdown-item">
-                    <a style="cursor: pointer" > {{'navbar.circuit' | translate}}</a>
+                    <a style="cursor: pointer"> {{'navbar.circuit' | translate}}</a>
                   </li>
                   <li class="dropdown-item">
                     <a style="cursor: pointer"> {{'navbar.foton' | translate}}</a>
@@ -116,19 +116,19 @@
               </li>
               <div class="dropdown-divider"></div>
               <li class="dropdown-submenu">
-                <a style="cursor: pointer" class="dropdown-item">   Projeler </a>
-                <ul class="dropdown-menu">
+                <a style="cursor: pointer" class="dropdown-item" routerLink="projects">{{'navbar.projects.title' | translate}}</a>
+                <!-- <ul class="dropdown-menu">
                   <li class="dropdown-item">
                     <a style="cursor: pointer"> Ters Problemler ve Bilişsel Sistemleri</a>
                   </li>
                   <li class="dropdown-item">
-                    <a style="cursor: pointer">  MEMS & Nanoteknoloji</a>
+                    <a style="cursor: pointer"> MEMS & Nanoteknoloji</a>
                   </li>
                   <li class="dropdown-item">
-                    <a style="cursor: pointer">  Anten ve RF Araştırma Laboratuvarı</a>
+                    <a style="cursor: pointer"> Anten ve RF Araştırma Laboratuvarı</a>
                   </li>
                   <li class="dropdown-item">
-                    <a style="cursor: pointer">  Biyomedikal Bilgi İşleme Laboratuvarı (BIPLAB)</a>
+                    <a style="cursor: pointer"> Biyomedikal Bilgi İşleme Laboratuvarı (BIPLAB)</a>
                   </li>
                   <li class="dropdown-item">
                     <a style="cursor: pointer"> Hesaplamalı Elektromanyetik Lab</a>
@@ -137,7 +137,37 @@
                     <a style="cursor: pointer"> Gömülü Sistemler ve Elektronik Laboratuvarı</a>
                   </li>
                   <li class="dropdown-item">
-                    <a style="cursor: pointer">  Fotonik Araştırma Laboratuvarı</a>
+                    <a style="cursor: pointer"> Fotonik Araştırma Laboratuvarı</a>
+                  </li>
+                </ul> -->
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="dropdown-submenu">
+                <a style="cursor: pointer" class="dropdown-item"> {{'navbar.publications' | translate}}</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer">{{2017}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2016}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2015}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2014}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2013}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2012}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2011}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a style="cursor: pointer"> {{2010}}</a>
                   </li>
                 </ul>
               </li>
@@ -159,7 +189,7 @@
             </div>
           </li>
         </ul>
-        <button (click)="changeLanguage(lang)" class="lang" [ngStyle]="{'background-image': 'url(' + langToogleImg + ')'}" ></button>
+        <button (click)="changeLanguage(lang)" class="lang" [ngStyle]="{'background-image': 'url(' + langToogleImg + ')'}"></button>
         <form id="borderForm" class="form-inline my-2 my-lg-0 searchIt">
           <input class="form-control mr-sm-2 searchInput" placeholder="Bul" aria-label="Search">
           <button type="button" class="btn btn-default btn-sm" (click)="fonksiyon()">
