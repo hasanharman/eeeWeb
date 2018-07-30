@@ -6,8 +6,8 @@ p.baslıklar {
   }
 
   .picture {
-    height: 25vw;
-    width: 35vw;
+    height: auto  ;
+    width: 40vw;
     border: 0.5vw solid #d9d4c7;
     float: left;
     padding: 0 0 0 0 !important;
@@ -17,4 +17,15 @@ p.baslıklar {
     font-size: 1.5vw;
     font-weight: bold;
     color: #9A1220;
+  }
+
+  
+@media (max-width: 700px) and (min-width: 300px) {
+  .picture {
+    height: auto;
+    width: 90vw;
+    border: 0.5vw solid #d9d4c7;
+    float: left;
+    padding: 0 0 0 0 !important;
+  }
   }
