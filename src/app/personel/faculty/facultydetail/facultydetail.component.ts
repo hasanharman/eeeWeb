@@ -36,7 +36,7 @@ export class FacultydetailComponent implements OnInit {
             this.surname = element.surname;
             this.number = element.number;
             this.email = element.email;
-            this.webLink = element.webLink;
+            this.webLink = element.web;
             this.phd = element.phd;
             this.ms = element.ms;
             this.bs = element.bs;
