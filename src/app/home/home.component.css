@@ -1,6 +1,14 @@
 .events {
   margin-top: 2vw;
 }
+.newTitle {
+  font-size: 1.8vw;
+  padding-left: 1vw;
+}
+.newText {
+  font-size: 1vw;
+  padding-left: 1vw;
+}
 .carousel-control-next-icon {
   color: black!important;
 }

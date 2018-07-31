@@ -40,6 +40,7 @@ import { Http } from '../../node_modules/@angular/http';
 import { AbouteeeComponent } from './about/abouteee/abouteee.component';
 import { NewsdetailComponent } from './news/newsdetail/newsdetail.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { LongtextPipe } from './longtext.pipe';
 
 
   
@@ -109,6 +110,7 @@ const appRoutes: Routes = [
     AbouteeeComponent,
     NewsdetailComponent,
     ProjectsComponent,
+    LongtextPipe,
    ],
   imports: [
     BrowserModule,

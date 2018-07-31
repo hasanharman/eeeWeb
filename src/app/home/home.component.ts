@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     $(document).ready(function () {
-      $('.carousel-indicators').css({top:'2vh'})
+      $('.carousel-indicators').css({top:'2vh',height:'1vh'})
     });
   }
 
