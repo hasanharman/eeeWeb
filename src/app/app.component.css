@@ -13,15 +13,15 @@ background-size: 3vw;
 }
 
 img {
-  width: 40%;
-  height: 40%;
+  width: 45%;
+  height: auto;
 }
 .header {
  height: 10vw;
 }
 .column {
   float: left;
-  padding: 3%;
+  padding: 2%;
   text-align: center;
   font-family: 'PT Sans', sans-serif;
 }

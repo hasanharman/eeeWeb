@@ -4,13 +4,23 @@
       <div class="row">
         <div class="col-12">
           <ngb-carousel style="outline: none!important; " class='newsborder'>
+              <div class='carousel-inner'>
+                  <ng-template style="outline: none !important;" ngbSlide  >
+                    <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;"routerLink="/abouteee" src="https://i.hizliresim.com/MDDONM.jpg"  alt="about eee">
+                    <div class="carousel-caption text-left carText">
+                      <h3 class="newTitle">ABOUT EEE</h3>
+                      <p class="newText"></p>
+                    </div>
+                  </ng-template>
+                </div>
+
             <div class='carousel-inner'>
               <ng-template style="outline: none !important;" ngbSlide *ngFor="let new of news |async let i = index">
                 <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
                   alt="{{new.title}}">
                 <div class="carousel-caption text-left carText">
-                  <h3>{{new.title}}</h3>
-                  <p>{{new.text}}</p>
+                  <h3 class="newTitle">{{new.title | longtext}}</h3>
+                  <p class="newText">{{new.text}}</p>
                 </div>
               </ng-template>
             </div>
