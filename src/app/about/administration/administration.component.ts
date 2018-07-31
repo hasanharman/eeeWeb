@@ -12,8 +12,9 @@ starterLang = 'tr'
 headpp;
 headSurname; 
 headName;
-vice1name;vice1surname;vice1pp;
-vice2name;vice2surname;vice2pp;
+headTitle;
+vice1name;vice1surname;vice1pp;vice1Title;
+vice2name;vice2surname;vice2pp;vice2Title;
 
  constructor(afDB: AngularFireDatabase) { 
 
@@ -28,6 +29,9 @@ vice2name;vice2surname;vice2pp;
     this.headpp = faculty.child('person24').child('pp').val();
   })
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.headTitle = faculty.child('person24').child('title').val();
+  })
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
     this.vice1name = faculty.child('person25').child('name').val();
   })
 
@@ -39,6 +43,9 @@ vice2name;vice2surname;vice2pp;
     this.vice1pp = faculty.child('person25').child('pp').val();    
   })
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice1Title = faculty.child('person25').child('title').val();    
+  })
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
     this.vice2name = faculty.child('person29').child('name').val();
   })
 
@@ -48,6 +55,9 @@ vice2name;vice2surname;vice2pp;
 
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
     this.vice2pp = faculty.child('person29').child('pp').val();    
+  })
+  firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
+    this.vice2Title = faculty.child('person29').child('title').val();    
   })
   }
   

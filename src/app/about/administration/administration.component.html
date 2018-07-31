@@ -5,8 +5,8 @@
     style="cursor: pointer;" routerLink="/faculty/{{(headName | lowercase) |notTurkish}}{{(headSurname |lowercase)|notTurkish }}">
       <div class="flipper">
         <div class="front proCart">
-          <img src="{{headpp}}" width="150" height="200" style="margin-bottom:5px" />
-          <p>{{headName}} {{headSurname}}</p>
+          <img src="{{headpp}}" class="image" width="100%" height="200" style="margin-bottom:5px" />
+          <p>{{headTitle}} {{headName}} {{headSurname}}</p>
         </div>
       </div>
     </div>
@@ -22,8 +22,8 @@
       >
         <div class="flipper  text-center ">
           <div class="front proCart">
-            <img src="{{vice1pp}}" width="150" height="200" style="margin-bottom:5px">
-            <p>{{vice1name}} {{vice1surname}}</p>
+            <img class="image" src="{{vice1pp}}" width="100%" height="200" style="margin-bottom:5px">
+            <p>{{vice1Title}} {{vice1name}} {{vice1surname}}</p>
           </div>
         </div>
       </div>
@@ -35,8 +35,8 @@
         style="cursor: pointer;" routerLink="/faculty/{{(vice2name | lowercase) |notTurkish}}{{(vice2surname |lowercase)|notTurkish }}"
         >
           <div class="front proCart">
-            <img src="{{vice2pp}}" width="150" height="200" style="margin-bottom:5px">
-            <p>{{vice2name}} {{vice2surname}}</p>
+            <img src="{{vice2pp}}" class="image" width="100%" height="200" style="margin-bottom:5px">
+            <p>{{vice2Title}} {{vice2name}} {{vice2surname}}</p>
           </div>
         </div>
       </div>
