@@ -15,6 +15,30 @@
 .newsborder {
   border: 0.5vw solid #d9d4c7;
 }
+.alertIt {
+  color:red;
+  animation-name: alertAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes alertAnim {
+  0% {
+    color: rgb(49, 49, 49);
+    font-weight: 300;
+  }
+  50% {
+    color:rgb(221, 34, 34);
+    font-weight: 700;
+
+  }
+  100% {
+    color: rgb(49, 49, 49);
+    font-weight: 300;
+
+  }
+}
 
 .carText {
   height: 10vh;

@@ -12,10 +12,12 @@ import { TranslateService, LangChangeEvent } from '../../../node_modules/ng2-tra
 })
 export class HomeComponent implements OnInit {
   news;
+  newsRegular;
+
   eventText;
   eventTitle;
   facultyText;
-  annoText; annoText2; annoText3;
+  announcements;
   spotlights;
 
   starterLang = 'tr'
@@ -27,6 +29,8 @@ export class HomeComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
+      this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
 
       this.spotlights = afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
         let randomNumber = Math.floor(Math.random() * data.length)
@@ -38,6 +42,9 @@ export class HomeComponent implements OnInit {
     })
 
     this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
+    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
+    this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
+
     config.interval = 4000;
     config.wrap = true;
     config.keyboard = true;
@@ -57,19 +64,10 @@ export class HomeComponent implements OnInit {
       this.eventTitle = data.child('eventTitle').val();
     })
 
-    let announcementsRef = firebase.database().ref().child('home').child('announcements');
-    announcementsRef.once('value', data => {
-      this.annoText = data.child('text').val();
-    })
+    
 
-    announcementsRef.child('home').child('announcements');
-    announcementsRef.once('value', data => {
-      this.annoText2 = data.child('text2').val();
-    })
-    announcementsRef.child('home').child('announcements');
-    announcementsRef.once('value', data => {
-      this.annoText3 = data.child('text3').val();
-    })
+   
+    
   }
 
   ngOnInit() {
