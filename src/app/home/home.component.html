@@ -6,7 +6,7 @@
           <ngb-carousel style="outline: none!important; " class='newsborder'>
               <div class='carousel-inner'>
                   <ng-template style="outline: none !important;" ngbSlide  >
-                    <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/abouteee" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fabouteee.jpg?alt=media&token=23b0cc71-466b-4224-9cdf-3ae8ddadeff7"  alt="about eee">
+                    <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/abouteee" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fabouteee.jpg?alt=media&token=292aa7c9-62a0-4304-b63a-fd87a0be9fcd"  alt="about eee">
                     <div class="carousel-caption text-left carText">
                       <h3 class="newTitle">EEE Hakkında</h3>
                       <p class="newText">Bölüm Hakkında detaylı bilgi için tıklayınız.</p>
@@ -16,7 +16,7 @@
                 <div class='carousel-inner'>
                   <ng-template style="outline: none !important;" ngbSlide  >
                       <a href="http://www.iyte.edu.tr/Duyurular.aspx?m=23247" target="_blank" style="cursor: pointer;">
-                          <img class='newsimage' width="740vw" height="350vh" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fiytegate.jpg?alt=media&token=c77124ce-9b6e-4c52-9836-7c5342072947"  alt="about eee">        
+                          <img class='newsimage' width="740vw" height="350vh" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fiytegate.jpg?alt=media&token=7d4749ad-29da-43fa-8f2b-ef78ba2a03a6"  alt="about eee">        
                       </a>
                     <div class="carousel-caption text-left carText">
                       <h3 class="newTitle">İYTE Tanıtım Günleri</h3>
@@ -30,7 +30,7 @@
                 <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
                   alt="{{new.title}}">
                 <div class="carousel-caption text-left carText">
-                  <h3 class="newTitle">{{new.title | longtext}}</h3>
+                  <h3 class="newTitle">{{new.title | longtext:50}}</h3>
                   <p class="newText">{{new.text}}</p>
                 </div>
               </ng-template>
@@ -43,7 +43,7 @@
           <div class="leftpart">
             <p class="baslıklar">{{'home.newsHead' | translate}}</p>
             <div class="dropdown-divider"></div>
-            <div class="loopBoxes" *ngFor="let new of news |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
+            <div class="loopBoxes" *ngFor="let new of newsRegular |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
               <div *ngIf="i<3">
                 <div class="newBox">
                   <div class="col-md-4 picture">
@@ -112,9 +112,8 @@
         <p class="baslıklar">{{'home.annoTitle' | translate}}</p>
         <div class="dropdown-divider"></div>
         <ul>
-          <li>{{'home.announcements.text' | translate}}</li>
-          <li>{{'home.announcements.text2' | translate}}</li>
-          <li>{{'home.announcements.text3' | translate}}</li>
+          <li *ngFor="let anno of announcements | async;" [ngClass]="{ 'alertIt':anno.type == 3 }"> {{anno.title}}</li>
+          
         </ul>
         <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
       </div>

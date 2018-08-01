@@ -5,13 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class LongtextPipe implements PipeTransform {
 
-  transform(value: string, args?: any): any {
+  transform(value: string, args?: number): any {
     let newText:string = '';
     if(value) {
-      if(value.length >42) {
-        for(let i = 0 ; i< 41 ;i++) {
+    console.log(args,typeof(args));
+    
+      if(value.length >args) {
+        for(let i = 0 ; i< args-1 ;i++) {
           
-          if(i === 40) {
+          if(i === args-2) {
             newText+= '...'
             return newText;
           }
