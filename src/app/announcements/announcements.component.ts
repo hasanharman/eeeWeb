@@ -13,6 +13,8 @@ export class AnnouncementsComponent implements OnInit {
   announcements;
 
   constructor(private afDB: AngularFireDatabase, translateService: TranslateService) {
+    if(!translateService.currentLang)  this.starterLang = 'tr' ;
+    else this.starterLang = translateService.currentLang;
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
