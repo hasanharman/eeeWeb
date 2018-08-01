@@ -97,15 +97,14 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   font-family: arial;
-  border-radius: 2px;
-  padding: 5px;
+  border-radius: 5px;
   width: 160px;
-  height: 270px;
+  height: 250px;
   backface-visibility: hidden;
   position: absolute;
 }
 
-.front {
+/* .front {
 	z-index: 2;
 	transform: rotateY(0deg);
 }
@@ -113,7 +112,7 @@ img {
 .back {
   transform: rotateY(180deg);
   margin-left: -50px;
-}
+} */
 
 .flip-container {
   perspective: 1000;
@@ -125,7 +124,7 @@ img {
   width: 150px;
 	height: 260px;
 }
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+/* .flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateY(180deg);
 }
 
@@ -134,12 +133,16 @@ img {
 transition: 0.6s;
 transform-style: preserve-3d;
 position: relative;
+} */
+.image {
+  margin-bottom:5px;
+  border-radius: 5px 5px 0 0;
 }
 
 .icon-link {
   margin-right: 5px;
 }
-.twitter, github {
+/* .twitter, github {
   float: left;
 }
 
@@ -165,7 +168,7 @@ position: relative;
 .fa-pinterest-square {
   color: #b81621;
 
-}
+} */
 
 @media (max-width: 394px) {
 

@@ -82,9 +82,9 @@
 
 
 .icon-link {
-  margin-right: 5px;
+  margin-right: 2vw;
 }
-.twitter, github {
+/* .twitter, github {
   float: left;
 }
 
@@ -110,4 +110,4 @@
 .fa-pinterest-square {
   color: #b81621;
 
-}
+} */

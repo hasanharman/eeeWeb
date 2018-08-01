@@ -13,29 +13,30 @@
       <li>M.S. : {{ms}}</li>
       <li>B.S. : {{bs}}</li>
     </ul>
-    <div class="social  d-flex justify-content-center" >
-     
-        <a  href="{{webLink}}" class="icon-link round-corner twitter fill">
-            <i style="cursor: pointer" class="fas fa-globe fa-3x"></i>
-        </a>
-        
+    <div class="social  d-flex justify-content-center">
+      <a href="{{webLink}}" class="icon-link">
+        <i style="cursor: pointer" class="far fa-address-card fa-3x"></i>
+      </a>
+      <a href="{{webLink}}">
+        <i style="cursor: pointer" class="fas fa-globe fa-3x"></i>
+      </a>
     </div>
   </div>
 </div>
 
-  <div class="column right">
-    <p>İsteğe bağlı metin</p>
-    <div class="btn-group" role="group">
-      <button class="button button1" (click)='lessonFunction()'>
-        <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
-      <button class="button button1" (click)='researchFunction()'>
-        <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
-      <button class="button button1 son" (click)='publicationFunction()'>
-        <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
-    </div>
-
-    <li *ngFor="let lesson of lessons" class="lesson">{{lesson}}</li>
-    <li *ngFor="let research of researches" class="research">{{research}}</li>
-    <li *ngFor="let publication of publications" class="publication">{{publication}}</li>
-
+<div class="column right">
+  <p>İsteğe bağlı metin</p>
+  <div class="btn-group" role="group">
+    <button class="button button1" (click)='lessonFunction()'>
+      <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
+    <button class="button button1" (click)='researchFunction()'>
+      <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
+    <button class="button button1 son" (click)='publicationFunction()'>
+      <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
   </div>
+
+  <li *ngFor="let lesson of lessons" class="lesson">{{lesson}}</li>
+  <li *ngFor="let research of researches" class="research">{{research}}</li>
+  <li *ngFor="let publication of publications" class="publication">{{publication}}</li>
+
+</div>

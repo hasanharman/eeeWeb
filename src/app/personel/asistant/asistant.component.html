@@ -55,11 +55,11 @@
         <div class="row">
             <div class="flip-container " *ngFor="let asistant of asistants | async" ontouchstart="this.classList.toggle('hover');">
                 <div class="flipper col">
-                <div class="front proCart">
-                    <img src="{{asistant.pp}}" alt="{{asistant.name}} " width="150" height="200" style="margin-bottom:5px">
+                <div class="front proCart" style="cursor: pointer;" routerLink="/asistant/{{(asistant.name | lowercase) |notTurkish}}{{(asistant.surname |lowercase)|notTurkish }}">
+                    <img src="{{asistant.pp}}" alt="{{asistant.name}} " width="100%" height="200" class="image">
                     <p>{{asistant.name | titlecase}} {{asistant.surname | uppercase}}</p>
                 </div>
-                <div class="back proCart">
+                <!-- <div class="back proCart">
                     <a class="icon-link round-corner facebook fill">
                         <i class="fab fa-facebook-square fa-3x"></i>
                     </a>
@@ -87,7 +87,7 @@
                     <a class="icon-link">
                         <i style="cursor: pointer;" routerLink="/asistant/{{(asistant.name | lowercase) |notTurkish}}{{(asistant.surname |lowercase)|notTurkish }}" class="fas fa-info-circle fa-3x"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
             </div>
         </div>
