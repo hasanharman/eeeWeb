@@ -1,3 +1,4 @@
+import { AngularFireDatabase } from 'angularfire2/database';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
@@ -10,17 +11,20 @@ import * as firebase from 'firebase/app';
 export class PapersComponent implements OnInit {
     year;
   text;
-  constructor(private route: ActivatedRoute) { 
+  contents;
+  constructor(private route: ActivatedRoute,afDB: AngularFireDatabase) { 
     this.route.params.subscribe(params => {
       this.year = params;
     });
+    this.contents = afDB.list('/tr/personels/faculty').valueChanges();
+
 
   }
 
   ngOnInit() {
   }
 
-  write() {
+  /* write() {
     console.log(this.year.year);
     this.text=  $('.myInput').val();
     console.log(this.text);
@@ -43,5 +47,5 @@ firebase.database().ref().child('en').child('navbar').child('papers').child(this
       [newPath]: this.text
       })
            })
-  }
+  } */
 }

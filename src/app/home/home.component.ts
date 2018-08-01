@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
   starterLang = 'tr'
 
   constructor(afDB: AngularFireDatabase, config: NgbCarouselConfig, translateService: TranslateService) {
+    if(!translateService.currentLang)  this.starterLang = 'tr' ;
+    else this.starterLang = translateService.currentLang;
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;

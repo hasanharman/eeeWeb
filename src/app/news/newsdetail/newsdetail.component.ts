@@ -16,7 +16,10 @@ export class NewsdetailComponent implements OnInit {
   photoUrl:string;
   subtitle:string;
   constructor(private route: ActivatedRoute,translateService:TranslateService ) {
+    if(!translateService.currentLang)  this.starterLang = 'tr' ;
+    else this.starterLang = translateService.currentLang;
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+      
       console.log(event.lang);
       this.starterLang = event.lang;
       

@@ -16,6 +16,13 @@ export class NewsComponent implements OnInit {
   starterLang = 'tr'
  
   constructor(afDB: AngularFireDatabase, translateService:TranslateService ) {
+     
+    console.log(translateService.currentLang );
+    if(!translateService.currentLang)  this.starterLang = 'tr' ;
+    else this.starterLang = translateService.currentLang;
+
+    console.log(this.starterLang);
+    
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
