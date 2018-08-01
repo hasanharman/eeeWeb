@@ -9,13 +9,10 @@ import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-tra
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './about/contact/contact.component';
-import { ResearchesComponent } from './researches/researches.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
 import { ProjectLessonsComponent } from './project-lessons/project-lessons.component';
 import { AdminComponent } from './admin/admin.component';
-import { ArastirmaalanlariComponent } from './researches/arastirmaalanlari/arastirmaalanlari.component';
-import { LablarComponent } from './researches/lablar/lablar.component';
 import { AboutComponent } from './about/about.component';
 import { AdministrationComponent } from './about/administration/administration.component';
 import { PersonelComponent } from './personel/personel.component';
@@ -41,6 +38,7 @@ import { AbouteeeComponent } from './about/abouteee/abouteee.component';
 import { NewsdetailComponent } from './news/newsdetail/newsdetail.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LongtextPipe } from './longtext.pipe';
+import { PapersComponent } from './papers/papers.component';
 
 
   
@@ -68,8 +66,6 @@ const appRoutes: Routes = [
   { path: 'staff/:id', component: StaffdetailComponent},
   { path: 'spotlights', component: SpotlightsComponent},
   { path: 'spotlights/:id', component: SpotlightsdetailComponent},
-  { path: 'arastirmaalanlari', component: ArastirmaalanlariComponent},
-  { path: 'lablar', component: LablarComponent},
   { path: 'projects', component: ProjectsComponent},
   { path: 'internship', component: InternshipComponent},
   { path: 'projectLesson', component: ProjectLessonsComponent},
@@ -85,14 +81,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ResearchesComponent,
     ArticlesComponent,
     InternshipComponent,
     ProjectLessonsComponent,
     ContactComponent,
     AdminComponent,
-    ArastirmaalanlariComponent,
-    LablarComponent,
     NewsComponent,
     NotTurkishPipe,
     AboutComponent,
@@ -111,6 +104,7 @@ const appRoutes: Routes = [
     NewsdetailComponent,
     ProjectsComponent,
     LongtextPipe,
+    PapersComponent,
    ],
   imports: [
     BrowserModule,
