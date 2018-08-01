@@ -38,6 +38,7 @@
   text-align: left;
 }
 
+
 .loopBoxes {
   margin-top: 1vw;
   overflow: auto;
@@ -102,7 +103,7 @@ li {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 14vw;
+  width: 12vw;
   text-align: center;
   font-family: arial;
   overflow: hidden;
