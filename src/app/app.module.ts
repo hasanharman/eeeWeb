@@ -74,6 +74,7 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdminComponent},
   { path: 'news', component: NewsComponent},
   { path: 'newsdetail/:newsId', component: NewsdetailComponent},
+  { path: 'papers/:year', component: PapersComponent},
   { path: '**', redirectTo: 'home'}
 
 ];
