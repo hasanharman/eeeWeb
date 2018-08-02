@@ -5,14 +5,15 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p class="baslıklar">{{'navbar.projects.title' | translate}}</p>
+              <p class="baslıklar">{{'education.titleU' | translate}}</p>
               <div class="dropdown-divider"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <p class="divider"><b>{{'navbar.projects.project' | translate}}</b></p>
-              <p>{{'navbar.projects.owner' | translate}}</p>       
+              <p *ngFor="let item of collection |async" >  {{item}} </p> 
+              <a href="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/education%2FEg%CC%86itim-Plan%C4%B1-I%CC%87ngilizceECTS.pdf?alt=media&token=20d5b7ed-3f00-4feb-84ed-0723c6c9c8d2">{{'education.plan' | translate}}</a>      
             </div>
           </div>
         </div>
