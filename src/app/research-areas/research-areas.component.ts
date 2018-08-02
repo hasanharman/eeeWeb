@@ -111,4 +111,4 @@ export class ResearchAreasComponent implements OnInit {
     // })
 
   }
-}
+
