@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col-8">
       <div class="leftpart">
-        <p class="baslıklar">{{'home.newsHead' | translate}}</p>
+        <p class="basliklar">{{'home.newsHead' | translate}}</p>
         <div class="dropdown-divider"></div>
         <div class="loopBoxes" *ngFor="let new of news |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
           <div class="newBox">

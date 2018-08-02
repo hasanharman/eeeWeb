@@ -9,6 +9,7 @@ import { TranslateService, LangChangeEvent } from '../../../../node_modules/ng2-
 })
 export class UndergraduateComponent implements OnInit {
   starterLang = 'tr';
+  courseList = false;
   collection;
   constructor(private afDB: AngularFireDatabase, translateService: TranslateService) { 
     if(!translateService.currentLang)  this.starterLang = 'tr' ;

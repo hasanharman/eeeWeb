@@ -1,3 +1,4 @@
+import { TranslateService, LangChangeEvent } from 'ng2-translate';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -12,15 +13,33 @@ export class PapersComponent implements OnInit {
     year;
   text;
   contents;
-  constructor(private route: ActivatedRoute,afDB: AngularFireDatabase) { 
+  starterLang = 'tr'
+ 
+
+  constructor(afDB: AngularFireDatabase, translateService:TranslateService,private route: ActivatedRoute) {
+     
+    console.log(translateService.currentLang );
+    if(!translateService.currentLang)  this.starterLang = 'tr' ;
+    else this.starterLang = translateService.currentLang;
+
+    console.log(this.starterLang);
     this.route.params.subscribe(params => {
       this.year = params;
-    });
-    this.contents = afDB.list('/tr/personels/faculty').valueChanges();
+       this.contents = afDB.list(this.starterLang + '/navbar/papers/' + this.year.year).valueChanges();
+});
 
+    translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+      console.log(event.lang);
+      this.starterLang = event.lang;
+      this.contents = afDB.list(this.starterLang + '/navbar/papers/' + this.year.year).valueChanges();
+      
+   })
+   
+  };
 
+  getYear():string {
+    return '2017'
   }
-
   ngOnInit() {
   }
 

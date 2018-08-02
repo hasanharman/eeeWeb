@@ -15,6 +15,7 @@ export class NewsComponent implements OnInit {
   text;
   starterLang = 'tr'
  
+
   constructor(afDB: AngularFireDatabase, translateService:TranslateService ) {
      
     console.log(translateService.currentLang );
@@ -32,7 +33,6 @@ export class NewsComponent implements OnInit {
    this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
    
   };
-
   ngOnInit() {
   }
 

@@ -5,16 +5,39 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p class="baslıklar">{{'education.titleU' | translate}}</p>
+              <p class="basliklar">{{'education.titleU' | translate}}</p>
               <div class="dropdown-divider"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <p class="divider"><b>{{'navbar.projects.project' | translate}}</b></p>
-              <p *ngFor="let item of collection |async" >  {{item}} </p> 
-              <a href="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/education%2FEg%CC%86itim-Plan%C4%B1-I%CC%87ngilizceECTS.pdf?alt=media&token=20d5b7ed-3f00-4feb-84ed-0723c6c9c8d2">{{'education.plan' | translate}}</a>      
-            </div>
+               <p *ngFor="let item of collection |async" >  {{item}} </p> 
+               <a href="{{'education.planLink' | translate}}"><br>{{'education.plan' | translate}}</a>      
+               <a style=" color:#1588fa; cursor: pointer;"  data-toggle="modal" data-target="#exampleModalCenter" ><br>{{'education.courseList' | translate}}</a>      
+               <a href="{{'education.coursemLink' | translate}}"><br>{{'education.courseM' | translate}}</a>     
+               <br><br> 
+              </div>
           </div>
         </div>
-        
+
+
+ 
+<!-- Modal starts-->
+<div   class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{'education.courseList' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+ 
+        <img width="400" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/education%2Fehmlessons.png?alt=media&token=b6ef61c2-1db7-4dac-95b6-ad064adb7c46"/>
+      </div>
+      
+    </div>
+  </div>
+</div>
+        <!-- Modal Ends -->

@@ -20,6 +20,7 @@
   animation-name: alertAnim;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function:ease;
 
 }
 
@@ -27,17 +28,15 @@
   0% {
     color: rgb(49, 49, 49);
     font-weight: 300;
-  }
-  50% {
-    color:rgb(221, 34, 34);
-    font-weight: 700;
-
+    font-size: 1wv;
   }
   100% {
-    color: rgb(49, 49, 49);
-    font-weight: 300;
+    color:rgb(221, 34, 34);
+    font-weight: 700;
+    font-size: 1.5wv;
 
   }
+  
 }
 
 .carText {
@@ -106,7 +105,7 @@
   text-align: center;
 }
 
-p.baslıklar {
+p.basliklar {
   font-size: 2vw;
   font-weight: bold;
   margin-bottom: -1vw!important;
@@ -174,7 +173,7 @@ a:hover {
   .card {
     width: 22vw;
   }
-  p.baslıklar {
+  p.basliklar {
     font-size: 1.8vw;
   }
   p {
@@ -192,7 +191,7 @@ a:hover {
   .see {
     font-size: 1.3vw;
   }
-  p.baslıklar {
+  p.basliklar {
     font-size: 2vw;
   }
   p {
@@ -235,7 +234,7 @@ a:hover {
     padding-right: 15vw;
     margin-bottom: 3vw;
   }
-  p.baslıklar {
+  p.basliklar {
     text-align: center;
     font-size: 4vw;
   }

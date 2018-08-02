@@ -1,3 +1,15 @@
-<p>
-  graduate works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="basliklar"> {{'education.titleG' | translate}}</p><br>
+      <div class="dropdown-divider"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+       <p *ngFor="let item of collection |async" >  {{item}} </p> 
+        
+       <br><br> 
+      </div>
+  </div>
+</div>
