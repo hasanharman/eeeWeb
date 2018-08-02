@@ -1,0 +1,10 @@
+p.baslıklar {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: -1vw !important;
+    margin-top:2vw;
+  }
+
+.divider {
+    margin-top: 3vw;
+}
