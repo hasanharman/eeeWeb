@@ -1,15 +1,165 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p class="basliklar"> {{'education.titleG' | translate}}</p><br>
+      <p class="basliklar"> </p>
+      <br>
       <div class="dropdown-divider"></div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-       <p *ngFor="let item of collection |async" >  {{item}} </p> 
-        
-       <br><br> 
-      </div>
+      <h1> {{'education.titlePage' | translate}} </h1>
+      <p>
+        <b>{{'education.degrees' | translate}}</b>
+      </p>
+      <ul>
+        <li *ngFor="let item of collection |async"> {{item}} </li>
+      </ul>
+      <br>
+      <ul>
+        <li>
+          <a style=" color:#1588fa; cursor: pointer;" data-toggle="modal" data-target="#adm"> {{'education.admissionText' | translate}}</a>
+        </li>
+        <li>
+          <a  style=" color:#1588fa; cursor: pointer;" data-toggle="modal" data-target="#deg"> {{'education.degree' | translate}}</a>
+        </li>
+        <li>
+          <a  style=" color:#1588fa; cursor: pointer;" data-toggle="modal" data-target="#msc"> {{'education.msc' | translate}}</a>
+        </li>
+        <li>
+          <a  style=" color:#1588fa; cursor: pointer;" data-toggle="modal" data-target="#phd"> {{'education.phd' | translate}}</a>
+        </li>
+        <li>
+          <a  style=" color:#1588fa; cursor: pointer;" data-toggle="modal" data-target="#desc"> {{'education.desc' | translate}}</a>
+        </li>
+        <li>
+          <a  style=" color:#1588fa; cursor: pointer;" data-toggle="modal" data-target="#list"> {{'education.list' | translate}}</a>
+        </li>
+      </ul>
+
+      <br>
+      <br>
+    </div>
   </div>
 </div>
+
+<!--admission starts-->
+<div class="modal fade" id="adm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{'education.admissionText' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          {{'education.admissionDetails.title' | translate}}
+          {{'education.admissionDetails.text' | translate}}
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--admission ends-->
+
+<!--degree starts-->
+<div class="modal fade" id="deg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"> {{'education.degree' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--degree ends-->
+
+<!--msc starts-->
+<div class="modal fade" id="msc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{'education.msc' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--msc ends-->
+
+<!--phd starts-->
+<div class="modal fade" id="phd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{'education.phd' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--phd ends-->
+
+<!--desc starts-->
+<div class="modal fade" id="desc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{'education.desc' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--desc ends-->
+
+<!--list starts-->
+<div class="modal fade" id="list" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{'education.list' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          {{'education.list' | translate}}
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--list ends-->
