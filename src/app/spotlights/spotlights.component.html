@@ -1,21 +1,25 @@
 <div class="column left">
-    </div>
-    <div class="column middle">    
-        <!-- <input placeholder="username"  class="usernameF"/>  
+</div>
+<div class="column middle">
+  <!-- <input placeholder="username"  class="usernameF"/>  
     
         <input placeholder="name"  class="nameF"/>  
             <input placeholder="surname" class="surnameF"/>
             <input placeholder="pp"  class="ppF"/>
             <button (click)="addToFirebase()"> Firebaseye ekle!</button> -->
-    <div class="fakulty">
-        <h2 class="heading">{{'personels.spotlightName' |translate}}</h2>
-        <div *ngFor="let spotlight of spotlights | async" class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            <div class="flipper">
-                <div class="front">
-                    <img src="{{spotlight.pp}}" alt="{{spotlight.name}}" width="150" height="200">
-                    <p>{{spotlight.name | titlecase }} {{spotlight.surname | titlecase }}</p>
-                </div>
-                <div class="back">
+  <h2 class="heading">{{'personels.spotlightName' |translate}}</h2>
+  <div class="dropdown-divider"></div>
+  <div class="container">
+    <div class="row">
+      <div class="flip-container " *ngFor="let spotlight of spotlights | async">
+        <div class="flipper col" style="cursor: pointer;" routerLink="/spotlights/{{(spotlight.name | lowercase) | notTurkish}}{{(spotlight.surname |lowercase)|notTurkish }}">
+          <div class="front proCart">
+            <img src="{{spotlight.pp}}" alt="{{spotlight.name}}" width="100%" height="200" class="image">
+            <p style="height: inherit;">{{spotlight.name | titlecase }} {{spotlight.surname | titlecase }}</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="back">
                     <a class="icon-link round-corner facebook fill">
                         <i class="fab fa-facebook-square fa-3x"></i>
                     </a>
@@ -43,10 +47,9 @@
                     <a class="icon-link">
                         <i style="cursor: pointer;" routerLink="/spotlights/{{(spotlight.name | lowercase) | notTurkish}}{{(spotlight.surname |lowercase)|notTurkish }}" class="fas fa-info-circle fa-3x"></i>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="column right">   
-            
-        </div>
-    
+                </div> -->
+    </div>
+  </div>
+  <div class="column right">
+
+  </div>

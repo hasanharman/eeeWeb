@@ -12,9 +12,10 @@
     float: left;
     width: 30vw;
     text-align: left;
-    margin-top: -4vw;
+    margin-top: -3vw;
     margin-left: 5vw;
   }
+
   .icon {
     float: left;
     vertical-align: middle;
@@ -37,13 +38,12 @@
     overflow: hidden;
   }
   .social a {
-    width: 6vw;
+    width: auto;
     display: inline-block;
   }
-  .icons {
-    display: inline-block;
-    margin-top: 1vw;
-    margin-left: 1vw;
+
+  .icon-gap {
+    margin: 1vw!important;
   }
   
   .fa-facebook-square {
@@ -73,5 +73,20 @@
   .fa-pinterest-square {
     color: #b81621;
   }
+
+  @media (max-width: 980px) {
+    .icon {
+      font-size: 1vw;
+    }
+    .cardText {
+      font-size: 1.5vw;
+    }
+  }
+
   
-  
+  @media (max-width: 666px) {
+   
+    .card ul {
+      padding: 1vw;
+    }
+  }

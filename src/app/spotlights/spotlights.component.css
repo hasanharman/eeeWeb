@@ -12,18 +12,41 @@
 .right {
     width: 7.5%;
 }
-.asistant, .staff {
-  clear: left;
+.heading {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: -1vw!important;
 }
+
+.proCart {
+
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: arial;
+  border-radius: 5px;
+  width: 160px;
+  height: 250px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.image {
+  margin-bottom:5px;
+  border-radius: 5px 5px 0 0;
+}
+
 .flip-container {
-    perspective: 1000;
-    float: left;
-    margin-right: 40px;
-    margin-left: 0%;
-    margin-bottom: 30px;
-    margin-top: 30px;
+  perspective: 1000;
+  float: left;
+  margin-right: 40px;
+  margin-left: 0%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 150px;
+	height: 260px;
 }
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
+	/* .flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
 	}
 
@@ -37,9 +60,9 @@
 	transform-style: preserve-3d;
 
 	position: relative;
-}
+} */
 
-.front, .back {
+/* .front, .back {
 	backface-visibility: hidden;
     position: absolute;
 }
@@ -51,15 +74,12 @@
 
 .back {
 	transform: rotateY(180deg);
-}
-img {
-    border-radius: 5px;
-}
+} */
 
 .icon-link {
   margin-right: 5px;
 }
-.twitter, github {
+/* .twitter, github {
   float: left;
 }
 
@@ -85,4 +105,4 @@ img {
 .fa-pinterest-square {
   color: #b81621;
 
-}
+} */
