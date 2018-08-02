@@ -1,7 +1,22 @@
-<!-- <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Paper</span>
-  </div>
-  <input type="text" class="form-control myInput" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-</div>
-<button class="btn" (click)="write()" >Write!</button> -->
+<!-- 
+        <input placeholder="project" class="projectF"/>
+        <input placeholder="owner"  class="ownerF"/>
+        <button (click)="addToFirebase()"> Firebaseye ekle!</button> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="basliklar">{{'navbar.publications' | translate}}</p>
+              <div class="dropdown-divider"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <ul>
+                  <li style="list-style-type:circle;margin-bottom: 2vh" class="divider" *ngFor="let item of contents | async"> {{item}}</li>
+
+              </ul>
+          
+            </div>
+          </div>
+        </div>
+        
