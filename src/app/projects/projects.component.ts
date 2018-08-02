@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit {
 //     let owner = $('.ownerF').val();
 
 //     firebase.database().ref().child('tr').child('navbar').child('projects').update({
-//       project33: project,
+//       [project]: project,
 //       owner33: owner,
 //     })
 //     firebase.database().ref().child('en').child('navbar').child('projects').update({

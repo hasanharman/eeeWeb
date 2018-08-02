@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="leftpart">
+          <p class="basliklar">{{'navbar.events' | translate}}</p>
+          <div class="dropdown-divider"></div>
+          <div class="loopBoxes" *ngFor="let event of events |async let i = index" style="cursor: pointer;" routerLink="/eventdetail/{{event.eventName}}">
+            <div class="newBox">
+              <div class="col-md-4 picture">
+                <img class='imgNews' src="{{event.photo}}" width="100%" height="100%">
+              </div>
+              <div class="col-md-8 text2">
+                <h5>{{event.title}}</h5>
+                <p>{{event.text}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

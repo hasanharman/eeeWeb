@@ -11,7 +11,6 @@ import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-tra
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './about/contact/contact.component';
-import { ArticlesComponent } from './articles/articles.component';
 import { InternshipComponent } from './internship/internship.component';
 import { ProjectLessonsComponent } from './project-lessons/project-lessons.component';
 import { AdminComponent } from './admin/admin.component';
@@ -41,6 +40,10 @@ import { NewsdetailComponent } from './news/newsdetail/newsdetail.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LongtextPipe } from './longtext.pipe';
 import { PapersComponent } from './papers/papers.component';
+import { EventsComponent } from './events/events.component';
+import { EventDetailComponent } from './events/event-detail/event-detail.component';
+import { ResearchAreasComponent } from './research-areas/research-areas.component';
+import { ResearchLabsComponent } from './research-labs/research-labs.component';
 
 
   
@@ -79,6 +82,9 @@ const appRoutes: Routes = [
   { path: 'papers/:year', component: PapersComponent},
   { path: 'graduate', component: GraduateComponent},
   { path: 'undergraduate', component: UndergraduateComponent},
+  { path: 'events', component: EventsComponent},
+  { path: 'events/:Id', component: EventDetailComponent},
+  { path: 'area/:Id', component: ResearchAreasComponent},
   { path: '**', redirectTo: 'home'}
 
 ];
@@ -86,7 +92,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ArticlesComponent,
     InternshipComponent,
     ProjectLessonsComponent,
     ContactComponent,
@@ -112,6 +117,10 @@ const appRoutes: Routes = [
     PapersComponent,
     GraduateComponent,
     UndergraduateComponent,
+    EventsComponent,
+    EventDetailComponent,
+    ResearchAreasComponent,
+    ResearchLabsComponent,
    ],
   imports: [
     BrowserModule,

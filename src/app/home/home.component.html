@@ -4,26 +4,28 @@
       <div class="row">
         <div class="col-12">
           <ngb-carousel style="outline: none!important; " class='newsborder'>
-              <div class='carousel-inner'>
-                  <ng-template style="outline: none !important;" ngbSlide  >
-                    <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/abouteee" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fabouteee.jpg?alt=media&token=292aa7c9-62a0-4304-b63a-fd87a0be9fcd"  alt="about eee">
-                    <div class="carousel-caption text-left carText">
-                      <h3 class="newTitle">{{'navbar.abouteee.title' | translate}}</h3>
-                      <p class="newText">{{'navbar.abouteee.detail' | translate}}</p>
-                    </div>
-                  </ng-template>
+            <div class='carousel-inner'>
+              <ng-template style="outline: none !important;" ngbSlide>
+                <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/abouteee" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fabouteee.jpg?alt=media&token=292aa7c9-62a0-4304-b63a-fd87a0be9fcd"
+                  alt="about eee">
+                <div class="carousel-caption text-left carText">
+                  <h3 class="newTitle">{{'navbar.abouteee.title' | translate}}</h3>
+                  <p class="newText">{{'navbar.abouteee.detail' | translate}}</p>
                 </div>
-                <div class='carousel-inner'>
-                  <ng-template style="outline: none !important;" ngbSlide  >
-                      <a href="http://www.iyte.edu.tr/Duyurular.aspx?m=23247" target="_blank" style="cursor: pointer;">
-                          <img class='newsimage' width="740vw" height="350vh" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fiytegate.jpg?alt=media&token=7d4749ad-29da-43fa-8f2b-ef78ba2a03a6"  alt="about eee">        
-                      </a>
-                    <div class="carousel-caption text-left carText">
-                      <h3 class="newTitle">{{'home.newStatic.tanıtımTitle' | translate}}</h3>
-                      <p class="newText">{{'home.newStatic.tanıtımText' | translate}}</p>
-                    </div>
-                  </ng-template>
+              </ng-template>
+            </div>
+            <div class='carousel-inner'>
+              <ng-template style="outline: none !important;" ngbSlide>
+                <a href="http://www.iyte.edu.tr/Duyurular.aspx?m=23247" target="_blank" style="cursor: pointer;">
+                  <img class='newsimage' width="740vw" height="350vh" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fiytegate.jpg?alt=media&token=7d4749ad-29da-43fa-8f2b-ef78ba2a03a6"
+                    alt="about eee">
+                </a>
+                <div class="carousel-caption text-left carText">
+                  <h3 class="newTitle">{{'home.newStatic.tanıtımTitle' | translate}}</h3>
+                  <p class="newText">{{'home.newStatic.tanıtımText' | translate}}</p>
                 </div>
+              </ng-template>
+            </div>
 
             <div class='carousel-inner'>
               <ng-template style="outline: none !important;" ngbSlide *ngFor="let new of news |async let i = index">
@@ -37,7 +39,7 @@
             </div>
           </ngb-carousel>
         </div>
-      </div>  
+      </div>
       <div class="row">
         <div class="col-8">
           <div class="leftpart">
@@ -61,25 +63,27 @@
         </div>
         <div class="col-4">
           <div class="events">
-            <p class="basliklar">{{'home.eventHead' | translate}}</p>
+            <p class="basliklar">{{'navbar.events' | translate}}</p>
             <div class="dropdown-divider"></div>
             <div class="container">
-              <div class="row row-striped">
-                <div class="col-4 text-right">
-                  <h1 class="display-16">
-                    <span class="badge badge-secondary">2</span>
-                  </h1>
-                  <h5>AGU</h5>
-                </div>
-                <div class="col-8">
-                  <h6>
-                    <strong>{{'home.events.eventTitle' | translate}}</strong>
-                  </h6>
+              <div class="ev" *ngFor="let event of events | async">
+                <div class="row row-striped">
+                  <div class="col-4 text-right">
+                    <div class="display-16">
+                      <div style="display: inline-block;" class="eventDay">{{event.day}}</div>
+                    </div>
+                    <div style="display: inline-block;" class="eventMonth">{{event.month}}</div>
+                  </div>
+                  <div class="col-8">
+                    <div style="display: inline-block;">
+                      {{event.title}}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
+          <a class="see" routerLink="/events">{{'home.seeall' | translate}}</a>
         </div>
       </div>
     </div>
@@ -89,21 +93,29 @@
         <div class="dropdown-divider"></div>
         <div class='altmezun'>
           <a href="http://www.iyte.edu.tr/AltSayfa.aspx?m=52" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1.5vw;">{{'home.quickLinks.calender.title' | translate}}</p>
+            <p style="font-size:1.3vw;">{{'home.quickLinks.calender.title' | translate}}</p>
           </a>
           <hr class="style6">
-          <p routerLink='/internship' style="cursor: pointer; font-size:1.5vw;">{{'home.quickLinks.intern.title' | translate}}</p>
+          <p routerLink='/internship' style="cursor: pointer; font-size:1.3vw;">{{'home.quickLinks.intern.title' | translate}}</p>
           <hr class="style6">
-          <p routerLink='/projectLesson' style="cursor: pointer;font-size:1.5vw;">{{'home.quickLinks.projectL.title' | translate}}</p>
+          <p routerLink='/projectLesson' style="cursor: pointer;font-size:1.3vw;">{{'home.quickLinks.projectL.title' | translate}}</p>
           <hr class="style6">
           <a href="https://cms.iyte.edu.tr/login/index.php" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1.5vw;">
-              <img src='../assets/image/cms.jpg' width="25px" height='20px'> {{'home.quickLinks.cms.title' | translate}}</p>
+            <p style="font-size:1.3vw;">
+              <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fcms.jpg?alt=media&token=58a5bfd0-9de9-43a8-a611-a42613d4c320"
+                width="25px" height='20px'> {{'home.quickLinks.cms.title' | translate}}</p>
           </a>
           <hr class="style6">
           <a href="https://obs.iyte.edu.tr/oibs/ogrenci/login.aspx" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1.5vw;margin-bottom:5.5vw;">
-              <img src='../assets/image/obs.gif' width="20px" height='20px'> {{'home.quickLinks.obs.title' | translate}}</p>
+            <p style="font-size:1.3vw;">
+              <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fobs.gif?alt=media&token=9e47d79c-e71d-4662-b4ba-8938bc7ec759"
+                width="20px" height='20px'> {{'home.quickLinks.obs.title' | translate}}</p>
+          </a>
+          <hr class="style6">
+          <a href="http://ieee.iyte.edu.tr/" target="_blank" style="cursor: pointer;">
+            <p style="font-size:1.3vw;margin-bottom:3.3vw;">
+              <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fieee.png?alt=media&token=6f539926-a191-4135-929a-a983762243e2"
+                width="20px" height='20px'> {{'home.quickLinks.ieee.title' | translate}}</p>
           </a>
 
         </div>
@@ -113,7 +125,7 @@
         <div class="dropdown-divider"></div>
         <ul>
           <li *ngFor="let anno of announcements | async;" [ngClass]="{ 'alertIt':anno.type == 3 }"> {{anno.title}}</li>
-          
+
         </ul>
         <a class="see" routerLink="/announcements">{{'home.seeall' | translate}}</a>
       </div>

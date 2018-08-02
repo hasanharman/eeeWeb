@@ -94,9 +94,10 @@
 .spotlight {
   margin-bottom: 1vw;
 }
-.badge {
-  background-color:#9A1220;
+.eventDay {
+  color:#9A1220;
 }
+
 
 .spotlight a {
   margin-top: 1vw;

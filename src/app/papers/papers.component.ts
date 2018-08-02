@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./papers.component.css']
 })
 export class PapersComponent implements OnInit {
-    year;
+  year;
   text;
   contents;
   starterLang = 'tr'
