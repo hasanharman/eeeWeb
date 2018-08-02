@@ -1,3 +1,5 @@
+import { UndergraduateComponent } from './education/undergraduate/undergraduate.component';
+import { GraduateComponent } from './education/graduate/graduate.component';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -75,6 +77,8 @@ const appRoutes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'newsdetail/:newsId', component: NewsdetailComponent},
   { path: 'papers/:year', component: PapersComponent},
+  { path: 'graduate', component: GraduateComponent},
+  { path: 'undergraduate', component: UndergraduateComponent},
   { path: '**', redirectTo: 'home'}
 
 ];
@@ -106,6 +110,8 @@ const appRoutes: Routes = [
     ProjectsComponent,
     LongtextPipe,
     PapersComponent,
+    GraduateComponent,
+    UndergraduateComponent,
    ],
   imports: [
     BrowserModule,
