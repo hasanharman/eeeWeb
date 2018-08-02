@@ -9,15 +9,16 @@ import { TranslateService, LangChangeEvent } from '../../../../node_modules/ng2-
 })
 export class UndergraduateComponent implements OnInit {
   starterLang = 'tr';
-
+  collection;
   constructor(private afDB: AngularFireDatabase, translateService: TranslateService) { 
     if(!translateService.currentLang)  this.starterLang = 'tr' ;
     else this.starterLang = translateService.currentLang;
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
-
+      this.collection = afDB.list(this.starterLang + '/education/undergraduate').valueChanges();
     });
+    this.collection = afDB.list(this.starterLang + '/education/undergraduate').valueChanges();
 
   }
 
