@@ -84,6 +84,7 @@ const appRoutes: Routes = [
   { path: 'undergraduate', component: UndergraduateComponent},
   { path: 'events', component: EventsComponent},
   { path: 'events/:Id', component: EventDetailComponent},
+  { path: 'lab/:Id', component: ResearchLabsComponent},
   { path: 'area/:Id', component: ResearchAreasComponent},
   { path: '**', redirectTo: 'home'}
 
