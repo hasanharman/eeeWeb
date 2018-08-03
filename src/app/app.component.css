@@ -45,8 +45,11 @@ img {
 }
 
 .navbar {
-  background-color: #9A1220;
-}
+  /* background-color: #9A1220; */
+    background-color: #1f86c9;
+    /* background-color: #578A8D; */
+
+}   
 
 #borderForm {
   margin-left: 2vw;
