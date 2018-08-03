@@ -26,6 +26,22 @@ export class GraduateComponent implements OnInit {
    
 
   }
+ /*    copy() {
+    let myVal = $('.myInput').val().toString();
+    console.log(myVal);
+    firebase.database().ref().child('tr').child('navbar').child(myVal + 'Details').update({
+      academicsTitle:"Akademisyenler",
+      collabText:"Kolaboratörler",
+      projectsText:"Projeler",
+      title:"ANTEN & MİKRODALGA",
+      topicsText:"Başlıca Araştırma Konuları"
+    }) */
+   /*  firebase.database().ref().child('tr').child('navbar').child('antennaDetails').once('value',antenna => {
+      console.log(antenna);
+      
+      firebase.database().ref().child('tr').child('navbar').child(myVal + 'Details').update(antenna.val())
+    }) */
+/*   }  */
 
   ngOnInit() {
   }

@@ -10,27 +10,44 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./research-areas.component.css']
 })
 export class ResearchAreasComponent implements OnInit {
-  text;
-  text2;
-  text3;
-  text4;
-  text5;
-
+ title;
+academicsText;
+collabText;
+projectsText;
+researchesText;
+topicsText;
   contents;
   starterLang = 'tr'
   routerDirective;
 
+
+  academics;
+  searchers;
+  collab;
+  topics;
+  projects;
   constructor(afDB: AngularFireDatabase, translateService: TranslateService, private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       this.routerDirective = params['Id'] + 'Details';
-      //console.log(this.routerDirective,typeof(this.routerDirective));
-    })
+console.log(this.routerDirective);
+       this.academics = afDB.list(this.starterLang + '/navbar/'+ this.routerDirective + '/academics').valueChanges();
+       this.searchers = afDB.list(this.starterLang + '/navbar/'+ this.routerDirective + '/researches').valueChanges();
+       this.collab = afDB.list(this.starterLang + '/navbar/'+ this.routerDirective + '/collab').valueChanges();
+       this.topics = afDB.list(this.starterLang + '/navbar/'+ this.routerDirective + '/topics').valueChanges();
+       this.projects = afDB.list(this.starterLang + '/navbar/'+ this.routerDirective + '/projects').valueChanges();
+      })
     firebase.database().ref().child('tr').child('navbar').child(this.routerDirective).once('value', data => {
       console.log(data.child('title').val());
-
+      this.title = data.child('title').val();
+      this.academicsText = data.child('academicsTitle').val();
+      this.collabText = data.child('collabText').val();
+      this.projectsText = data.child('projectsText').val();
+      this.researchesText = data.child('researchersText').val();
+      this.topicsText = data.child('topicsText').val();
     })
   }
 
+   
   ngOnInit() {
 
   }
