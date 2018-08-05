@@ -20,8 +20,7 @@ export class AppComponent {
 
 
   
-   let x = require('fs')
-  }
+   }
 
   changeLanguage(lang) {
     if( lang == "tr") {
