@@ -12,6 +12,7 @@ export class GraduateComponent implements OnInit {
   starterLang = 'tr';
   collection;
   education;
+  admissions;
   constructor(private afDB: AngularFireDatabase, translateService: TranslateService) { 
     if(!translateService.currentLang)  this.starterLang = 'tr' ;
     else this.starterLang = translateService.currentLang;
@@ -23,8 +24,9 @@ export class GraduateComponent implements OnInit {
 
     });
     this.collection = afDB.list(this.starterLang + '/education/graduate').valueChanges();
-   
+    this.admissions = afDB.list(this.starterLang + '/education/admissionDetails/text').valueChanges();
 
+    
   }
  /*    copy() {
     let myVal = $('.myInput').val().toString();

@@ -56,8 +56,8 @@
       </div>
       <div class="modal-body">
 
-          {{'education.admissionDetails.title' | translate}}
-          {{'education.admissionDetails.text' | translate}}
+         <b>{{'education.admissionDetails.title' | translate}}</b> 
+         <p *ngFor="let text of admissions |async" > {{text}}</p>
       </div>
 
     </div>
