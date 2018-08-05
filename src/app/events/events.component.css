@@ -8,6 +8,10 @@
     font-weight: bold;
     margin-bottom: -1vw !important;
   }
+
+  p {
+    font-size: 0.8vw;
+  }
   
   .loopBoxes {
     border: 0.5vw solid #ebebeb;
