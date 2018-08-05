@@ -13,9 +13,11 @@ export class EventDetailComponent implements OnInit {
   starterLang = 'tr'
   routerDirective;
   title:string;
-  text:string;
-  photoUrl:string;
-  subtitle:string;
+  text1:string;
+  text2:string;
+  text3:string;
+  pp:string;
+  date:string;
 
   constructor(private route: ActivatedRoute,translateService:TranslateService ) {
     if(!translateService.currentLang)  this.starterLang = 'tr' ;
@@ -25,15 +27,15 @@ export class EventDetailComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       
-      firebase.database().ref().child(this.starterLang).child('home').child('events').child(this.routerDirective)
+      firebase.database().ref().child(this.starterLang).child('home').child('events').child('eventDetail').child(this.routerDirective)
       .once('value',news => {
-        console.log(news.val());
         
-        this.title = news.child('newsDetail').child('title').val(); 
-        this.text = news.child('newsDetail').child('text').val();
-        this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
-        this.subtitle = news.child('newsDetail').child('subtitle').val(); 
-        console.log(this.title);
+        this.title = news.child('eventDetail').child('title').val(); 
+        this.text1 = news.child('eventDetail').child('text1').val();
+        this.text2 = news.child('eventDetail').child('text1').val();
+        this.text3 = news.child('eventDetail').child('text1').val();
+        this.pp = news.child('eventDetail').child('pp').val(); 
+        this.date = news.child('eventDetail').child('date').val(); 
         
       })
 
@@ -45,13 +47,13 @@ export class EventDetailComponent implements OnInit {
       
       firebase.database().ref().child(this.starterLang).child('home').child('newsRegular').child(this.routerDirective)
       .once('value',news => {
-        console.log(news.val());
         
-        this.title = news.child('newsDetail').child('title').val(); 
-        this.text = news.child('newsDetail').child('text').val();
-        this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
-        this.subtitle = news.child('newsDetail').child('subtitle').val(); 
-        console.log(this.title);
+        this.title = news.child('eventDetail').child('title').val(); 
+        this.text1 = news.child('eventDetail').child('text1').val();
+        this.text2 = news.child('eventDetail').child('text1').val();
+        this.text3 = news.child('eventDetail').child('text1').val();
+        this.pp = news.child('eventDetail').child('pp').val(); 
+        this.date = news.child('eventDetail').child('date').val(); 
         
       })
     });

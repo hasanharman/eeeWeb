@@ -1,0 +1,31 @@
+p.basliklar {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    margin-bottom: -1vw !important;
+  }
+
+  .picture {
+    height: auto  ;
+    width: 40vw;
+    border: 0.5vw solid #d9d4c7;
+    float: left;
+    padding: 0 0 0 0 !important;
+  }
+
+  .sub {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #9A1220;
+  }
+
+  
+@media (max-width: 700px) and (min-width: 300px) {
+  .picture {
+    height: auto;
+    width: 90vw;
+    border: 0.5vw solid #d9d4c7;
+    float: left;
+    padding: 0 0 0 0 !important;
+  }
+  }
