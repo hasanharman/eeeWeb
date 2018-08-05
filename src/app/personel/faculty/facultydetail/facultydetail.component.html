@@ -3,15 +3,13 @@
   <p>{{title}}</p>
 
   <div class="card">
-    <img src="{{pp}}" style="width:100%">
+    <img src="{{pp}}"  class="cardImg">
     <ul>
-      <li>
-        <i class="fas fa-phone"></i> {{number}}</li>
-      <li>
-        <i class="far fa-envelope"></i> {{email}}</li>
-      <li>Ph.D. : {{phd}}</li>
-      <li>M.S. : {{ms}}</li>
-      <li>B.S. : {{bs}}</li>
+      <li class="info"><i class="fas fa-phone"></i> {{number}}</li>
+      <li class="info"> <i class="far fa-envelope"></i> {{email}}</li>
+      <li class="info"><b>Ph.D.</b> : {{phd}}</li>
+      <li class="info"><b>M.S.</b> : {{ms}}</li>
+      <li class="info"><b>B.S.</b> : {{bs}}</li>
     </ul>
     <div class="social  d-flex justify-content-center">
       <a href="{{webLink}}" class="icon-link">
@@ -26,13 +24,14 @@
 
 <div class="column right">
   <p>İsteğe bağlı metin</p>
-  <div class="btn-group" role="group">
-    <button class="button button1" (click)='lessonFunction()'>
-      <i class="fas fa-chalkboard fa-2x icon"></i>Açtığı Dersler</button>
-    <button class="button button1" (click)='researchFunction()'>
-      <i class="fas fa-flask fa-2x icon"></i>Araştırma Alanları</button>
-    <button class="button button1 son" (click)='publicationFunction()'>
-      <i class="fas fa-book fa-2x icon"></i>Yayınlar</button>
+  <div class="btn-group row" role="group">
+    
+    <button class="button button1 col-lg-3" (click)='lessonFunction()'>
+      <i style=" vertical-align: middle;" class="fas fa-chalkboard fa-2x icon"></i><span class="btn-text">Açtığı Dersler</span></button>
+    <button class="button button1  col-lg-3" (click)='researchFunction()'>
+      <i class="fas fa-flask fa-2x icon"></i><span class="btn-text">Araştırma Alanları</span></button>
+    <button class="button button1  col-lg-3" (click)='publicationFunction()'>
+      <i class="fas fa-book fa-2x icon"></i> <span class="btn-text">Yayınlar</span></button>
   </div>
 
   <li *ngFor="let lesson of lessons" class="lesson">{{lesson}}</li>

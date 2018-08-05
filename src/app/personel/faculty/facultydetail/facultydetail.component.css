@@ -1,14 +1,15 @@
 .column {
   padding: 3vw;
 }
+
 .right {
   float: right;
   width: 45vw;
   text-align: left;
   margin-right: 10vw;
   margin-top: 2vw;
-  
 }
+
 .left {
   float: left;
   width: 37vw;
@@ -16,6 +17,7 @@
   margin-top: -3vw;
   margin-left: 4vw;
 }
+
 .lesson {
   text-align: left;
   margin-top: 1.5vw;
@@ -33,10 +35,10 @@
   margin-top: 1.5vw;
   display: none;
 }
+.btn-group {
 
+}
 .button {
-  background-color: #9A1220;
-  border: none;
   color: white;
   padding: 16px 32px;
   text-align: center;
@@ -48,9 +50,16 @@
   /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  width: 40%;
-}
+  width: 15vw;
+  height: auto;
+  }
+ 
+  
+  i.fa {
+    line-height: 100%;
+  }
 
+  
 .button1 {
   background-color: white;
   color: black;
@@ -70,44 +79,46 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 25vw;
    margin-left: 0;
   text-align: left;
   font-family: arial;
+  width: 100%;
 }
-
+.cardImg {
+  width: 100%;
+}
 .card ul {
   list-style-type: none;
+  padding: 2vh;
 }
-
 
 .icon-link {
   margin-right: 2vw;
 }
-/* .twitter, github {
-  float: left;
+
+.info {
+  margin-top: 2vh;
 }
 
-.fa-facebook-square {
-  color: #3b5998;
-}
-.fa-twitter-square {
-  color: #00aced;
-}
-.fa-linkedin {
-  color: #007bb6;
+@media (max-width: 970px) {
+  .button {
+    font-size:1.4vw;
+  }
 }
 
-.fa-youtube-square {
-  color: #df1c31;
+@media (max-width: 680px) {
+  .info {
+    font-size: 2vw;
+  }
+  .card {
+    width: 100%;
+  }
 }
-.fa-reddit-square {
-  color: #8bbbe3;
+@media (max-width: 500px) {
+  .button {
+    font-size:2vw;
+  }
+  .btn-text {
+    display: none;
+  }
 }
-.fa-github-square {
-  color:#444;
-}
-.fa-pinterest-square {
-  color: #b81621;
-
-} */

@@ -52,7 +52,7 @@
 }
 
 .see {
-  font-size: 0.9vw;
+  font-size: 1.2vw;
   color: darkblue;
   text-align: left !important;
 }
@@ -151,13 +151,13 @@ a:hover {
 
 @media (max-width: 1100px) and (min-width: 990px) {
   .see {
-    font-size: 1vw;
+    font-size: 1.4vw;
   }
 }
 
 @media (max-width: 991px) and (min-width: 700px) {
   .see {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
   }
   .column {
     padding: 0.5vw;
@@ -190,7 +190,7 @@ a:hover {
 
 @media (max-width: 800px) and (min-width: 700px) {
   .see {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
   p.basliklar {
     font-size: 2vw;
@@ -208,7 +208,7 @@ a:hover {
 
 @media (max-width: 699px) {
   .see {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   .column {
     padding: 0vw;
