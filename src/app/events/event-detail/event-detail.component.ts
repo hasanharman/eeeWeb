@@ -27,33 +27,33 @@ export class EventDetailComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       
-      firebase.database().ref().child(this.starterLang).child('home').child('events').child('eventDetail').child(this.routerDirective)
-      .once('value',news => {
+      firebase.database().ref().child(this.starterLang).child('home').child('events').child(this.routerDirective).child('eventDetail')
+      .once('value',events => {
         
-        this.title = news.child('eventDetail').child('title').val(); 
-        this.text1 = news.child('eventDetail').child('text1').val();
-        this.text2 = news.child('eventDetail').child('text1').val();
-        this.text3 = news.child('eventDetail').child('text1').val();
-        this.pp = news.child('eventDetail').child('pp').val(); 
-        this.date = news.child('eventDetail').child('date').val(); 
+        this.title = events .child('title').val(); 
+        this.text1 = events.child('text1').val();
+        this.text2 = events.child('text1').val();
+        this.text3 = events .child('text1').val();
+        this.pp = events.child('pp').val(); 
+        this.date = events.child('date').val(); 
         
       })
 
     });
 
     this.route.params.subscribe(params => {
-      this.routerDirective = params['newsId'];
+      this.routerDirective = params['Id'];
       console.log(this.routerDirective);
       
-      firebase.database().ref().child(this.starterLang).child('home').child('newsRegular').child(this.routerDirective)
-      .once('value',news => {
+      firebase.database().ref().child(this.starterLang).child('home').child('events').child(this.routerDirective).child('eventDetail')
+      .once('value',events => {
         
-        this.title = news.child('eventDetail').child('title').val(); 
-        this.text1 = news.child('eventDetail').child('text1').val();
-        this.text2 = news.child('eventDetail').child('text1').val();
-        this.text3 = news.child('eventDetail').child('text1').val();
-        this.pp = news.child('eventDetail').child('pp').val(); 
-        this.date = news.child('eventDetail').child('date').val(); 
+        this.title = events.child('title').val(); 
+        this.text1 = events.child('text1').val();
+        this.text2 = events.child('text1').val();
+        this.text3 = events.child('text1').val();
+        this.pp = events.child('pp').val(); 
+        this.date = events.child('date').val(); 
         
       })
     });

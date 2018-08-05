@@ -4,7 +4,7 @@
         <div class="leftpart">
           <p class="basliklar">{{'navbar.events' | translate}}</p>
           <div class="dropdown-divider"></div>
-          <div class="loopBoxes" *ngFor="let event of events |async let i = index" style="cursor: pointer;" routerLink="/eventDetail/{{event.eventName}}">
+          <div class="loopBoxes" *ngFor="let event of events |async let i = index" style="cursor: pointer;" routerLink="/event/{{event.eventName}}">
             <div class="newBox">
               <div class="col-md-4 picture">
                 <img class='imgNews' src="{{event.pp}}" width="100%" height="100%">
