@@ -44,6 +44,7 @@ import { EventsComponent } from './events/events.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { ResearchAreasComponent } from './research-areas/research-areas.component';
 import { ResearchLabsComponent } from './research-labs/research-labs.component';
+import { TrimPipe } from './trim.pipe';
 
 
   
@@ -123,6 +124,7 @@ const appRoutes: Routes = [
     EventDetailComponent,
     ResearchAreasComponent,
     ResearchLabsComponent,
+    TrimPipe,
    ],
   imports: [
     BrowserModule,
