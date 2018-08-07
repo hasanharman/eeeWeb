@@ -9,6 +9,10 @@
   font-size: 1vw;
   padding-left: 1vw;
 }
+.ev {
+  margin-bottom: 1vh;
+ 
+}
 .carousel-control-next-icon {
   color: black!important;
 }
@@ -96,6 +100,12 @@
 }
 .eventDay {
   color:#9A1220;
+  font-size: 1.5vw;
+}
+.eventMonth {
+  color:#9A1220;
+  font-size: 1.5vw;
+
 }
 
 

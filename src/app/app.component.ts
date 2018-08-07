@@ -18,7 +18,6 @@ export class AppComponent {
     let browserLang = translate.getBrowserLang(); // detech which lang. user is using
    // translate.use(browserLang.match(/en|tr/) ?  browserLang : "tr")
 
-
   
    }
 

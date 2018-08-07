@@ -43,6 +43,9 @@ img {
 .menubar {
   clear: both;
 }
+.nav-link {
+  color:rgba(255, 255, 255, 0.767)!important;
+}
 
 .navbar {
   /* background-color: #9A1220; */
