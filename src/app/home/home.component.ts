@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
-      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
+      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges().map( (arr) => { return arr.reverse(); } );
       this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
-      this.events = afDB.list(this.starterLang + '/home/events').valueChanges();
+      this.events = afDB.list(this.starterLang + '/home/events').valueChanges().map( (arr) => { return arr.reverse(); } );
 
       this.spotlights = afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
         let randomNumber = Math.floor(Math.random() * data.length)
@@ -36,13 +36,14 @@ export class HomeComponent implements OnInit {
 
         this.spotlights = data[randomNumber];
       });
+     
 
     })
-
+  
     this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
-    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
+    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges().map( (arr) => { return arr.reverse(); } );
     this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
-    this.events = afDB.list(this.starterLang + '/home/events').valueChanges();
+    this.events = afDB.list(this.starterLang + '/home/events').valueChanges().map( (arr) => { return arr.reverse(); } );
 
     config.interval = 4000;
     config.wrap = true;

@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" style=" margin: 4vh 10vw 2vh 10vw">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
       <div class="row">
         <div class="col-12">
           <ngb-carousel style="outline: none!important; " class='newsborder'>
             <div class='carousel-inner'>
               <ng-template style="outline: none !important;" ngbSlide>
-                <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/abouteee" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fabouteee.jpg?alt=media&token=292aa7c9-62a0-4304-b63a-fd87a0be9fcd"
+                <img class='newsimage' width="820vw" height="350vh" style="cursor: pointer;" routerLink="/abouteee" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fabouteee.jpg?alt=media&token=292aa7c9-62a0-4304-b63a-fd87a0be9fcd"
                   alt="about eee">
                 <div class="carousel-caption text-left carText">
                   <h3 class="newTitle">{{'navbar.abouteee.title' | translate}}</h3>
@@ -17,7 +17,7 @@
             <div class='carousel-inner'>
               <ng-template style="outline: none !important;" ngbSlide>
                 <a href="http://www.iyte.edu.tr/Duyurular.aspx?m=23247" target="_blank" style="cursor: pointer;">
-                  <img class='newsimage' width="740vw" height="350vh" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fiytegate.jpg?alt=media&token=7d4749ad-29da-43fa-8f2b-ef78ba2a03a6"
+                  <img class='newsimage' width="820vw" height="350vh" src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/news%2Fiytegate.jpg?alt=media&token=7d4749ad-29da-43fa-8f2b-ef78ba2a03a6"
                     alt="about eee">
                 </a>
                 <div class="carousel-caption text-left carText">
@@ -29,7 +29,7 @@
 
             <div class='carousel-inner'>
               <ng-template style="outline: none !important;" ngbSlide *ngFor="let new of news |async let i = index">
-                <img class='newsimage' width="740vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
+                <img class='newsimage' width="820vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
                   alt="{{new.title}}">
                 <div class="carousel-caption text-left carText">
                   <h3 class="newTitle">{{new.title | longtext:50}}</h3>
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-8">
+        <div class="col-7">
           <div class="leftpart">
             <p class="basliklar">{{'home.newsHead' | translate}}</p>
             <div class="dropdown-divider"></div>
@@ -61,16 +61,16 @@
           </div>
           <a class="see" routerLink="/news">{{'home.seeall' | translate}}</a>
         </div>
-        <div class="col-4">
+        <div class="col-5">
           <div class="events">
             <p class="basliklar">{{'navbar.events' | translate}}</p>
             <div class="dropdown-divider"></div>
             <div class="container">
-              <div class="ev" *ngFor="let event of events | async">
+              <div routerLink="/event/{{event.eventName}}" class="ev" style="cursor: pointer;" *ngFor="let event of events | async">
                 <div class="row row-striped">
-                  <div class="col-4 text-right">
+                  <div class="col-4 text-center">
                     <div class="display-16">
-                      <div style="display: inline-block;" class="eventDay">{{event.day}}</div>
+                      <div style="display: inline-block " class="eventDay">{{event.day}}</div>
                     </div>
                     <div style="display: inline-block;" class="eventMonth">{{event.month}}</div>
                   </div>
@@ -87,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 right">
+    <div class="col-md-3 right">
       <div class="quickLinks">
         <p class="basliklar">{{'home.quickLinks.title' | translate}}</p>
         <div class="dropdown-divider"></div>
@@ -141,3 +141,4 @@
     </div>
 
   </div>
+</div>
