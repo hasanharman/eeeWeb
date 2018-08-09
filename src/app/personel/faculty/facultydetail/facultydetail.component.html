@@ -15,16 +15,19 @@
       <a href="{{cv}}" class="icon-link">
         <i style="cursor: pointer" class="far fa-address-card fa-3x"></i>
       </a>
-      <a href="{{webLink}}">
+      <a class="icon-link" href="{{webLink}}">
         <i style="cursor: pointer" class="fas fa-globe fa-3x"></i>
       </a>
+
+      <a *ngIf="name == 'Kıvılcım'" href="https://scholar.google.com/citations?user=rq9hCjsAAAAJ&hl=en">
+          <i style="cursor: pointer" class="fab fa-google-plus-square fa-3x"></i>
+        </a>
     </div>
   </div>
 </div>
 
 <div class="column right">
-  <p>İsteğe bağlı metin</p>
-  <div class="btn-group row" role="group">
+    <div class="btn-group row" role="group">
     
     <button class="button button1 col-lg-3" (click)='lessonFunction()'>
       <i style=" vertical-align: middle;" class="fas fa-chalkboard fa-2x icon"></i><span class="btn-text">Açtığı Dersler</span></button>

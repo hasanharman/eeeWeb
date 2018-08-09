@@ -1,67 +1,37 @@
-<div class="column left">
-</div>
-<div class="column middle">
-    <div class="Faculty News">
-        <h5>Editing Faculty News</h5>
-        <input placeholder="facultyText" class="facultyTextF" />
-        <button (click)="addToFacultyNews()">Ekle/Güncelle</button>
-      </div>
-    <div class="Announcements">
-        <h5>Editing Announcements</h5>
-        <input placeholder="annoText" class="annoTextF" />
-        <button (click)="addToAnnouncements()">Ekle/Güncelle</button>
-      </div>
-      <div class="Events">
-          <h5>Editing Events</h5>
-          <input placeholder="eventTitle" class="eventTitleF" />
-          <input placeholder="eventText" class="eventTextF" />
-          <button (click)="addToEvents()">Ekle/Güncelle</button>
-        </div>
-        <div class="NEWS">
-            <h5>Editing Main News</h5>
-            <input placeholder="newsnumber" class="newsnumberF" />
-            <input placeholder="newsTitle" class="newsTitleF" />
-            <input placeholder="newsText" class="newsTextF" />
-            <input placeholder="newsPhoto" class="newsPhotoF" />
-            <button (click)="addToNews()">Ekle/Güncelle</button>
+<body>
+  <div id="login" *ngIf="!logged">
+    <h3 class="text-center text-white pt-5">Login form</h3>
+    <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+          <div id="login-box" class="col-md-12">
+
+            <label for="password" class="text-info">Password:</label>
+            <br>
+            <input type="password" name="password" id="password" #password class="form-control">
+            <button (click)="login(password.value)">Login</button>
+
           </div>
-    <div class="Faculty">
-        <h5>Editing Spotlights Page</h5>
-        <input placeholder="username" class="usernameF" />
-        <input placeholder="email" class="emailF" />
-        <input placeholder="name" class="nameF" />
-        <input placeholder="pp" class="ppF" />
-        <input placeholder="socialMedias" class="socialMediasF" />
-        <input placeholder="surname" class="surnameF" />
-        <input placeholder="userId" class="userIdF" />
-        <input placeholder="text" class="textF" />
-
-        <button (click)="addToFaculty()">Ekle/Güncelle</button>
+        </div>
       </div>
-  <div class="Asistant">
-    <h5>Editing Asistant Page</h5>
-    <input placeholder="username" class="usernameF" />
-    <input placeholder="bs" class="bsF" />
-    <input placeholder="email" class="emailF" />
-    <input placeholder="ms" class="msF" />
-    <input placeholder="name" class="nameF" />
-    <input placeholder="pp" class="ppF" />
-    <input placeholder="socialMedias" class="socialMediasF" />
-    <input placeholder="surname" class="surnameF" />
-    <input placeholder="userId" class="userIdF" />
-
-    <button (click)="addToAsistant()">Ekle/Güncelle</button>
-    <button (click)="removeToAsistant()">Sil</button>
-  </div>
-  <div class="Staff">
-      <h5>Editing Staff Page</h5>
-      <input placeholder="username" class="usernameF" />
-      <input placeholder="name" class="nameF" />
-      <input placeholder="surname" class="surnameF" />
-      <input placeholder="pp" class="ppF" />
-      <button (click)="addToStaff()">Ekle/Güncelle</button>
-      <button (click)="removeToStaff()">Sil</button>
     </div>
-</div>
-<div class="column right">
-</div>
+  </div>
+
+  <div *ngIf="logged">
+    <h1 style="margin:6vw">
+      <u>HOME</u>
+
+      <section>
+      
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">link</span>
+                  </div>
+                  <input style="width: 20vw!important" type="text" aria-describedby="basic-addon1">
+                   <button class="btn">Add to Database!</button>
+                </div>
+                
+            </section>
+    </h1>
+  </div>
+</body>

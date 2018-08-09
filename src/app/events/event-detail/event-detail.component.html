@@ -7,15 +7,24 @@
   </div>
   <div class="row">
     <div class="col-md-5">
-        <img class="picture" src={{pp}}/>
-    </div>    
+      <img class="picture" src={{pp}}/>
+    </div>
     <div class="col-md-2"></div>
 
     <div class="col-md-5">
-        <p class="sub">{{date}}</p>
-        <p>{{text1}}</p>
-        <p>{{text2}}</p>
-        <p>{{text3}}</p>
+      <p>
+        <span style="font-weight: 600">{{'home.topic' | translate }}:</span> {{topic}}</p>
+      <p class="sub">{{date}}</p>
+      <p>
+        <span style="font-weight: 600">{{'home.venue' | translate }}:</span> {{venue}}</p>
+      <p>
+        <span style="font-weight: 600">{{'home.speaker' | translate }}:</span> {{speaker}}</p>
+
+      <p style="font-weight: 600;font-size: 3vw">{{'home.abstract' | translate }}</p>
+
+      <p>{{text1}}</p>
+      <p>{{text2}}</p>
+      <p>{{text3}}</p>
 
     </div>
   </div>
