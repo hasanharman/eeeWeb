@@ -4,12 +4,11 @@
 
 
 .lang {
-  border-radius: 50%;
-  height: 3vw;
-  width: 3vw;
-background-repeat: no-repeat;
-background-size: 3vw;
-
+  font-size: 2vw;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  margin-right:3vw;
 }
 
 img {
