@@ -19,6 +19,7 @@ export class FacultydetailComponent implements OnInit {
   cv;
   phd;
   ms;
+  ms2;
   bs;
   pp;
   title;
@@ -43,7 +44,9 @@ export class FacultydetailComponent implements OnInit {
             this.ms = element.ms;
             this.bs = element.bs;
             this.title = element.title;
-
+             if(this.name == "Mehmet Zübeyir") {
+               this.ms2 = element.ms2;
+             }
             this.lessons = Object.keys(element.lessons).map(function (key) {
               return [element.lessons[key]]
             });
@@ -59,6 +62,7 @@ export class FacultydetailComponent implements OnInit {
     });
   }
   ngOnInit() {
+    
   }
 
   lessonFunction() {
