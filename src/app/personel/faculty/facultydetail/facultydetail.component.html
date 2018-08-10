@@ -8,7 +8,8 @@
       <li class="info"><i class="fas fa-phone"></i> {{number}}</li>
       <li class="info"> <i class="far fa-envelope"></i> {{email}}</li>
       <li class="info"><b>Ph.D.</b> : {{phd}}</li>
-      <li class="info"><b>M.S.</b> : {{ms}}</li>
+      <li class="info" *ngIf="name != 'Enver'"><b>M.S.</b> : {{ms}}</li>
+      <li class="info" *ngIf="name == 'Mehmet Zübeyir'"><b>M.S.</b> : {{ms2}}</li>
       <li class="info"><b>B.S.</b> : {{bs}}</li>
     </ul>
     <div class="social  d-flex justify-content-center">
