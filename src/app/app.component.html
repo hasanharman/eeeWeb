@@ -189,13 +189,13 @@
             </div>
           </li>
         </ul>
-        <button (click)="changeLanguage(lang)" class="lang" [ngStyle]="{'background-image': 'url(' + langToogleImg + ')'}"></button>
-        <form id="borderForm" class="form-inline my-2 my-lg-0 searchIt">
+        <p (click)="changeLanguage(lang)" class="lang" style="cursor: pointer;">EN</p>
+        <!-- <form id="borderForm" class="form-inline my-2 my-lg-0 searchIt">
           <input class="form-control mr-sm-2 searchInput" placeholder="Bul" aria-label="Search">
           <button type="button" class="btn btn-default btn-sm" (click)="fonksiyon()">
             {{'navbar.find' | translate}}
           </button>
-        </form>
+        </form> -->
       </div>
     </nav>
   </div>

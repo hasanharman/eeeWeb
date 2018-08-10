@@ -1,4 +1,4 @@
-<div class="container" style=" margin: 4vh 10vw 2vh 10vw">
+<div class="container" style=" margin: 4vh 4vw 2vh 6vw">
   <div class="row">
     <div class="col-md-9">
       <div class="row">
@@ -32,8 +32,7 @@
                 <img class='newsimage' width="820vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
                   alt="{{new.title}}">
                 <div class="carousel-caption text-left carText">
-                  <h3 class="newTitle">{{new.title | longtext:50}}</h3>
-                  <p class="newText">{{new.text}}</p>
+                  <h3 class="newTitle">{{new.title }}</h3>
                 </div>
               </ng-template>
             </div>
@@ -65,21 +64,22 @@
           <div class="events">
             <p class="basliklar">{{'navbar.events' | translate}}</p>
             <div class="dropdown-divider"></div>
+
             <div class="container">
               <div routerLink="/event/{{event.eventName}}" class="ev" style="cursor: pointer;" *ngFor="let event of events | async">
                 <div class="row row-striped">
-                  <div class="col-4 text-center">
+                  <div class="col-2 text-center">
                     <div class="display-16">
-                      <div style="display: inline-block " class="eventDay">{{event.day}}</div>
+                      <div style="display: inline-block;" class="eventDay">{{event.day}} {{event.month}} {{event.year}}</div>
                     </div>
-                    <div style="display: inline-block;" class="eventMonth">{{event.month}}</div>
                   </div>
-                  <div class="col-8">
-                    <div style="display: inline-block;">
-                      {{event.title | longtext:28}}
+                  <div class="col-10">
+                    <div style="display:inline-block;font-weight:600;">
+                      {{event.title}}
                     </div>
                   </div>
                 </div>
+                <div class="dropdown-divider"></div>
               </div>
             </div>
           </div>
