@@ -1,6 +1,7 @@
  import { Component } from '@angular/core';
 import * as $ from 'jquery';
 import { TranslateService } from 'ng2-translate'
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ export class AppComponent {
     let browserLang = translate.getBrowserLang(); // detech which lang. user is using
    // translate.use(browserLang.match(/en|tr/) ?  browserLang : "tr")
 
-  
+    
    }
 
   changeLanguage(lang) {
