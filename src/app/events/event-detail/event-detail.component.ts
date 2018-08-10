@@ -18,6 +18,9 @@ export class EventDetailComponent implements OnInit {
   text3:string;
   pp:string;
   date:string;
+  topic:string;
+  venue:string;
+  speaker:string;
 
   constructor(private route: ActivatedRoute,translateService:TranslateService ) {
     if(!translateService.currentLang)  this.starterLang = 'tr' ;
@@ -36,6 +39,9 @@ export class EventDetailComponent implements OnInit {
         this.text3 = events .child('text1').val();
         this.pp = events.child('pp').val(); 
         this.date = events.child('date').val(); 
+        this.topic = events.child('topic').val(); 
+        this.venue = events.child('venue').val(); 
+        this.speaker = events.child('speaker').val(); 
         
       })
 
