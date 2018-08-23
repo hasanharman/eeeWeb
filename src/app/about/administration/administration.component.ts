@@ -20,16 +20,16 @@ vice2name;vice2surname;vice2pp;vice2Title;
 
 
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    this.headName = faculty.child('person1').child('name').val();
+    this.headName = faculty.child('person24').child('name').val();
   })
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    this.headSurname = faculty.child('person1').child('surname').val();
+    this.headSurname = faculty.child('person24').child('surname').val();
   })
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    this.headpp = faculty.child('person1').child('pp').val();
+    this.headpp = faculty.child('person24').child('pp').val();
   })
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
-    this.headTitle = faculty.child('person1').child('title').val();
+    this.headTitle = faculty.child('person24').child('title').val();
   })
   firebase.database().ref().child(this.starterLang).child('personels').child('faculty').once('value', faculty=> {
     this.vice1name = faculty.child('person25').child('name').val();
