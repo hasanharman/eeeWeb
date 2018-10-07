@@ -15,7 +15,7 @@ export class NewsComponent implements OnInit {
   starterLang = 'tr'
  
 
-  constructor(afDB: AngularFireDatabase, translateService:TranslateService ) {
+  constructor(private afDB: AngularFireDatabase, translateService:TranslateService ) {
      
     console.log(translateService.currentLang );
     if(!translateService.currentLang)  this.starterLang = 'tr' ;
@@ -27,12 +27,15 @@ export class NewsComponent implements OnInit {
       console.log(event.lang);
       this.starterLang = event.lang;
       this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
+      this.afDB.list(this.starterLang + '/home/newsRegular').valueChanges().subscribe((test)=> {
+        console.log(test)    });
       
    })
    this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
    
   };
   ngOnInit() {
+ 
   }
 
 }

@@ -69,8 +69,88 @@ export class AdminComponent implements OnInit {
         pp: $('#notification-photo-tr').val(),
         type: parseInt($('#notification-type').val().toString()),
         key: key
-      }) 
+      })
     })
+
+
+  }
+
+  news() {
+    let key;
+    const title_en = $('#news-title-en').val();
+    const title_tr = $('#news-title-tr').val();
+    const photo = $('#news-photo').val();
+    const text_en = $('#news-text-en').val();
+    const text_tr = $('#news-text-tr').val();
+    const subtitle_en = $('#news-subtitle-en').val();
+    const subtitle_tr = $('#news-subtitle-tr').val();
+    const detailedText_en = $('#news-detailedText-en').val();
+    const detailedText_tr = $('#news-detailedText-tr').val();
+    const addHome = $('#news-addHome').val();
+
+    // console.log(title_en,title_tr,photo_en,photo_tr,text_en,text_tr,subtitle_en,subtitle_tr,detailedText_en,detailedText_tr)
+
+
+    firebase.database().ref('/en/home/newsRegular/').push({
+      photo: photo,
+      text: text_en,
+      title: title_en
+    }).then((event) => {
+      key = event.key;
+      firebase.database().ref('/en/home/newsRegular/' + event.key).update({
+        newsName: key,
+        newsDetail: {
+          newsName: key,
+          photoUrl: photo,
+          subtitle: subtitle_en,
+          text: detailedText_en,
+          title: title_en
+        }
+      });
+    }).then(() => {
+      if (addHome == "add") {
+        firebase.database().ref('/en/home/news/' + key).update({
+          photo: photo,
+          text: text_en,
+          title: title_en,
+          newsName: key
+        })
+      }
+
+    }).then(() => { // Here comes the Turkish part
+      firebase.database().ref('/tr/home/newsRegular/' + key).update({
+        photo: photo,
+        text: text_tr,
+        title: title_tr
+      }).then(() => {
+        firebase.database().ref('/tr/home/newsRegular/' + key).update({
+          newsName: key,
+          newsDetail: {
+            newsName: key,
+            photoUrl: photo,
+            subtitle: subtitle_tr,
+            text: detailedText_tr,
+            title: title_tr
+          }
+        });
+      }).then(() => {
+        if (addHome == "add") {
+          firebase.database().ref('/tr/home/news/' + key).update({
+            photo: photo,
+            text: text_tr,
+            title: title_tr,
+            newsName: key
+          })
+        }
+
+      });
+    });
+
+
+
+
+
+
 
 
   }

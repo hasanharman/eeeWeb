@@ -125,14 +125,61 @@
                   <form>
   
                     <div class="form-group">
-                      <label for="notification-title-en">Title:</label>
-                      <input type="text" class="form-control" id="notification-title-en">
+                      <label for="news-title-en">Title:</label>
+                      <input type="text" class="form-control" id="news-title-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-title-tr">Başlık:</label>
+                      <input type="text" class="form-control" id="news-title-tr">
                     </div>
   
                     
   
+                    <div class="form-group">
+                      <label for="news-photo">Fotoğraf Url:</label>
+                      <input type="text" class="form-control" id="news-photo">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="news-text-en">Text:</label>
+                      <input type="text" class="form-control" id="news-text-en">
+                    </div>
   
-                    <button type="button" (click)="announcement()" class="btn btn-warning pushBtn">Add Announcement</button>
+                    <div class="form-group">
+                      <label for="news-text-tr">Metin:</label>
+                      <input type="text" class="form-control" id="news-text-tr">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="news-subtitle-en">Subtitle (will be shown on detail page):</label>
+                      <input type="text" class="form-control" id="news-subtitle-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-subtitle-tr">Altyazı (detay sayfasında gösterilecek):</label>
+                      <input type="text" class="form-control" id="news-subtitle-tr">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-detailedText-en">Detailed text:</label>
+                      <input type="text" class="form-control" id="news-detailedText-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-detailedText-tr">Detaylı metin:</label>
+                      <input type="text" class="form-control" id="news-detailedText-tr">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="news-addHome">Type:</label>
+                      <select class="custom-select" id="news-addHome">
+                        <option style="color:rgb(9, 255, 0);" value="add" selected>Add into home carousel</option>
+                        <option style="color:rgb(255, 217, 0);" value="dont_add">Do not add into home carousel</option>
+                        </select> </div>
+                     
+  
+                    <button type="button" (click)="news()" class="btn btn-warning pushBtn">Add News</button>
                   </form>
                 </div>
               </div>
