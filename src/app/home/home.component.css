@@ -9,9 +9,14 @@
   font-size: 1vw;
   padding-left: 1vw;
 }
+
 .ev {
   margin-bottom: 1vh;
- 
+}
+
+.secondLine{
+  display: flex;
+  flex-direction: row;
 }
 .carousel-control-next-icon {
   color: black!important;
@@ -66,7 +71,6 @@
   
 }
 
-
 .loopBoxes {
   margin-top: 1vw;
   overflow: auto;
@@ -108,8 +112,6 @@
   font-size: 1vw;
 
 }
-
-
 .spotlight a {
   margin-top: 1vw;
   display: block;
@@ -267,5 +269,50 @@ a:hover {
   }
   .box p:first-child {
     font-size: 5vw;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .leftpart {
+    width: 350px;
+  }
+  .newBox{
+   display:grid;
+   grid-template-columns: 2fr 2fr;
+  }
+  .picture{
+    height: 45vw;
+    width: 45vw;
+  }
+  .newText{
+    font-size: 3vw;
+  }
+  .newTitle {
+    font-size: 4vw;
+  }
+  h5{
+    font-size: 5vw;
+    font-weight: 400;
+  }
+  .linksText{
+    font-size: 4vw!important;
+  }
+  .card{
+    width: 300px;
+  }
+  .events {
+    width: 350px;
+  }
+  .eventDay {
+    font-size: 4vw;
+  }
+  .evMobile{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+  }
+  .secondLine
+  {
+    flex-direction: column;
   }
 }

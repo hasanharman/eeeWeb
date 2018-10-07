@@ -1,8 +1,6 @@
 .ustmenu {
   margin-bottom: 1vw;
 }
-
-
 .lang {
   font-size: 2vw;
   font-weight: 500;
@@ -123,3 +121,18 @@ a {
   border-radius: 6px 0 6px 6px;
 }
 
+@media (max-width: 400px) {
+  .header{
+    height: 10vh;
+  }
+  .iyteLogo{
+    width: 20vw;
+  }
+  .ehmLogo{
+    width: 20vw;
+  }
+  .middle h1 {
+    font-size: 5vw;
+  }
+
+}

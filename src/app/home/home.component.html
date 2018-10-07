@@ -1,4 +1,4 @@
-<div class="container" >
+<div class="container">
   <div class="row">
     <div class="col-md-9">
       <div class="row">
@@ -26,7 +26,7 @@
           </ngb-carousel>
         </div>
       </div>
-      <div class="row">
+      <div class="row secondLine">
         <div class="col-7">
           <div class="leftpart">
             <p class="basliklar">{{'home.newsHead' | translate}}</p>
@@ -51,10 +51,9 @@
           <div class="events">
             <p class="basliklar">{{'navbar.events' | translate}}</p>
             <div class="dropdown-divider"></div>
-
             <div class="container">
               <div routerLink="/event/{{event.eventName}}" class="ev" style="cursor: pointer;" *ngFor="let event of events | async">
-                <div class="row row-striped">
+                <div class="row row-striped evMobile">
                   <div class="col-2 text-center">
                     <div class="display-16">
                       <div style="display: inline-block;" class="eventDay">{{event.day}} {{event.month}} {{event.year}}</div>
@@ -80,27 +79,27 @@
         <div class="dropdown-divider"></div>
         <div class='altmezun'>
           <a href="http://www.iyte.edu.tr/AltSayfa.aspx?m=52" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1vw;">{{'home.quickLinks.calender.title' | translate}}</p>
+            <p class="linksText" style="font-size:1vw;">{{'home.quickLinks.calender.title' | translate}}</p>
           </a>
           <hr class="style6">
-          <p routerLink='/internship' style="cursor: pointer; font-size:1.3vw;">{{'home.quickLinks.intern.title' | translate}}</p>
+          <p class="linksText" routerLink='/internship' style="cursor: pointer; font-size:1.3vw;">{{'home.quickLinks.intern.title' | translate}}</p>
           <hr class="style6">
-          <p routerLink='/projectLesson' style="cursor: pointer;font-size:1.3vw;">{{'home.quickLinks.projectL.title' | translate}}</p>
+          <p class="linksText" routerLink='/projectLesson' style="cursor: pointer;font-size:1.3vw;">{{'home.quickLinks.projectL.title' | translate}}</p>
           <hr class="style6">
           <a href="https://cms.iyte.edu.tr/login/index.php" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1vw;">
+            <p class="linksText" style="font-size:1vw;">
               <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fcms.jpg?alt=media&token=58a5bfd0-9de9-43a8-a611-a42613d4c320"
                 width="25px" height='20px'> {{'home.quickLinks.cms.title' | translate}}</p>
           </a>
           <hr class="style6">
           <a href="https://obs.iyte.edu.tr/oibs/ogrenci/login.aspx" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1vw;">
+            <p class="linksText" style="font-size:1vw;">
               <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fobs.gif?alt=media&token=9e47d79c-e71d-4662-b4ba-8938bc7ec759"
                 width="20px" height='20px'> {{'home.quickLinks.obs.title' | translate}}</p>
           </a>
           <hr class="style6">
           <a href="http://ieee.iyte.edu.tr/" target="_blank" style="cursor: pointer;">
-            <p style="font-size:1vw;margin-bottom:3.3vw;">
+            <p class="linksText" style="font-size:1vw;margin-bottom:3.3vw;">
               <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fieee.png?alt=media&token=6f539926-a191-4135-929a-a983762243e2"
                 width="20px" height='20px'> {{'home.quickLinks.ieee.title' | translate}}</p>
           </a>
