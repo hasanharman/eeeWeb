@@ -1,33 +1,195 @@
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-            <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin">
-              <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputEmail">Email address</label>
-              </div>
-
-              <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword">Password</label>
-              </div>
-
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-              <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
-            </form>
-          </div>
+<section>
+  <!-- LOGIN PANEL -->
+  <div *ngIf="panel" class="container entrance">
+    <div class="row marginMid">
+      <div class="col-12 ">
+        <div class="row centerItems">
+          <p>ADMIN ENTRANCE</p>
         </div>
       </div>
     </div>
+
+    <div class="row centerItems marginMid">
+      <div class="col-6 ">
+        <div class="row ">
+          <input type="text" class="form-control mail" placeholder="Email">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row centerItems marginMid">
+      <div class="col-6 ">
+        <div class="row ">
+          <input type="text" class="form-control password" placeholder="Password">
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row centerItems marginMid">
+      <div class="col-6  ">
+        <div class="row centerItems">
+          <button type="button" (click)="login()" class="btn btn-warning">Login</button>
+
+        </div>
+      </div>
+    </div>
+
   </div>
-</body>
+</section> <!-- LOGIN PANEL ENDS -->
+
+<section>
+  <!-- ADMIN PANEL -->
+  <div *ngIf="!panel" class="container panel">
+    <div class="row centerItems">
+      <p class="panel-title"> Hello {{userName}} !</p>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn  btn-block" data-toggle="collapse" data-target="#notification" aria-expanded="true"
+                  aria-controls="notification">
+                  Home - Announcements
+                </button>
+              </h5>
+            </div>
+
+            <div id="notification" class="collapse show" aria-labelledby="notification" data-parent="#accordion">
+              <div class="card-body">
+                <form>
+
+                  <div class="form-group">
+                    <label for="notification-title-en">Title:</label>
+                    <input type="text" class="form-control" id="notification-title-en">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="notification-title-tr">Başlık:</label>
+                      <input type="text" class="form-control" id="notification-title-tr">
+                    </div>
+
+                  <div class="form-group">
+                    <label for="notification-text-en">Text:</label>
+                    <input type="text" class="form-control" id="notification-text-en">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="notification-text-tr">Metin:</label>
+                      <input type="text" class="form-control" id="notification-text-tr">
+                    </div>
+
+                  <div class="form-group">
+                    <label for="notification-photo-en">Photo:</label>
+                    <input type="text" class="form-control" id="notification-photo-en">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="notification-photo-tr">Fotoğraf:</label>
+                      <input type="text" class="form-control" id="notification-photo-tr">
+                    </div>
+
+                  <div class="form-group">
+                    <label for="notification-type">Type:</label>
+                    <select class="custom-select" id="notification-type">
+                      <option selected>Choose...</option>
+                      <option value="1">Event</option>
+                      <option value="2" style="color:red;">Red Alert Notification</option>
+                     </select> </div>
+
+                     
+
+
+                  <button type="button" (click)="announcement()" class="btn btn-warning pushBtn">Add Announcement</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#news" aria-expanded="true"
+                    aria-controls="news">
+                    Home - News
+                  </button>
+                </h5>
+              </div>
+  
+              <div id="news" class="collapse" aria-labelledby="news" data-parent="#accordion">
+                <div class="card-body">
+                  <form>
+  
+                    <div class="form-group">
+                      <label for="news-title-en">Title:</label>
+                      <input type="text" class="form-control" id="news-title-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-title-tr">Başlık:</label>
+                      <input type="text" class="form-control" id="news-title-tr">
+                    </div>
+  
+                    
+  
+                    <div class="form-group">
+                      <label for="news-photo">Fotoğraf Url:</label>
+                      <input type="text" class="form-control" id="news-photo">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="news-text-en">Text:</label>
+                      <input type="text" class="form-control" id="news-text-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-text-tr">Metin:</label>
+                      <input type="text" class="form-control" id="news-text-tr">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="news-subtitle-en">Subtitle (will be shown on detail page):</label>
+                      <input type="text" class="form-control" id="news-subtitle-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-subtitle-tr">Altyazı (detay sayfasında gösterilecek):</label>
+                      <input type="text" class="form-control" id="news-subtitle-tr">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-detailedText-en">Detailed text:</label>
+                      <input type="text" class="form-control" id="news-detailedText-en">
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="news-detailedText-tr">Detaylı metin:</label>
+                      <input type="text" class="form-control" id="news-detailedText-tr">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="news-addHome">Type:</label>
+                      <select class="custom-select" id="news-addHome">
+                        <option style="color:rgb(9, 255, 0);" value="add" selected>Add into home carousel</option>
+                        <option style="color:rgb(255, 217, 0);" value="dont_add">Do not add into home carousel</option>
+                        </select> </div>
+                     
+  
+                    <button type="button" (click)="news()" class="btn btn-warning pushBtn">Add News</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> <!-- ADMIN PANEL ENDS -->
