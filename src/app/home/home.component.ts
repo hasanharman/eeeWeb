@@ -20,15 +20,15 @@ export class HomeComponent implements OnInit {
   starterLang = 'tr'
 
   constructor(afDB: AngularFireDatabase, config: NgbCarouselConfig, translateService: TranslateService) {
-    if(!translateService.currentLang)  this.starterLang = 'tr' ;
+    if (!translateService.currentLang) this.starterLang = 'tr';
     else this.starterLang = translateService.currentLang;
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
-      this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
-      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges().map( (arr) => { return arr.reverse(); } );
-      this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
-      this.events = afDB.list(this.starterLang + '/home/events').valueChanges().map( (arr) => { return arr.reverse(); } );
+      this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges();
+      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges();
+      this.announcements = afDB.list(this.starterLang + '/announcements', ref => ref.orderByChild("time")).valueChanges();
+      this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time") ).valueChanges();
 
       this.spotlights = afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
         let randomNumber = Math.floor(Math.random() * data.length)
@@ -36,14 +36,14 @@ export class HomeComponent implements OnInit {
 
         this.spotlights = data[randomNumber];
       });
-     
+
 
     })
-  
-    this.news = afDB.list(this.starterLang + '/home/news').valueChanges();
-    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular').valueChanges().map( (arr) => { return arr.reverse(); } );
-    this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
-    this.events = afDB.list(this.starterLang + '/home/events').valueChanges().map( (arr) => { return arr.reverse(); } );
+
+    this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges();
+    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges();
+    this.announcements = afDB.list(this.starterLang + '/announcements', ref => ref.orderByChild("time")).valueChanges();
+    this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time") ).valueChanges();
 
     config.interval = 4000;
     config.wrap = true;
@@ -56,29 +56,29 @@ export class HomeComponent implements OnInit {
 
       this.spotlights = data[randomNumber];
     })
-    
 
-  
 
-    
 
-   
-    
+
+
+
+
+
   }
 
   ngOnInit() {
     $(document).ready(function () {
-      $('.carousel-indicators').css({top:'2vh',height:'1vh'})
+      $('.carousel-indicators').css({ top: '2vh', height: '1vh' })
     });
   }
 
- /*  copy() {
-    firebase.database().ref().child('tr').child('home').child('news').once('value', data => {
-      const myData = data.val();
-      firebase.database().ref().child('tr').child('home').child('newsRegular').update(myData)
-
-    })
-  } */
-
+  /*  copy() {
+     firebase.database().ref().child('tr').child('home').child('news').once('value', data => {
+       const myData = data.val();
+       firebase.database().ref().child('tr').child('home').child('newsRegular').update(myData)
  
+     })
+   } */
+
+
 }
