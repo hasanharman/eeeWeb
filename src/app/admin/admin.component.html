@@ -48,264 +48,401 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div id="accordion">
+        <div class="general">
+          <h3>General editing part</h3>
+          <div id="accordion">
+            <!-- HOME - ANNOUNCEMENTS START-->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#notification" aria-expanded="true"
+                    aria-controls="notification">
+                    Home - Announcements
+                  </button>
+                </h5>
+              </div>
 
-          <!-- HOME - ANNOUNCEMENTS START-->
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn  btn-block" data-toggle="collapse" data-target="#notification" aria-expanded="true"
-                  aria-controls="notification">
-                  Home - Announcements
-                </button>
-              </h5>
-            </div>
+              <div id="notification" class="collapse show" aria-labelledby="notification" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5>Türkçe</h5>
+                      <form>
+                        <div class="form-group turkish">
+                          <label for="notification-title-tr">Başlık:</label>
+                          <input type="text" class="form-control" id="notification-title-tr">
+                        </div>
 
-            <div id="notification" class="collapse show" aria-labelledby="notification" data-parent="#accordion">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h5>Türkçe</h5>
-                    <form>
-                      <div class="form-group turkish">
-                        <label for="notification-title-tr">Başlık:</label>
-                        <input type="text" class="form-control" id="notification-title-tr">
-                      </div>
+                        <div class="form-group">
+                          <label for="notification-text-tr">Metin:</label>
+                          <input type="text" class="form-control" id="notification-text-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="notification-photo-tr">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="notification-photo-tr">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>English</h5>
+                      <form>
+                        <div class="form-group">
+                          <label for="notification-title-en">Title:</label>
+                          <input type="text" class="form-control" id="notification-title-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="notification-text-en">Text:</label>
+                          <input type="text" class="form-control" id="notification-text-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="notification-photo-en">Photo:</label>
+                          <input type="text" class="form-control" id="notification-photo-en">
+                        </div>
 
-                      <div class="form-group">
-                        <label for="notification-text-tr">Metin:</label>
-                        <input type="text" class="form-control" id="notification-text-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="notification-photo-tr">Fotoğraf:</label>
-                        <input type="text" class="form-control" id="notification-photo-tr">
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <h5>English</h5>
-                    <form>
-                      <div class="form-group">
-                        <label for="notification-title-en">Title:</label>
-                        <input type="text" class="form-control" id="notification-title-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="notification-text-en">Text:</label>
-                        <input type="text" class="form-control" id="notification-text-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="notification-photo-en">Photo:</label>
-                        <input type="text" class="form-control" id="notification-photo-en">
-                      </div>
-
-                    </form>
-                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label for="notification-type">Type:</label>
+                      <select class="custom-select" id="notification-type">
+                        <option selected>Choose...</option>
+                        <option value="1">Event</option>
+                        <option value="2" style="color:red;">Red Alert Notification</option>
+                      </select> </div>
+                    <button type="button" (click)="announcement()" class="btn btn-warning pushBtn">Add Announcement</button>
+                  </form>
                 </div>
-                <form>
-                  <div class="form-group">
-                    <label for="notification-type">Type:</label>
-                    <select class="custom-select" id="notification-type">
-                      <option selected>Choose...</option>
-                      <option value="1">Event</option>
-                      <option value="2" style="color:red;">Red Alert Notification</option>
-                    </select> </div>
-                  <button type="button" (click)="announcement()" class="btn btn-warning pushBtn">Add Announcement</button>
-                </form>
               </div>
             </div>
-          </div>
-          <!-- HOME - ANNOUNCEMENTS ENDS-->
+            <!-- HOME - ANNOUNCEMENTS ENDS-->
 
-          <!-- HOME - NEWS START-->
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn  btn-block" data-toggle="collapse" data-target="#news" aria-expanded="true"
-                  aria-controls="news">
-                  Home - News
-                </button>
-              </h5>
-            </div>
+            <!-- HOME - NEWS START-->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#news" aria-expanded="true"
+                    aria-controls="news">
+                    Home - News
+                  </button>
+                </h5>
+              </div>
 
-            <div id="news" class="collapse" aria-labelledby="news" data-parent="#accordion">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h5>Türkçe</h5>
-                    <form>
-                      <div class="form-group">
-                        <label for="news-title-tr">Başlık:</label>
-                        <input type="text" class="form-control" id="news-title-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-photo">Fotoğraf Url:</label>
-                        <input type="text" class="form-control" id="news-photo">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-text-tr">Metin:</label>
-                        <input type="text" class="form-control" id="news-text-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-subtitle-tr">Altyazı (detay sayfasında gösterilecek):</label>
-                        <input type="text" class="form-control" id="news-subtitle-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-detailedText-tr">Detaylı metin:</label>
-                        <input type="text" class="form-control" id="news-detailedText-tr">
-                      </div>
-                    </form>
+              <div id="news" class="collapse" aria-labelledby="news" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5>Türkçe</h5>
+                      <form>
+                        <div class="form-group">
+                          <label for="news-title-tr">Başlık:</label>
+                          <input type="text" class="form-control" id="news-title-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo">Fotoğraf Url:</label>
+                          <input type="text" class="form-control" id="news-photo">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-text-tr">Metin:</label>
+                          <input type="text" class="form-control" id="news-text-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-subtitle-tr">Altyazı (detay sayfasında gösterilecek):</label>
+                          <input type="text" class="form-control" id="news-subtitle-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-detailedText-tr">Detaylı metin:</label>
+                          <input type="text" class="form-control" id="news-detailedText-tr">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>English</h5>
+                      <form>
+                        <div class="form-group">
+                          <label for="news-title-en">Title:</label>
+                          <input type="text" class="form-control" id="news-title-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo">Fotoğraf Url:</label>
+                          <input type="text" class="form-control" id="news-photo">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-text-en">Text:</label>
+                          <input type="text" class="form-control" id="news-text-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-subtitle-en">Subtitle (will be shown on detail page):</label>
+                          <input type="text" class="form-control" id="news-subtitle-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-detailedText-en">Detailed text:</label>
+                          <input type="text" class="form-control" id="news-detailedText-en">
+                        </div>
+                      </form>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <h5>English</h5>
-                    <form>
-                      <div class="form-group">
-                        <label for="news-title-en">Title:</label>
-                        <input type="text" class="form-control" id="news-title-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-photo">Fotoğraf Url:</label>
-                        <input type="text" class="form-control" id="news-photo">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-text-en">Text:</label>
-                        <input type="text" class="form-control" id="news-text-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-subtitle-en">Subtitle (will be shown on detail page):</label>
-                        <input type="text" class="form-control" id="news-subtitle-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="news-detailedText-en">Detailed text:</label>
-                        <input type="text" class="form-control" id="news-detailedText-en">
-                      </div>
-                    </form>
-                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label for="news-addHome">Type:</label>
+                      <select class="custom-select" id="news-addHome">
+                        <option style="color:rgb(9, 255, 0);" value="add" selected>Add into home carousel</option>
+                        <option style="color:rgb(255, 217, 0);" value="dont_add">Do not add into home carousel</option>
+                      </select> </div>
+
+
+                    <button type="button" (click)="news()" class="btn btn-warning pushBtn">Add News</button>
+                  </form>
                 </div>
-                <form>
-                  <div class="form-group">
-                    <label for="news-addHome">Type:</label>
-                    <select class="custom-select" id="news-addHome">
-                      <option style="color:rgb(9, 255, 0);" value="add" selected>Add into home carousel</option>
-                      <option style="color:rgb(255, 217, 0);" value="dont_add">Do not add into home carousel</option>
-                    </select> </div>
-
-
-                  <button type="button" (click)="news()" class="btn btn-warning pushBtn">Add News</button>
-                </form>
               </div>
             </div>
-          </div>
-          <!-- HOME - ANNOUNCEMENTS ENDS-->
+            <!-- HOME - ANNOUNCEMENTS ENDS-->
 
-          <!-- HOME - EVENTS START-->
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn  btn-block" data-toggle="collapse" data-target="#events" aria-expanded="true"
-                  aria-controls="events">
-                  Home - Events
-                </button>
-              </h5>
-            </div>
-            <div id="events" class="collapse" aria-labelledby="events" data-parent="#accordion">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h5>Türkçe</h5>
-                    <form>
-                      <div class="form-group">
-                        <label for="events-title-tr">Başlık:</label>
-                        <input type="text" class="form-control" id="events-title-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-topic-tr">Konu:</label>
-                        <input type="text" class="form-control" id="events-topic-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-date-tr">Tarih:</label>
-                        <input type="date" class="form-control" id="events-date-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-speaker">Konuşmacı:</label>
-                        <input type="text" class="form-control" id="events-speaker">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-events-tr">Yer:</label>
-                        <input type="text" class="form-control" id="events-events-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-photo">Fotoğraf:</label>
-                        <input type="text" class="form-control" id="events-photo">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-text1-tr">Metin1:</label>
-                        <input type="text" class="form-control" id="events-text1-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-text2-tr">Metin2:</label>
-                        <input type="text" class="form-control" id="events-text2-tr">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-text3-tr">Metin3:</label>
-                        <input type="text" class="form-control" id="events-text3-tr">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col-md-6">
-                    <h5>English</h5>
-                    <form>
-                      <div class="form-group">
-                        <label for="events-title-en">Title:</label>
-                        <input type="text" class="form-control" id="events-title-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-topic-en">Topic:</label>
-                        <input type="text" class="form-control" id="events-topic-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-date-en">Date:</label>
-                        <input type="date" class="form-control" id="events-date-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-speaker">Speaker:</label>
-                        <input type="text" class="form-control" id="events-speaker">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-events-en">Place:</label>
-                        <input type="text" class="form-control" id="events-events-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-photo-en">Photo:</label>
-                        <input type="text" class="form-control" id="events-photo-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-text1-en">Text1:</label>
-                        <input type="text" class="form-control" id="events-text1-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-text2-en">Text2:</label>
-                        <input type="text" class="form-control" id="events-text2-en">
-                      </div>
-                      <div class="form-group">
-                        <label for="events-text3-en">Text3:</label>
-                        <input type="text" class="form-control" id="events-text3-en">
-                      </div>
+            <!-- HOME - EVENTS START-->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#events" aria-expanded="true"
+                    aria-controls="events">
+                    Home - Events
+                  </button>
+                </h5>
+              </div>
+              <div id="events" class="collapse" aria-labelledby="events" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5>Türkçe</h5>
+                      <form>
+                        <div class="form-group">
+                          <label for="events-title-tr">Başlık:</label>
+                          <input type="text" class="form-control" id="events-title-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-topic-tr">Konu:</label>
+                          <input type="text" class="form-control" id="events-topic-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-date-tr">Tarih:</label>
+                          <input type="date" class="form-control" id="events-date-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-speaker">Konuşmacı:</label>
+                          <input type="text" class="form-control" id="events-speaker">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-events-tr">Yer:</label>
+                          <input type="text" class="form-control" id="events-events-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-photo">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="events-photo">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-text1-tr">Metin1:</label>
+                          <input type="text" class="form-control" id="events-text1-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-text2-tr">Metin2:</label>
+                          <input type="text" class="form-control" id="events-text2-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-text3-tr">Metin3:</label>
+                          <input type="text" class="form-control" id="events-text3-tr">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>English</h5>
+                      <form>
+                        <div class="form-group">
+                          <label for="events-title-en">Title:</label>
+                          <input type="text" class="form-control" id="events-title-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-topic-en">Topic:</label>
+                          <input type="text" class="form-control" id="events-topic-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-date-en">Date:</label>
+                          <input type="date" class="form-control" id="events-date-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-speaker">Speaker:</label>
+                          <input type="text" class="form-control" id="events-speaker">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-events-en">Place:</label>
+                          <input type="text" class="form-control" id="events-events-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-photo-en">Photo:</label>
+                          <input type="text" class="form-control" id="events-photo-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-text1-en">Text1:</label>
+                          <input type="text" class="form-control" id="events-text1-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-text2-en">Text2:</label>
+                          <input type="text" class="form-control" id="events-text2-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-text3-en">Text3:</label>
+                          <input type="text" class="form-control" id="events-text3-en">
+                        </div>
 
-                    </form>
+                      </form>
+                    </div>
                   </div>
+                  <form>
+
+                    <button type="button" (click)="events()" class="btn btn-warning pushBtn">Add Event</button>
+                  </form>
                 </div>
-                <form>
-
-                  <button type="button" (click)="events()" class="btn btn-warning pushBtn">Add Event</button>
-                </form>
               </div>
             </div>
+            <!-- HOME - EVENTS ENDS-->
           </div>
-          <!-- HOME - EVENTS ENDS-->
-
         </div>
       </div>
-
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="personal">
+          <h3>Personal editing part</h3>
+          <div id="accordion">
+            <!-- FACULTY -  GENERAL SETTINGS-->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#faculty" aria-expanded="true"
+                    aria-controls="faculty">
+                    You can edit your personal details
+                  </button>
+                </h5>
+              </div>
+              <div id="faculty" class="collapse show" aria-labelledby="faculty" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5>Türkçe</h5>
+                      <form>
+                        <div class="form-group turkish">
+                          <label for="faculty-title-tr">Unvan:</label>
+                          <input type="text" class="form-control" id="faculty-title-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-phone-tr">Telefon Numarası:</label>
+                          <input type="text" class="form-control" id="faculty-phone-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-photo-tr">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="faculty-photo-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-cv-tr">CV:</label>
+                          <input type="text" class="form-control" id="faculty-cv-tr">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-web-tr">Kişisel web sitesi:</label>
+                          <input type="text" class="form-control" id="faculty-web-tr">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>English</h5>
+                      <form>
+                        <div class="form-group english">
+                          <label for="faculty-title-en">Title:</label>
+                          <input type="text" class="form-control" id="faculty-title-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-phone-en">Telefon Numarası:</label>
+                          <input type="text" class="form-control" id="faculty-phone-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-photo-en">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="faculty-photo-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-cv-en">CV:</label>
+                          <input type="text" class="form-control" id="faculty-cv-en">
+                        </div>
+                        <div class="form-group">
+                          <label for="faculty-web-en">Web page</label>
+                          <input type="text" class="form-control" id="faculty-web-en">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FACULTY -  ENDS -->
+            <!-- FACULTY -  PERSONAL SETTINGS-->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn  btn-block" data-toggle="collapse" data-target="#faculty2" aria-expanded="true"
+                      aria-controls="faculty2">
+                      You can edit your academic details
+                    </button>
+                  </h5>
+                </div>
+                <div id="faculty2" class="collapse show" aria-labelledby="faculty2" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h5>Türkçe</h5>
+                        <form>
+                          <div class="form-group turkish">
+                            <label for="faculty-text-tr">Kişisel Yazı:</label>
+                            <input type="text" class="form-control" id="faculty-text-tr">
+                          </div>
+                          <div class="form-group">
+                            <label for="faculty-lessons-tr">Açtığı Dersler:</label>
+                            <input type="text" class="form-control" id="faculty-lessons-tr">
+                          </div>
+                          <div class="form-group">
+                            <label for="faculty-publications-tr">Yayınlar:</label>
+                            <input type="text" class="form-control" id="faculty-publications-tr">
+                          </div>
+                          <div class="form-group">
+                            <label for="faculty-researches-tr">Araştırma Alanları:</label>
+                            <input type="text" class="form-control" id="faculty-researches-tr">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-md-6">
+                        <h5>English</h5>
+                        <form>
+                            <div class="form-group english">
+                                <label for="faculty-text-en">Brief Text:</label>
+                                <input type="text" class="form-control" id="faculty-text-en">
+                              </div>
+                              <div class="form-group">
+                                <label for="faculty-lessons-en">Lessons:</label>
+                                <input type="text" class="form-control" id="faculty-lessons-en">
+                              </div>
+                              <div class="form-group">
+                                <label for="faculty-publications-en">Publications:</label>
+                                <input type="text" class="form-control" id="faculty-publications-en">
+                              </div>
+                              <div class="form-group">
+                                <label for="faculty-researches-en">Research Areas:</label>
+                                <input type="text" class="form-control" id="faculty-researches-en">
+                              </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FACULTY -  ENDS -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section> <!-- ADMIN PANEL ENDS -->
