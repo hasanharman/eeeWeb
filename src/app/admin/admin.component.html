@@ -49,6 +49,8 @@
     <div class="row">
       <div class="col-12">
         <div id="accordion">
+
+          <!-- HOME - ANNOUNCEMENTS START-->
           <div class="card">
             <div class="card-header" id="headingOne">
               <h5 class="mb-0">
@@ -109,7 +111,9 @@
               </div>
             </div>
           </div>
+          <!-- HOME - ANNOUNCEMENTS ENDS-->
 
+          <!-- HOME - NEWS START-->
           <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
@@ -184,8 +188,105 @@
                 </div>
               </div>
             </div>
+          <!-- HOME - ANNOUNCEMENTS ENDS-->
 
-          
+           <!-- HOME - NEWS START-->
+          <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#events" aria-expanded="true"
+                    aria-controls="events">
+                    Home - Events
+                  </button>
+                </h5>
+              </div>
+  
+              <div id="events" class="collapse" aria-labelledby="events" data-parent="#accordion">
+                <div class="card-body">
+                  <form>
+  
+                    <div class="form-group">
+                      <label for="news-events-en">Place:</label>
+                      <input type="text" class="form-control" id="news-events-en">
+                    </div>
+   
+                    <div class="form-group">
+                        <label for="news-events-tr">Yer:</label>
+                        <input type="text" class="form-control" id="news-events-tr">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="news-photo">Photo:</label>
+                          <input type="text" class="form-control" id="news-photo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="news-speaker">Speaker:</label>
+                            <input type="text" class="form-control" id="news-speaker">
+                          </div>
+                     
+                          <div class="form-group">
+                              <label for="news-text1-en">Text1:</label>
+                              <input type="text" class="form-control" id="news-text1-en">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="news-text1-tr">Metin1:</label>
+                                <input type="text" class="form-control" id="news-text1-tr">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="news-text2-en">Text2:</label>
+                                  <input type="text" class="form-control" id="news-text2-en">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="news-text2-tr">Metin2:</label>
+                                    <input type="text" class="form-control" id="news-text2-tr">
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="news-text3-en">Text3:</label>
+                                      <input type="text" class="form-control" id="news-text3-en">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label for="news-text3-tr">Metin3:</label>
+                                        <input type="text" class="form-control" id="news-text3-tr">
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label for="news-title-en">Title:</label>
+                                          <input type="text" class="form-control" id="news-title-en">
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label for="news-title-tr">Başlık:</label>
+                                            <input type="text" class="form-control" id="news-title-tr">
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="news-topic-en">Topic:</label>
+                                              <input type="text" class="form-control" id="news-topic-en">
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="news-topic-tr">Tema:</label>
+                                                <input type="text" class="form-control" id="news-topic-tr">
+                                              </div>
+
+                                              <div class="form-group">
+                                                <label for="news-date">Date:</label>
+                                                <input type="date" class="form-control" id="news-date">
+                                              </div>
+
+
+                    <button type="button" (click)="events()" class="btn btn-warning pushBtn">Add Event</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          <!-- HOME - ANNOUNCEMENTS ENDS-->
 
         </div>
       </div>

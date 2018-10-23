@@ -16,8 +16,8 @@
             </div>
             <div class='carousel-inner'>
               <ng-template style="outline: none !important;" ngbSlide *ngFor="let new of news |async let i = index">
-                <img class='newsimage' width="820vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}" src="{{new.photo}}"
-                  alt="{{new.title}}">
+                <img class='newsimage' width="820vw" height="350vh" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}"
+                  src="{{new.photo}}" alt="{{new.title}}">
                 <div class="carousel-caption text-left carText">
                   <h3 class="newTitle">{{new.title }}</h3>
                 </div>
@@ -29,9 +29,10 @@
       <div class="row secondLine">
         <div class="col-7">
           <div class="leftpart">
-            <p class="basliklar">{{'home.newsHead' | translate}}</p>
+            <p class="basliklar">{{'home.newsHead| translate}}</p>
             <div class="dropdown-divider"></div>
-            <div class="loopBoxes" *ngFor="let new of newsRegular |async let i = index" style="cursor: pointer;" routerLink="/newsdetail/{{new.newsName}}">
+            <div class="loopBoxes" *ngFor="let new of newsRegular |async let i = index" style="cursor: pointer;"
+              routerLink="/newsdetail/{{new.newsName}}">
               <div *ngIf="i<3">
                 <div class="newBox">
                   <div class="col-md-4 picture">
@@ -82,9 +83,11 @@
             <p class="linksText" style="font-size:1vw;">{{'home.quickLinks.calender.title' | translate}}</p>
           </a>
           <hr class="style6">
-          <p class="linksText" routerLink='/internship' style="cursor: pointer; font-size:1.3vw;">{{'home.quickLinks.intern.title' | translate}}</p>
+          <p class="linksText" routerLink='/internship' style="cursor: pointer; font-size:1.3vw;">{{'home.quickLinks.intern.title'
+            | translate}}</p>
           <hr class="style6">
-          <p class="linksText" routerLink='/projectLesson' style="cursor: pointer;font-size:1.3vw;">{{'home.quickLinks.projectL.title' | translate}}</p>
+          <p class="linksText" routerLink='/projectLesson' style="cursor: pointer;font-size:1.3vw;">{{'home.quickLinks.projectL.title'
+            | translate}}</p>
           <hr class="style6">
           <a href="https://cms.iyte.edu.tr/login/index.php" target="_blank" style="cursor: pointer;">
             <p class="linksText" style="font-size:1vw;">
@@ -103,7 +106,6 @@
               <img src="https://firebasestorage.googleapis.com/v0/b/eeeweb-c2788.appspot.com/o/components%2Fieee.png?alt=media&token=6f539926-a191-4135-929a-a983762243e2"
                 width="20px" height='20px'> {{'home.quickLinks.ieee.title' | translate}}</p>
           </a>
-
         </div>
       </div>
       <div class="duyurular">
@@ -125,6 +127,5 @@
         <a class="see" routerLink="/spotlights">{{'home.seeall' | translate}}</a>
       </div>
     </div>
-
   </div>
 </div>
