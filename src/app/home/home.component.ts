@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
 
     this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges();
     this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges();
-    this.announcements = afDB.list(this.starterLang + '/announcements', ref => ref.orderByChild("time")).valueChanges();
+    this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
     this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time")).valueChanges();
 
     config.interval = 4000;

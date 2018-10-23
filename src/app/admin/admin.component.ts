@@ -155,84 +155,100 @@ export class AdminComponent implements OnInit {
   }
 
   events() {
-    const place_en = $('#news-events-en').val();
-    const place_tr = $('#news-events-tr').val();
-    const photo = $('#news-photo').val();
-    const speaker = $('#news-speaker').val();
-    const text1_en = $('#news-text1-en').val();
-    const text1_tr = $('#news-text1-tr').val();
-    const text2_en = $('#news-text2-en').val();
-    const text2_tr = $('#news-text2-tr').val();
-    const text3_en = $('#news-text3-en').val();
-    const text3_tr = $('#news-text3-tr').val();
-    const title_en = $('#news-title-en').val();
-    const title_tr = $('#news-title-tr').val();
-    const topic_en = $('#news-topic-en').val();
-    const topic_tr = $('#news-topic-tr').val();
-    const date = $('#news-date').val().toString();
+    const place_en = $('#events-events-en').val();
+    const place_tr = $('#events-events-tr').val();
+    const photo = $('#events-photo').val();
+    const speaker = $('#events-speaker').val();
+    const text1_en = $('#events-text1-en').val();
+    const text1_tr = $('#events-text1-tr').val();
+    const text2_en = $('#events-text2-en').val();
+    const text2_tr = $('#events-text2-tr').val();
+    const text3_en = $('#events-text3-en').val();
+    const text3_tr = $('#events-text3-tr').val();
+    const title_en = $('#events-title-en').val();
+    const title_tr = $('#events-title-tr').val();
+    const topic_en = $('#events-topic-en').val();
+    const topic_tr = $('#events-topic-tr').val();
+    const newsDate = $('#events-date-tr').val().toString();
+    let key;
 
-      function getTimeStamp(input) {
+    function getTimeStamp(input) {
       var parts = input.trim().split(' ');
       var date = parts[0].split('-');
-    var time = (parts[1] ? parts[1] : '00:00:00').split(':');
-  
-    // NOTE:: Month: 0 = January - 11 = December.
-    var d = new Date(date[0],date[1]-1,date[2],time[0],time[1],time[2]);
-    return d.getTime() / 1000;
-  }
+      var time = (parts[1] ? parts[1] : '00:00:00').split(':');
 
-  function parseDate(date:string) {
-    var newDate = date.split('-');
-    var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+      // NOTE:: Month: 0 = January - 11 = December.
+      var d = new Date(date[0], date[1] - 1, date[2], time[0], time[1], time[2]);
+      return d.getTime() / 1000;
+    }
 
-    newDate[1] =mS[parseInt(newDate[1]) - 1]
-     return newDate;
-  }
-  
-  console.log(parseDate(date))
+    function parseDate(date: string) {
+      var newDate = date.split('-');
+      var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+      newDate[1] = mS[parseInt(newDate[1]) - 1]
+      return newDate;
+    }
+    console.log("date is " +newsDate );
 
 
     /*   HERE COMES THE EN PART*/
-      
-    firebase.database().ref('/en/events').push({
-           place:place_en,
-           pp:photo,
-           year:parseDate(date)[0],
-           month:parseDate(date[1]),
-           day:parseDate(date[2]),
-           title:title_en,
-           eventDetail: {
-             pp:photo,
-             speaker:speaker,
-             text1: text1_en,
-             text2:text2_en,
-             text3:text3_en,
-             title:title_en,
-             topic:topic_en,
-             venue:place_en
-           }
 
-    }).then(data => {
-      firebase.database().ref('/en/events/' + data.key).push({
-      eventName: data.key
+    firebase.database().ref('/en/events').push({
+      place: place_en,
+      pp: photo,
+      year: parseDate(newsDate)[0],
+      month: parseDate(newsDate)[1],
+      day: parseDate(newsDate)[2],
+      title: title_en,
+      eventDetail: {
+        pp: photo,
+        speaker: speaker,
+        text1: text1_en,
+        text2: text2_en,
+        text3: text3_en,
+        title: title_en,
+        topic: topic_en,
+        venue: place_en
+      }
+
+    }).then((data) => {
+      key = data.key;
+      firebase.database().ref('/en/events/' + data.key).update({
+        eventName: data.key
+      });
+    }).then(() => {
+      console.log(key)
+ /*   HERE COMES THE EN PART*/
+
+    firebase.database().ref('/tr/events/' + key ).update({
+      place: place_tr,
+      pp: photo,
+      year: parseDate(newsDate)[0],
+      month: parseDate(newsDate)[1],
+      day: parseDate(newsDate)[2],
+      title: title_tr,
+      eventDetail: {
+        pp: photo,
+        speaker: speaker,
+        text1: text1_tr,
+        text2: text2_tr,
+        text3: text3_tr,
+        title: title_tr,
+        topic: topic_tr,
+        venue: place_tr
+      }
+
+    }).then(() => {
+      firebase.database().ref('/en/events/' + key ).update({
+        eventName:  key
       });
     })
- 
+    })
 
-      /*   HERE COMES THE TR PART*/
-     /* 
-      firebase.database().ref('/tr/events').push({
-        place:place_en,
-        pp:photo,
-        title:title_en
+   
 
- }).then(data => {
-   firebase.database().ref('/tr/events/' + data.key).push({
-   eventName: data.key
-   });
- })
-  } */
+  }
+
 
 }
-}
-
