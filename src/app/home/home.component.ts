@@ -25,10 +25,10 @@ export class HomeComponent implements OnInit {
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
-      this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges();
-      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges();
-      this.announcements = afDB.list(this.starterLang + '/announcements', ref => ref.orderByChild("time")).valueChanges();
-      this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time")).valueChanges();
+      this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+      this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+      this.announcements = afDB.list(this.starterLang + '/announcements' ,ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+      this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
 
       this.spotlights = afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
         let randomNumber = Math.floor(Math.random() * data.length)
@@ -40,19 +40,20 @@ export class HomeComponent implements OnInit {
 
     })
 
-    this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges();
-    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges();
-    this.announcements = afDB.list(this.starterLang + '/announcements').valueChanges();
-    this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time")).valueChanges();
+    this.news = afDB.list(this.starterLang + '/home/news', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+    this.newsRegular = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+   this.announcements =  afDB.list(this.starterLang + '/announcements' ,ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+   
+    this.events = afDB.list(this.starterLang + '/home/events', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
 
     config.interval = 4000;
     config.wrap = true;
     config.keyboard = true;
 
     afDB.list(this.starterLang + '/personels/spotlights').valueChanges().subscribe(data => {
-      console.log(data);
+     // console.log(data);
       let randomNumber = Math.floor(Math.random() * data.length)
-      console.warn(data[randomNumber]);
+     // console.warn(data[randomNumber]);
 
       this.spotlights = data[randomNumber];
     })
