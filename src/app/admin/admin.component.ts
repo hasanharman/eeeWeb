@@ -171,17 +171,10 @@ export class AdminComponent implements OnInit {
     const topic_tr = $('#events-topic-tr').val();
     const newsDate = $('#events-date-tr').val().toString();
     let key;
-
-    function getTimeStamp(input) {
-      var parts = input.trim().split(' ');
-      var date = parts[0].split('-');
-      var time = (parts[1] ? parts[1] : '00:00:00').split(':');
-
-      // NOTE:: Month: 0 = January - 11 = December.
-      var d = new Date(date[0], date[1] - 1, date[2], time[0], time[1], time[2]);
-      return d.getTime() / 1000;
-    }
-
+ 
+    var date = new Date(newsDate);
+    var timestamp = date.getTime();
+    console.log(timestamp)
     function parseDate(date: string) {
       var newDate = date.split('-');
       var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -200,6 +193,7 @@ export class AdminComponent implements OnInit {
       year: parseDate(newsDate)[0],
       month: parseDate(newsDate)[1],
       day: parseDate(newsDate)[2],
+      time: timestamp,
       title: title_en,
       eventDetail: {
         pp: photo,
@@ -228,6 +222,7 @@ export class AdminComponent implements OnInit {
       month: parseDate(newsDate)[1],
       day: parseDate(newsDate)[2],
       title: title_tr,
+      time: timestamp,
       eventDetail: {
         pp: photo,
         speaker: speaker,
@@ -244,7 +239,71 @@ export class AdminComponent implements OnInit {
         eventName:  key
       });
     })
+    }).then( ()=> {
+ /* THIS PART FOR HOME/events */
+
+      /*   HERE COMES THE EN PART*/
+
+      firebase.database().ref('/en/home/events/' +key).update({
+        place: place_en,
+        pp: photo,
+        year: parseDate(newsDate)[0],
+        month: parseDate(newsDate)[1],
+        day: parseDate(newsDate)[2],
+        time: timestamp,
+        title: title_en,
+        eventDetail: {
+          pp: photo,
+          speaker: speaker,
+          text1: text1_en,
+          text2: text2_en,
+          text3: text3_en,
+          title: title_en,
+          topic: topic_en,
+          venue: place_en
+        }
+  
+      }).then((data) => { 
+        firebase.database().ref('/en/home/events/' + key).update({
+          eventName: key
+        });
+      }).then(() => {
+        console.log(key)
+   /*   HERE COMES THE EN PART*/
+  
+      firebase.database().ref('/tr/home/events/' + key ).update({
+        place: place_tr,
+        pp: photo,
+        year: parseDate(newsDate)[0],
+        month: parseDate(newsDate)[1],
+        day: parseDate(newsDate)[2],
+        title: title_tr,
+        time: timestamp,
+        eventDetail: {
+          pp: photo,
+          speaker: speaker,
+          text1: text1_tr,
+          text2: text2_tr,
+          text3: text3_tr,
+          title: title_tr,
+          topic: topic_tr,
+          venue: place_tr
+        }
+  
+      }).then(() => {
+        firebase.database().ref('/en/home/events/' + key ).update({
+          eventName:  key
+        });
+      })
+      });
+  
+
     })
+
+
+
+   
+    
   }
 
   faculty() {
