@@ -296,7 +296,6 @@
                     </div>
                   </div>
                   <form>
-
                     <button type="button" (click)="events()" class="btn btn-warning pushBtn">Add Event</button>
                   </form>
                 </div>
@@ -330,20 +329,26 @@
                       <form>
                         <div class="form-group turkish">
                           <label for="faculty-title-tr">Unvan:</label>
-                          <input type="text" class="form-control" id="faculty-title-tr" [(ngModel)]="title_tr" [ngModelOptions]="{standalone: true}">
+                          <input type="text" class="form-control" id="faculty-title-tr" [(ngModel)]="title_tr"
+                            [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-phone-tr">Telefon Numarası:</label>
-                          <input type="text" class="form-control" id="faculty-phone-tr" [(ngModel)]="number_tr" [ngModelOptions]="{standalone: true}">
+                          <input type="text" class="form-control" id="faculty-phone-tr" [(ngModel)]="number_tr"
+                            [ngModelOptions]="{standalone: true}">
                         </div>
-                       
+                        <div class="form-group">
+                          <label for="faculty-text-tr">Kişisel Yazı:</label>
+                          <input type="text" class="form-control" id="faculty-text-tr">
+                        </div>
                         <div class="form-group">
                           <label for="faculty-cv-tr">CV:</label>
                           <input type="text" class="form-control" id="faculty-cv-tr" [(ngModel)]="cv" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-web-tr">Kişisel web sitesi:</label>
-                          <input type="text" class="form-control" id="faculty-web-tr" [(ngModel)]="webLink" [ngModelOptions]="{standalone: true}">
+                          <input type="text" class="form-control" id="faculty-web-tr" [(ngModel)]="webLink"
+                            [ngModelOptions]="{standalone: true}">
                         </div>
                       </form>
                     </div>
@@ -352,93 +357,117 @@
                       <form>
                         <div class="form-group english">
                           <label for="faculty-title-en">Title:</label>
-                          <input type="text" class="form-control" id="faculty-title-en" [(ngModel)]="title_en" [ngModelOptions]="{standalone: true}">
+                          <input type="text" class="form-control" id="faculty-title-en" [(ngModel)]="title_en"
+                            [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-phone-en">Telefon Numarası:</label>
-                          <input type="text" class="form-control" id="faculty-phone-en" [(ngModel)]="number_en" [ngModelOptions]="{standalone: true}">
+                          <input type="text" class="form-control" id="faculty-phone-en" [(ngModel)]="number_en"
+                            [ngModelOptions]="{standalone: true}">
                         </div>
-                      
+                        <div class="form-group">
+                          <label for="faculty-text-en">Brief Text:</label>
+                          <input type="text" class="form-control" id="faculty-text-en">
+                        </div>
                         <div class="form-group">
                           <label for="faculty-cv-en">CV:</label>
                           <input type="text" class="form-control" id="faculty-cv-en" [(ngModel)]="cv" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-web-en">Web page</label>
-                          <input type="text" class="form-control" id="faculty-web-en" [(ngModel)]="webLink" [ngModelOptions]="{standalone: true}">
+                          <input type="text" class="form-control" id="faculty-web-en" [(ngModel)]="webLink"
+                            [ngModelOptions]="{standalone: true}">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <form>
+                    <button type="button" (click)="faculty()" class="btn btn-warning pushBtn">Change My Details</button>
+                  </form>
+                </div>
+              </div>
+             
+
+            </div>
+            <!-- FACULTY -  ENDS -->
+            <!-- FACULTY -  LESSON SETTINGS-->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#facultyLesson" aria-expanded="true"
+                    aria-controls="facultyLesson">
+                    You can edit your lessons
+                  </button>
+                </h5>
+              </div>
+              <div id="facultyLesson" class="collapse show" aria-labelledby="facultyLesson" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form>
+                        <div class="form-group">
+                          <label for="faculty-lessons-tr">Açtığı Dersler:</label>
+                          <input type="text" class="form-control" id="faculty-lessons-tr">
                         </div>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-              <form>
-
-                <button type="button" (click)="faculty()" class="btn btn-warning pushBtn">Change My Details</button>
-              </form>
-
             </div>
-            <!-- FACULTY -  ENDS -->
-            <!-- FACULTY -  PERSONAL SETTINGS-->
+            <!-- FACULTY - LESSONS ENDS -->
+            <!-- FACULTY - RESEARCH AREA SETTINGS-->
             <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn  btn-block" data-toggle="collapse" data-target="#faculty2" aria-expanded="true"
-                      aria-controls="faculty2">
-                      You can edit your academic details
-                    </button>
-                  </h5>
-                </div>
-                <div id="faculty2" class="collapse show" aria-labelledby="faculty2" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <h5>Türkçe</h5>
-                        <form>
-                          <div class="form-group turkish">
-                            <label for="faculty-text-tr">Kişisel Yazı:</label>
-                            <input type="text" class="form-control" id="faculty-text-tr" >
-                          </div>
-                          <div class="form-group">
-                            <label for="faculty-lessons-tr">Açtığı Dersler:</label>
-                            <input type="text" class="form-control" id="faculty-lessons-tr">
-                          </div>
-                          <div class="form-group">
-                            <label for="faculty-publications-tr">Yayınlar:</label>
-                            <input type="text" class="form-control" id="faculty-publications-tr">
-                          </div>
-                          <div class="form-group">
-                            <label for="faculty-researches-tr">Araştırma Alanları:</label>
-                            <input type="text" class="form-control" id="faculty-researches-tr">
-                          </div>
-                        </form>
-                      </div>
-                      <div class="col-md-6">
-                        <h5>English</h5>
-                        <form>
-                            <div class="form-group english">
-                                <label for="faculty-text-en">Brief Text:</label>
-                                <input type="text" class="form-control" id="faculty-text-en">
-                              </div>
-                              <div class="form-group">
-                                <label for="faculty-lessons-en">Lessons:</label>
-                                <input type="text" class="form-control" id="faculty-lessons-en">
-                              </div>
-                              <div class="form-group">
-                                <label for="faculty-publications-en">Publications:</label>
-                                <input type="text" class="form-control" id="faculty-publications-en">
-                              </div>
-                              <div class="form-group">
-                                <label for="faculty-researches-en">Research Areas:</label>
-                                <input type="text" class="form-control" id="faculty-researches-en">
-                              </div>
-                        </form>
-                      </div>
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#facultyResearch" aria-expanded="true"
+                    aria-controls="facultyResearch">
+                    You can edit your Research Area details
+                  </button>
+                </h5>
+              </div>
+              <div id="facultyResearch" class="collapse show" aria-labelledby="facultyResearch" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form>
+                        <div class="form-group">
+                          <label for="faculty-researches-tr">Araştırma Alanları:</label>
+                          <input type="text" class="form-control" id="faculty-researches-tr">
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- FACULTY -  ENDS -->
+            </div>
+            <!-- FACULTY -  RESEARCH AREAS ENDS -->
+            <!-- FACULTY -  PUBLICATIONS SETTINGS-->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#facultyPublication" aria-expanded="true"
+                    aria-controls="facultyPublication">
+                    You can edit your Publications details
+                  </button>
+                </h5>
+              </div>
+              <div id="facultyPublication" class="collapse show" aria-labelledby="facultyPublication" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form>
+                        <div class="form-group">
+                          <label for="faculty-publications-tr">Yayınlar:</label>
+                          <input type="text" class="form-control" id="faculty-publications-tr">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FACULTY -  ENDS -->
           </div>
         </div>
       </div>
