@@ -4,6 +4,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
@@ -132,6 +133,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    FormsModule,
     NgbModule.forRoot(),
     TranslateModule.forRoot({
       provide: TranslateLoader,

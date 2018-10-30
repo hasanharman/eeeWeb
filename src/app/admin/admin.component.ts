@@ -12,15 +12,55 @@ export class AdminComponent implements OnInit {
   panel = false;
   entered = true;
   userName: string;
+  personNo:string;
+
+
+  /* PERSONEL INFORMATION STARTS */
+  bs;
+  cv;
+  dr;
+  email;
+  ms;
+  name;
+  number_tr;
+  number_en;
+  phd;
+  postdr;
+  socialMedias;
+  surname;
+  webLink;
+  title_tr;
+  title_en;
+  /* PERSONEL INFORMATION ENDS */
+
   constructor() {
+
 
   }
 
   ngOnInit() {
 
+    this.personNo = "person34";
 
-
-
+ let facultyRef = firebase.database().ref("/tr/personels/faculty/" + this.personNo);
+              facultyRef.once('value', personel =>{
+                this.bs = personel.child("bs").val();
+                this.cv = personel.child("cv").val();
+                this.dr = personel.child("dr").val();
+                this.email = personel.child("email").val();
+                this.ms = personel.child("ms").val();
+                this.name = personel.child("name").val();
+                this.phd = personel.child("phd").val();
+                this.number_tr = personel.child("number").val();
+                this.number_en = personel.child("number").val();
+                this.postdr = personel.child("postdr").val();
+                this.socialMedias = personel.child("socialMedias").val();
+                this.surname = personel.child("surname").val();
+                this.title_tr = personel.child("title").val();
+                this.title_en = personel.child("title").val();
+                this.webLink = personel.child("webLink").val();
+                 
+              });
   }
 
   login() {
@@ -34,6 +74,9 @@ export class AdminComponent implements OnInit {
               this.entered = false;
               this.panel = true;
               this.userName = element.child('name').val();
+              this.personNo = element.child('personNo').val();
+
+             
 
             } else {
               console.log('Wrong Password');
@@ -307,42 +350,25 @@ export class AdminComponent implements OnInit {
   }
 
   faculty() {
-    /* EN */
-    let key;
-    firebase.database().ref('/en/faculty/key').push({
-      title: $('#faculty-title-en').val(),
-      text: $('#faculy-text-en').val(),
-      pp: $('#faculty-photo-en').val(),
-      cv: $('#faculty-cv-en').val(),
-      web: $('#faculty-web-en').val(),
-      phone: $('#faculty-phone-en').val(),
-      lessons: $('#faculty-lessons-en').val(),
-      publications: $('#faculty-publications-en').val(),
-      researches: $('#faculty-researches-en').val(),
 
 
+    let facultyRef = firebase.database().ref("/tr/personels/faculty/" + this.personNo);
+    let facultyRef_en = firebase.database().ref("/en/personels/faculty/" + this.personNo);
+    facultyRef.update({
+      cv:   this.cv,
+      email:   this.email,
+      number:   this.number_tr,
+      webLink:   this.webLink,
+      title: this.title_tr
+    });
 
-    }).then((snap) => {
-      console.log(snap);
-      firebase.database().ref('/en/faculty/key' + snap.key).update({
-        key: snap.key
-      })
-      key = snap.key;
-      /* TR */
-
-      firebase.database().ref('/tr/announcements/' + key).update({
-        title: $('#faculty-title-tr').val(),
-        text: $('#faculy-text-tr').val(),
-        pp: $('#faculty-photo-tr').val(),
-        cv: $('#faculty-cv-tr').val(),
-        web: $('#faculty-web-tr').val(),
-        phone: $('#faculty-phone-tr').val(),
-        lessons: $('#faculty-lessons-tr').val(),
-        publications: $('#faculty-publications-tr').val(),
-        researches: $('#faculty-researches-tr').val(),
-        key: key
-      })
-    })
+    facultyRef_en.update({
+      cv:   this.cv,
+      email:   this.email,
+      number:   this.number_en,
+      webLink:   this.webLink,
+      title: this.title_en
+    });
 
 
   }

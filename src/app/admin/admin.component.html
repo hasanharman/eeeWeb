@@ -330,23 +330,20 @@
                       <form>
                         <div class="form-group turkish">
                           <label for="faculty-title-tr">Unvan:</label>
-                          <input type="text" class="form-control" id="faculty-title-tr">
+                          <input type="text" class="form-control" id="faculty-title-tr" [(ngModel)]="title_tr" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-phone-tr">Telefon Numarası:</label>
-                          <input type="text" class="form-control" id="faculty-phone-tr">
+                          <input type="text" class="form-control" id="faculty-phone-tr" [(ngModel)]="number_tr" [ngModelOptions]="{standalone: true}">
                         </div>
-                        <div class="form-group">
-                          <label for="faculty-photo-tr">Fotoğraf:</label>
-                          <input type="text" class="form-control" id="faculty-photo-tr">
-                        </div>
+                       
                         <div class="form-group">
                           <label for="faculty-cv-tr">CV:</label>
-                          <input type="text" class="form-control" id="faculty-cv-tr">
+                          <input type="text" class="form-control" id="faculty-cv-tr" [(ngModel)]="cv" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-web-tr">Kişisel web sitesi:</label>
-                          <input type="text" class="form-control" id="faculty-web-tr">
+                          <input type="text" class="form-control" id="faculty-web-tr" [(ngModel)]="webLink" [ngModelOptions]="{standalone: true}">
                         </div>
                       </form>
                     </div>
@@ -355,29 +352,31 @@
                       <form>
                         <div class="form-group english">
                           <label for="faculty-title-en">Title:</label>
-                          <input type="text" class="form-control" id="faculty-title-en">
+                          <input type="text" class="form-control" id="faculty-title-en" [(ngModel)]="title_en" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-phone-en">Telefon Numarası:</label>
-                          <input type="text" class="form-control" id="faculty-phone-en">
+                          <input type="text" class="form-control" id="faculty-phone-en" [(ngModel)]="number_en" [ngModelOptions]="{standalone: true}">
                         </div>
-                        <div class="form-group">
-                          <label for="faculty-photo-en">Fotoğraf:</label>
-                          <input type="text" class="form-control" id="faculty-photo-en">
-                        </div>
+                      
                         <div class="form-group">
                           <label for="faculty-cv-en">CV:</label>
-                          <input type="text" class="form-control" id="faculty-cv-en">
+                          <input type="text" class="form-control" id="faculty-cv-en" [(ngModel)]="cv" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="form-group">
                           <label for="faculty-web-en">Web page</label>
-                          <input type="text" class="form-control" id="faculty-web-en">
+                          <input type="text" class="form-control" id="faculty-web-en" [(ngModel)]="webLink" [ngModelOptions]="{standalone: true}">
                         </div>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
+              <form>
+
+                <button type="button" (click)="faculty()" class="btn btn-warning pushBtn">Change My Details</button>
+              </form>
+
             </div>
             <!-- FACULTY -  ENDS -->
             <!-- FACULTY -  PERSONAL SETTINGS-->
@@ -398,7 +397,7 @@
                         <form>
                           <div class="form-group turkish">
                             <label for="faculty-text-tr">Kişisel Yazı:</label>
-                            <input type="text" class="form-control" id="faculty-text-tr">
+                            <input type="text" class="form-control" id="faculty-text-tr" >
                           </div>
                           <div class="form-group">
                             <label for="faculty-lessons-tr">Açtığı Dersler:</label>
