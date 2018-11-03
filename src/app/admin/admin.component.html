@@ -1,6 +1,6 @@
 <section>
   <!-- LOGIN PANEL -->
-  <div *ngIf="panel" class="container entrance">
+  <div *ngIf="!panel" class="container entrance">
     <div class="row marginMid">
       <div class="col-12 ">
         <div class="row centerItems">
@@ -42,7 +42,7 @@
 
 <section>
   <!-- ADMIN PANEL -->
-  <div *ngIf="!panel" class="container panel">
+  <div *ngIf="panel" class="container panel">
     <div class="row centerItems">
       <p class="panel-title"> Hello {{userName}} !</p>
     </div>
@@ -321,7 +321,7 @@
                   </button>
                 </h5>
               </div>
-              <div id="faculty" class="collapse show" aria-labelledby="faculty" data-parent="#accordion">
+              <div id="faculty" class="collapse " aria-labelledby="faculty" data-parent="#accordion">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
@@ -400,7 +400,7 @@
                   </button>
                 </h5>
               </div>
-              <div id="facultyLesson" class="collapse show" aria-labelledby="facultyLesson" data-parent="#accordion">
+              <div id="facultyLesson" class="collapse " aria-labelledby="facultyLesson" data-parent="#accordion">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
@@ -426,7 +426,7 @@
                   </button>
                 </h5>
               </div>
-              <div id="facultyResearch" class="collapse show" aria-labelledby="facultyResearch" data-parent="#accordion">
+              <div id="facultyResearch" class="collapse " aria-labelledby="facultyResearch" data-parent="#accordion">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
@@ -452,7 +452,7 @@
                   </button>
                 </h5>
               </div>
-              <div id="facultyPublication" class="collapse show" aria-labelledby="facultyPublication" data-parent="#accordion">
+              <div id="facultyPublication" class="collapse " aria-labelledby="facultyPublication" data-parent="#accordion">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">

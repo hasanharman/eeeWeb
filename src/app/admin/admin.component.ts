@@ -39,8 +39,23 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
 
-    this.personNo = "person34";
+  login() {
+
+    firebase.database().ref('/admins').once('value', val => {
+      val.forEach(element => {
+        if (this.entered) {
+          if ($('.mail').val() == element.child('mail').val()) {
+            if ($('.password').val() == element.child('password').val()) {
+              console.log('You have succesfuly entered');
+              this.entered = false;
+              this.panel = true;
+              this.userName = element.child('name').val();
+              this.personNo = element.child('personNo').val();
+
+             
+
 
  let facultyRef = firebase.database().ref("/tr/personels/faculty/" + this.personNo);
               facultyRef.once('value', personel =>{
@@ -61,22 +76,6 @@ export class AdminComponent implements OnInit {
                 this.webLink = personel.child("webLink").val();
                  
               });
-  }
-
-  login() {
-
-    firebase.database().ref('/admins').once('value', val => {
-      val.forEach(element => {
-        if (this.entered) {
-          if ($('.mail').val() == element.child('mail').val()) {
-            if ($('.password').val() == element.child('password').val()) {
-              console.log('You have succesfuly entered');
-              this.entered = false;
-              this.panel = true;
-              this.userName = element.child('name').val();
-              this.personNo = element.child('personNo').val();
-
-             
 
             } else {
               console.log('Wrong Password');

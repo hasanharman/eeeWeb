@@ -143,6 +143,9 @@ li {
    text-align: center;
   font-family: arial;
   overflow: hidden;
+  margin-left: 10%;
+  height:32vh;
+  width: 80%;
 }
 
 .title {
