@@ -1,6 +1,6 @@
 <section>
   <!-- LOGIN PANEL -->
-  <div *ngIf="!panel" class="container entrance">
+  <div *ngIf="panel" class="container entrance">
     <div class="row marginMid">
       <div class="col-12 ">
         <div class="row centerItems">
@@ -42,12 +42,12 @@
 
 <section>
   <!-- ADMIN PANEL -->
-  <div *ngIf="panel" class="container panel">
+  <div *ngIf="!panel" class="container panel">
     <div class="row centerItems">
       <p class="panel-title"> Hello {{userName}} !</p>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-8">
         <div class="general">
           <h3>General editing part</h3>
           <div id="accordion">
@@ -55,8 +55,8 @@
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <button class="btn  btn-block" data-toggle="collapse" data-target="#notification" aria-expanded="true"
-                    aria-controls="notification">
+                  <button class="btn  btn-block  " data-toggle="collapse" data-target="#notification" aria-expanded="true"
+                    id="announcementBtn" aria-controls="notification">
                     Home - Announcements
                   </button>
                 </h5>
@@ -121,7 +121,7 @@
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <button class="btn  btn-block" data-toggle="collapse" data-target="#news" aria-expanded="true"
+                  <button class="btn  btn-block newsBtn" data-toggle="collapse" data-target="#news" aria-expanded="true"
                     aria-controls="news">
                     Home - News
                   </button>
@@ -202,7 +202,7 @@
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <button class="btn  btn-block" data-toggle="collapse" data-target="#events" aria-expanded="true"
+                  <button class="btn  btn-block eventsBtn" data-toggle="collapse" data-target="#events" aria-expanded="true"
                     aria-controls="events">
                     Home - Events
                   </button>
@@ -305,14 +305,65 @@
           </div>
         </div>
       </div>
+
+      <!--CONTENT THAT EXITS-->
+      <div class="col-4">
+        <div class="general">
+          <h3>Latest updates</h3>
+          <div id="accordion">
+            <!-- HOME - ANNOUNCEMENTS START-->
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn  btn-block" data-toggle="collapse" data-target="#exists" aria-expanded="true"
+                    aria-controls="exist">
+                    Value that exists
+                  </button>
+                </h5>
+              </div>
+
+              <div id="exists" class="collapse show" aria-labelledby="exists" data-parent="#accordion">
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+
+
+                      <p style="color:rgb(148, 148, 148);background-color: rgb(242, 243, 230);"><b>Announcements</b></p>
+
+                      <p style="background-color: rgb(230, 239, 243);border-radius: 4px" *ngFor="let item of annoEx |async">
+                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash" (click)="removeAnno(item.key)"></i>
+                        <br></p>
+
+
+                      <p style="color:rgb(148, 148, 148);background-color: rgb(168, 208, 224);"><b>Events</b></p>
+
+                      <p style="background-color: rgb(220, 240, 234);border-radius: 4px" *ngFor="let item of eventEx |async">
+                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash" (click)="removeEvents(item.eventName)"></i>
+                        <br></p>
+
+
+                      <p style="color:rgb(148, 148, 148);background-color: rgb(188, 182, 250);"><b>News</b></p>
+
+                      <p style="background-color: rgb(243, 231, 230);border-radius: 4px" *ngFor="let item of newsEx |async">
+                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash" (click)="removeNews(item.newsName)"></i>
+                        <br></p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
+    <!--  <div class="row">
       <div class="col-md-12">
         <div class="personal">
           <h3>Personal editing part</h3>
           <div id="accordion">
-            <!-- FACULTY -  GENERAL SETTINGS-->
-            <div class="card">
+             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
                   <button class="btn  btn-block" data-toggle="collapse" data-target="#faculty" aria-expanded="true"
@@ -388,9 +439,7 @@
               </div>
              
 
-            </div>
-            <!-- FACULTY -  ENDS -->
-            <!-- FACULTY -  LESSON SETTINGS-->
+            </div> 
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
@@ -414,9 +463,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- FACULTY - LESSONS ENDS -->
-            <!-- FACULTY - RESEARCH AREA SETTINGS-->
+            </div> 
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
@@ -440,9 +487,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- FACULTY -  RESEARCH AREAS ENDS -->
-            <!-- FACULTY -  PUBLICATIONS SETTINGS-->
+            </div> 
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
@@ -467,10 +512,9 @@
                 </div>
               </div>
             </div>
-            <!-- FACULTY -  ENDS -->
-          </div>
+           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section> <!-- ADMIN PANEL ENDS -->

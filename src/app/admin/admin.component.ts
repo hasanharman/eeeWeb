@@ -12,8 +12,10 @@ export class AdminComponent implements OnInit {
   panel = false;
   entered = true;
   userName: string;
-  personNo:string;
-
+  personNo: string;
+  eventEx;
+  annoEx;
+  newsEx;
 
   /* PERSONEL INFORMATION STARTS */
   bs;
@@ -33,13 +35,43 @@ export class AdminComponent implements OnInit {
   title_en;
   /* PERSONEL INFORMATION ENDS */
 
-  constructor() {
+  constructor(private afDB: AngularFireDatabase) {
 
-
-  }
+    this.annoEx = afDB.list('/en/announcements' ,ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+    this.eventEx = afDB.list('/en/home/events', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+    this.newsEx = afDB.list('/en/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+   }
 
   ngOnInit() {
+
+  
   }
+
+  removeAnno(key){
+
+
+    this.afDB.list("/en/announcements/" + key).remove();
+    this.afDB.list("/tr/announcements/" + key).remove();
+  }
+
+  removeNews(key) {
+    this.afDB.list("/en/home/newsRegular/" + key).remove();
+    this.afDB.list("/en/home/news/" + key).remove();
+
+    this.afDB.list("/tr/home/newsRegular/" + key).remove();
+    this.afDB.list("/tr/home/news/" + key).remove();
+  }
+
+  
+  removeEvents(key) {
+    this.afDB.list("/en/events/" + key).remove();
+    this.afDB.list("/en/home/events/" + key).remove();
+
+    this.afDB.list("/tr/events/" + key).remove();
+    this.afDB.list("/tr/home/events/" + key).remove();
+  }
+
+
 
   login() {
 
@@ -54,11 +86,11 @@ export class AdminComponent implements OnInit {
               this.userName = element.child('name').val();
               this.personNo = element.child('personNo').val();
 
-             
 
 
- let facultyRef = firebase.database().ref("/tr/personels/faculty/" + this.personNo);
-              facultyRef.once('value', personel =>{
+
+              let facultyRef = firebase.database().ref("/tr/personels/faculty/" + this.personNo);
+              facultyRef.once('value', personel => {
                 this.bs = personel.child("bs").val();
                 this.cv = personel.child("cv").val();
                 this.dr = personel.child("dr").val();
@@ -74,7 +106,7 @@ export class AdminComponent implements OnInit {
                 this.title_tr = personel.child("title").val();
                 this.title_en = personel.child("title").val();
                 this.webLink = personel.child("webLink").val();
-                 
+
               });
 
             } else {
@@ -213,7 +245,7 @@ export class AdminComponent implements OnInit {
     const topic_tr = $('#events-topic-tr').val();
     const newsDate = $('#events-date-tr').val().toString();
     let key;
- 
+
     var date = new Date(newsDate);
     var timestamp = date.getTime();
     console.log(timestamp)
@@ -224,7 +256,7 @@ export class AdminComponent implements OnInit {
       newDate[1] = mS[parseInt(newDate[1]) - 1]
       return newDate;
     }
-    console.log("date is " +newsDate );
+    console.log("date is " + newsDate);
 
 
     /*   HERE COMES THE EN PART*/
@@ -255,65 +287,9 @@ export class AdminComponent implements OnInit {
       });
     }).then(() => {
       console.log(key)
- /*   HERE COMES THE EN PART*/
-
-    firebase.database().ref('/tr/events/' + key ).update({
-      place: place_tr,
-      pp: photo,
-      year: parseDate(newsDate)[0],
-      month: parseDate(newsDate)[1],
-      day: parseDate(newsDate)[2],
-      title: title_tr,
-      time: timestamp,
-      eventDetail: {
-        pp: photo,
-        speaker: speaker,
-        text1: text1_tr,
-        text2: text2_tr,
-        text3: text3_tr,
-        title: title_tr,
-        topic: topic_tr,
-        venue: place_tr
-      }
-
-    }).then(() => {
-      firebase.database().ref('/en/events/' + key ).update({
-        eventName:  key
-      });
-    })
-    }).then( ()=> {
- /* THIS PART FOR HOME/events */
-
       /*   HERE COMES THE EN PART*/
 
-      firebase.database().ref('/en/home/events/' +key).update({
-        place: place_en,
-        pp: photo,
-        year: parseDate(newsDate)[0],
-        month: parseDate(newsDate)[1],
-        day: parseDate(newsDate)[2],
-        time: timestamp,
-        title: title_en,
-        eventDetail: {
-          pp: photo,
-          speaker: speaker,
-          text1: text1_en,
-          text2: text2_en,
-          text3: text3_en,
-          title: title_en,
-          topic: topic_en,
-          venue: place_en
-        }
-  
-      }).then((data) => { 
-        firebase.database().ref('/en/home/events/' + key).update({
-          eventName: key
-        });
-      }).then(() => {
-        console.log(key)
-   /*   HERE COMES THE EN PART*/
-  
-      firebase.database().ref('/tr/home/events/' + key ).update({
+      firebase.database().ref('/tr/events/' + key).update({
         place: place_tr,
         pp: photo,
         year: parseDate(newsDate)[0],
@@ -331,21 +307,77 @@ export class AdminComponent implements OnInit {
           topic: topic_tr,
           venue: place_tr
         }
-  
+
       }).then(() => {
-        firebase.database().ref('/en/home/events/' + key ).update({
-          eventName:  key
+        firebase.database().ref('/en/events/' + key).update({
+          eventName: key
         });
       })
+    }).then(() => {
+      /* THIS PART FOR HOME/events */
+
+      /*   HERE COMES THE EN PART*/
+
+      firebase.database().ref('/en/home/events/' + key).update({
+        place: place_en,
+        pp: photo,
+        year: parseDate(newsDate)[0],
+        month: parseDate(newsDate)[1],
+        day: parseDate(newsDate)[2],
+        time: timestamp,
+        title: title_en,
+        eventDetail: {
+          pp: photo,
+          speaker: speaker,
+          text1: text1_en,
+          text2: text2_en,
+          text3: text3_en,
+          title: title_en,
+          topic: topic_en,
+          venue: place_en
+        }
+
+      }).then((data) => {
+        firebase.database().ref('/en/home/events/' + key).update({
+          eventName: key
+        });
+      }).then(() => {
+        console.log(key)
+        /*   HERE COMES THE EN PART*/
+
+        firebase.database().ref('/tr/home/events/' + key).update({
+          place: place_tr,
+          pp: photo,
+          year: parseDate(newsDate)[0],
+          month: parseDate(newsDate)[1],
+          day: parseDate(newsDate)[2],
+          title: title_tr,
+          time: timestamp,
+          eventDetail: {
+            pp: photo,
+            speaker: speaker,
+            text1: text1_tr,
+            text2: text2_tr,
+            text3: text3_tr,
+            title: title_tr,
+            topic: topic_tr,
+            venue: place_tr
+          }
+
+        }).then(() => {
+          firebase.database().ref('/en/home/events/' + key).update({
+            eventName: key
+          });
+        })
       });
-  
+
 
     })
 
 
 
-   
-    
+
+
   }
 
   faculty() {
@@ -354,18 +386,18 @@ export class AdminComponent implements OnInit {
     let facultyRef = firebase.database().ref("/tr/personels/faculty/" + this.personNo);
     let facultyRef_en = firebase.database().ref("/en/personels/faculty/" + this.personNo);
     facultyRef.update({
-      cv:   this.cv,
-      email:   this.email,
-      number:   this.number_tr,
-      webLink:   this.webLink,
+      cv: this.cv,
+      email: this.email,
+      number: this.number_tr,
+      webLink: this.webLink,
       title: this.title_tr
     });
 
     facultyRef_en.update({
-      cv:   this.cv,
-      email:   this.email,
-      number:   this.number_en,
-      webLink:   this.webLink,
+      cv: this.cv,
+      email: this.email,
+      number: this.number_en,
+      webLink: this.webLink,
       title: this.title_en
     });
 
