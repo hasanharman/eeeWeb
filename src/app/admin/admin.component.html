@@ -1,6 +1,6 @@
 <section>
   <!-- LOGIN PANEL -->
-  <div *ngIf="!panel" class="container entrance">
+  <div *ngIf="panel" class="container entrance">
     <div class="row marginMid">
       <div class="col-12 ">
         <div class="row centerItems">
@@ -42,7 +42,7 @@
 
 <section>
   <!-- ADMIN PANEL -->
-  <div *ngIf="panel" class="container panel">
+  <div *ngIf="!panel" class="container panel">
     <div class="row centerItems">
       <p class="panel-title"> Hello {{userName}} !</p>
     </div>
@@ -138,6 +138,7 @@
                           <label for="news-title-tr">Başlık:</label>
                           <input type="text" class="form-control" id="news-title-tr">
                         </div>
+                       
                         <div class="form-group">
                           <label for="news-photo">Fotoğraf Url:</label>
                           <input type="text" class="form-control" id="news-photo">
@@ -181,6 +182,10 @@
                         </div>
                       </form>
                     </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="news-date-tr">Tarih/Date:</label>
+                    <input type="date" class="form-control" id="news-date-tr">
                   </div>
                   <form>
                     <div class="form-group">

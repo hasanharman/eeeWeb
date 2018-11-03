@@ -131,16 +131,18 @@ export class AdminComponent implements OnInit {
     const detailedText_en = $('#news-detailedText-en').val();
     const detailedText_tr = $('#news-detailedText-tr').val();
     const addHome = $('#news-addHome').val();
+    const newDate = $('#news-date-tr').val().toString();
     const time = Date.now();
 
-    // console.log(title_en,title_tr,photo_en,photo_tr,text_en,text_tr,subtitle_en,subtitle_tr,detailedText_en,detailedText_tr)
+    console.log(newDate);
 
 
     firebase.database().ref('/en/home/newsRegular/').push({
       photo: photo,
       text: text_en,
       title: title_en,
-      time: time
+      time: time,
+      newDate : newDate,
     }).then((event) => {
       key = event.key;
       firebase.database().ref('/en/home/newsRegular/' + event.key).update({
@@ -160,7 +162,8 @@ export class AdminComponent implements OnInit {
           text: text_en,
           title: title_en,
           newsName: key,
-          time: time
+          time: time,
+          newDate : newDate,
         })
       }
 
@@ -169,7 +172,8 @@ export class AdminComponent implements OnInit {
         photo: photo,
         text: text_tr,
         title: title_tr,
-        time: time
+        time: time,
+        newDate : newDate,
       }).then(() => {
         firebase.database().ref('/tr/home/newsRegular/' + key).update({
           newsName: key,
@@ -188,7 +192,8 @@ export class AdminComponent implements OnInit {
             time: time,
             text: text_tr,
             title: title_tr,
-            newsName: key
+            newsName: key,
+            newDate : newDate,
           })
         }
 
@@ -277,7 +282,7 @@ export class AdminComponent implements OnInit {
       }
 
     }).then(() => {
-      firebase.database().ref('/en/events/' + key ).update({
+      firebase.database().ref('/tr/events/' + key ).update({
         eventName:  key
       });
     })
@@ -333,7 +338,7 @@ export class AdminComponent implements OnInit {
         }
   
       }).then(() => {
-        firebase.database().ref('/en/home/events/' + key ).update({
+        firebase.database().ref('/tr/home/events/' + key ).update({
           eventName:  key
         });
       })

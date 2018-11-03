@@ -15,6 +15,8 @@ export class NewsdetailComponent implements OnInit {
   text:string;
   photoUrl:string;
   subtitle:string;
+  newDate:string;
+
   constructor(private route: ActivatedRoute,translateService:TranslateService ) {
     if(!translateService.currentLang)  this.starterLang = 'tr' ;
     else this.starterLang = translateService.currentLang;
@@ -30,8 +32,8 @@ export class NewsdetailComponent implements OnInit {
         this.title = news.child('newsDetail').child('title').val(); 
         this.text = news.child('newsDetail').child('text').val();
         this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
-        this.subtitle = news.child('newsDetail').child('subtitle').val(); 
-        console.log(this.title);
+        this.subtitle = news.child('newsDetail').child('subtitle').val();
+        this.newDate = news.child('newDate').val();  
         
       })
 
@@ -49,7 +51,7 @@ export class NewsdetailComponent implements OnInit {
         this.text = news.child('newsDetail').child('text').val();
         this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
         this.subtitle = news.child('newsDetail').child('subtitle').val(); 
-        console.log(this.title);
+        this.newDate = news.child('newDate').val();  
         
       })
     });
