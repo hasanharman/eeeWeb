@@ -26,12 +26,11 @@ export class NewsComponent implements OnInit {
     translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log(event.lang);
       this.starterLang = event.lang;
-      this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
-      this.afDB.list(this.starterLang + '/home/newsRegular').valueChanges().subscribe((test)=> {
-        console.log(test)    });
+      this.news = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+      this.afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse()); 
       
    })
-   this.news = afDB.list(this.starterLang + '/home/newsRegular').valueChanges();
+   this.news = afDB.list(this.starterLang + '/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
    
   };
   ngOnInit() {
