@@ -37,17 +37,17 @@ export class AdminComponent implements OnInit {
 
   constructor(private afDB: AngularFireDatabase) {
 
-    this.annoEx = afDB.list('/en/announcements' ,ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
+    this.annoEx = afDB.list('/en/announcements', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
     this.eventEx = afDB.list('/en/home/events', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
     this.newsEx = afDB.list('/en/home/newsRegular', ref => ref.orderByChild("time")).valueChanges().map((array) => array.reverse());
-   }
+  }
 
   ngOnInit() {
 
-  
+
   }
 
-  removeAnno(key){
+  removeAnno(key) {
 
 
     this.afDB.list("/en/announcements/" + key).remove();
@@ -62,7 +62,7 @@ export class AdminComponent implements OnInit {
     this.afDB.list("/tr/home/news/" + key).remove();
   }
 
-  
+
   removeEvents(key) {
     this.afDB.list("/en/events/" + key).remove();
     this.afDB.list("/en/home/events/" + key).remove();
@@ -156,6 +156,11 @@ export class AdminComponent implements OnInit {
     const title_en = $('#news-title-en').val();
     const title_tr = $('#news-title-tr').val();
     const photo = $('#news-photo').val();
+    const photo2 = $('#news-photo2').val();
+    const photo3 = $('#news-photo3').val();
+    const photo4 = $('#news-photo4').val();
+    const photo5 = $('#news-photo5').val();
+
     const text_en = $('#news-text-en').val();
     const text_tr = $('#news-text-tr').val();
     const subtitle_en = $('#news-subtitle-en').val();
@@ -171,10 +176,14 @@ export class AdminComponent implements OnInit {
 
     firebase.database().ref('/en/home/newsRegular/').push({
       photo: photo,
+      photo2: photo2,
+      photo3: photo3,
+      photo4: photo4,
+      photo5: photo5,
       text: text_en,
       title: title_en,
       time: time,
-      newDate : newDate,
+      newDate: newDate,
     }).then((event) => {
       key = event.key;
       firebase.database().ref('/en/home/newsRegular/' + event.key).update({
@@ -191,21 +200,29 @@ export class AdminComponent implements OnInit {
       if (addHome == "add") {
         firebase.database().ref('/en/home/news/' + key).update({
           photo: photo,
+          photo2: photo2,
+          photo3: photo3,
+          photo4: photo4,
+          photo5: photo5,
           text: text_en,
           title: title_en,
           newsName: key,
           time: time,
-          newDate : newDate,
+          newDate: newDate,
         })
       }
 
     }).then(() => { // Here comes the Turkish part
       firebase.database().ref('/tr/home/newsRegular/' + key).update({
         photo: photo,
+        photo2: photo2,
+        photo3: photo3,
+        photo4: photo4,
+        photo5: photo5,
         text: text_tr,
         title: title_tr,
         time: time,
-        newDate : newDate,
+        newDate: newDate,
       }).then(() => {
         firebase.database().ref('/tr/home/newsRegular/' + key).update({
           newsName: key,
@@ -221,11 +238,15 @@ export class AdminComponent implements OnInit {
         if (addHome == "add") {
           firebase.database().ref('/tr/home/news/' + key).update({
             photo: photo,
+            photo2: photo2,
+            photo3: photo3,
+            photo4: photo4,
+            photo5: photo5,
             time: time,
             text: text_tr,
             title: title_tr,
             newsName: key,
-            newDate : newDate,
+            newDate: newDate,
           })
         }
 
