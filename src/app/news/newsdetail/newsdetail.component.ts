@@ -14,6 +14,10 @@ export class NewsdetailComponent implements OnInit {
   title:string;
   text:string;
   photoUrl:string;
+  photoUrl2:string;
+  photoUrl3:string;
+  photoUrl4:string;
+  photoUrl5:string;
   subtitle:string;
   newDate:string;
 
@@ -49,8 +53,11 @@ export class NewsdetailComponent implements OnInit {
         
         this.title = news.child('newsDetail').child('title').val(); 
         this.text = news.child('newsDetail').child('text').val();
-        this.photoUrl = news.child('newsDetail').child('photoUrl').val(); 
-        this.subtitle = news.child('newsDetail').child('subtitle').val(); 
+        this.photoUrl = news.child('newsDetail').child('photoUrl').val();
+        this.photoUrl = news.child('newsDetail2').child('photoUrl').val(); 
+        this.photoUrl = news.child('newsDetail3').child('photoUrl').val(); 
+        this.photoUrl = news.child('newsDetail4').child('photoUrl').val(); 
+        this.photoUrl = news.child('newsDetail5').child('photoUrl').val(); 
         this.newDate = news.child('newDate').val();  
         
       })

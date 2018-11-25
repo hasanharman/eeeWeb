@@ -1,6 +1,6 @@
 <section>
   <!-- LOGIN PANEL -->
-  <div *ngIf="panel" class="container entrance">
+  <div *ngIf="!panel" class="container entrance">
     <div class="row marginMid">
       <div class="col-12 ">
         <div class="row centerItems">
@@ -42,7 +42,7 @@
 
 <section>
   <!-- ADMIN PANEL -->
-  <div *ngIf="!panel" class="container panel">
+  <div *ngIf="panel" class="container panel">
     <div class="row centerItems">
       <p class="panel-title"> Hello {{userName}} !</p>
     </div>
@@ -142,6 +142,22 @@
                         <div class="form-group">
                           <label for="news-photo">Fotoğraf Url:</label>
                           <input type="text" class="form-control" id="news-photo">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo2">Fotoğraf 2 Url:</label>
+                          <input type="text" class="form-control" id="news-photo2">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo3">Fotoğraf 3 Url:</label>
+                          <input type="text" class="form-control" id="news-photo3">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo4">Fotoğraf 4 Url:</label>
+                          <input type="text" class="form-control" id="news-photo4">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo5">Fotoğraf 5 Url:</label>
+                          <input type="text" class="form-control" id="news-photo5">
                         </div>
                         <div class="form-group">
                           <label for="news-text-tr">Metin:</label>
