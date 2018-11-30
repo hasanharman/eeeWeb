@@ -58,6 +58,11 @@ export class HomeComponent implements OnInit {
       this.spotlights = data[randomNumber];
     })
 
+
+
+
+    
+
   }
 
   ngOnInit() {

@@ -158,8 +158,7 @@ export class AdminComponent implements OnInit {
     const photo = $('#news-photo').val();
     const photo2 = $('#news-photo2').val();
     const photo3 = $('#news-photo3').val();
-    const photo4 = $('#news-photo4').val();
-    const photo5 = $('#news-photo5').val();
+ 
 
     const text_en = $('#news-text-en').val();
     const text_tr = $('#news-text-tr').val();
@@ -175,11 +174,7 @@ export class AdminComponent implements OnInit {
 
 
     firebase.database().ref('/en/home/newsRegular/').push({
-      photo: photo,
-      photo2: photo2,
-      photo3: photo3,
-      photo4: photo4,
-      photo5: photo5,
+      photo: photo, 
       text: text_en,
       title: title_en,
       time: time,
@@ -190,7 +185,9 @@ export class AdminComponent implements OnInit {
         newsName: key,
         newsDetail: {
           newsName: key,
-          photoUrl: photo,
+          photoUrl1: photo,
+          photoUrl2: photo2,
+          photoUrl3: photo3,
           subtitle: subtitle_en,
           text: detailedText_en,
           title: title_en
@@ -199,11 +196,7 @@ export class AdminComponent implements OnInit {
     }).then(() => {
       if (addHome == "add") {
         firebase.database().ref('/en/home/news/' + key).update({
-          photo: photo,
-          photo2: photo2,
-          photo3: photo3,
-          photo4: photo4,
-          photo5: photo5,
+          photo: photo, 
           text: text_en,
           title: title_en,
           newsName: key,
@@ -214,11 +207,7 @@ export class AdminComponent implements OnInit {
 
     }).then(() => { // Here comes the Turkish part
       firebase.database().ref('/tr/home/newsRegular/' + key).update({
-        photo: photo,
-        photo2: photo2,
-        photo3: photo3,
-        photo4: photo4,
-        photo5: photo5,
+        photo: photo, 
         text: text_tr,
         title: title_tr,
         time: time,
@@ -228,7 +217,9 @@ export class AdminComponent implements OnInit {
           newsName: key,
           newsDetail: {
             newsName: key,
-            photoUrl: photo,
+            photoUrl1: photo,
+            photoUrl2: photo2,
+            photoUrl3: photo3, 
             subtitle: subtitle_tr,
             text: detailedText_tr,
             title: title_tr
@@ -237,11 +228,7 @@ export class AdminComponent implements OnInit {
       }).then(() => {
         if (addHome == "add") {
           firebase.database().ref('/tr/home/news/' + key).update({
-            photo: photo,
-            photo2: photo2,
-            photo3: photo3,
-            photo4: photo4,
-            photo5: photo5,
+            photo: photo, 
             time: time,
             text: text_tr,
             title: title_tr,
