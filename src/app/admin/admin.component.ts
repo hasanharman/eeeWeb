@@ -128,7 +128,7 @@ export class AdminComponent implements OnInit {
       time: Date.now(),
       title: $('#notification-title-en').val(),
       text: $('#notification-text-en').val(),
-      pp: $('#notification-photo-en').val(),
+      pp1: $('#notification-photo1').val(), 
       type: parseInt($('#notification-type').val().toString())
     }).then((snap) => {
       console.log(snap);
@@ -142,7 +142,8 @@ export class AdminComponent implements OnInit {
         time: Date.now(),
         title: $('#notification-title-tr').val(),
         text: $('#notification-text-tr').val(),
-        pp: $('#notification-photo-tr').val(),
+        pp1: $('#notification-photo1').val(),
+         
         type: parseInt($('#notification-type').val().toString()),
         key: key
       })
@@ -158,7 +159,9 @@ export class AdminComponent implements OnInit {
     const photo = $('#news-photo').val();
     const photo2 = $('#news-photo2').val();
     const photo3 = $('#news-photo3').val();
- 
+    const photo4 = $('#news-photo4').val();
+    const photo5 = $('#news-photo5').val();
+
 
     const text_en = $('#news-text-en').val();
     const text_tr = $('#news-text-tr').val();
@@ -174,7 +177,7 @@ export class AdminComponent implements OnInit {
 
 
     firebase.database().ref('/en/home/newsRegular/').push({
-      photo: photo, 
+      photo: photo,
       text: text_en,
       title: title_en,
       time: time,
@@ -188,6 +191,8 @@ export class AdminComponent implements OnInit {
           photoUrl1: photo,
           photoUrl2: photo2,
           photoUrl3: photo3,
+          photoUrl4: photo4,
+          photoUrl5: photo5,
           subtitle: subtitle_en,
           text: detailedText_en,
           title: title_en
@@ -196,7 +201,7 @@ export class AdminComponent implements OnInit {
     }).then(() => {
       if (addHome == "add") {
         firebase.database().ref('/en/home/news/' + key).update({
-          photo: photo, 
+          photo: photo,
           text: text_en,
           title: title_en,
           newsName: key,
@@ -207,7 +212,7 @@ export class AdminComponent implements OnInit {
 
     }).then(() => { // Here comes the Turkish part
       firebase.database().ref('/tr/home/newsRegular/' + key).update({
-        photo: photo, 
+        photo: photo,
         text: text_tr,
         title: title_tr,
         time: time,
@@ -219,7 +224,9 @@ export class AdminComponent implements OnInit {
             newsName: key,
             photoUrl1: photo,
             photoUrl2: photo2,
-            photoUrl3: photo3, 
+            photoUrl3: photo3,
+            photoUrl4: photo4,
+            photoUrl5: photo5,
             subtitle: subtitle_tr,
             text: detailedText_tr,
             title: title_tr
@@ -228,7 +235,7 @@ export class AdminComponent implements OnInit {
       }).then(() => {
         if (addHome == "add") {
           firebase.database().ref('/tr/home/news/' + key).update({
-            photo: photo, 
+            photo: photo,
             time: time,
             text: text_tr,
             title: title_tr,
@@ -242,20 +249,18 @@ export class AdminComponent implements OnInit {
   }
 
   events() {
-    const place_en = $('#events-events-en').val();
-    const place_tr = $('#events-events-tr').val();
-    const photo = $('#events-photo').val();
-    const speaker = $('#events-speaker').val();
+
+    const photo1 = $('#events-photo1').val();
+    const photo2 = $('#events-photo2').val();
+    const photo3 = $('#events-photo3').val();
+    const photo4 = $('#events-photo4').val();
+    const photo5 = $('#events-photo5').val();
     const text1_en = $('#events-text1-en').val();
     const text1_tr = $('#events-text1-tr').val();
-    const text2_en = $('#events-text2-en').val();
-    const text2_tr = $('#events-text2-tr').val();
-    const text3_en = $('#events-text3-en').val();
-    const text3_tr = $('#events-text3-tr').val();
+
     const title_en = $('#events-title-en').val();
     const title_tr = $('#events-title-tr').val();
-    const topic_en = $('#events-topic-en').val();
-    const topic_tr = $('#events-topic-tr').val();
+
     const newsDate = $('#events-date-tr').val().toString();
     let key;
 
@@ -275,22 +280,20 @@ export class AdminComponent implements OnInit {
     /*   HERE COMES THE EN PART*/
 
     firebase.database().ref('/en/events').push({
-      place: place_en,
-      pp: photo,
+      pp: photo1,
       year: parseDate(newsDate)[0],
       month: parseDate(newsDate)[1],
       day: parseDate(newsDate)[2],
       time: timestamp,
       title: title_en,
       eventDetail: {
-        pp: photo,
-        speaker: speaker,
+        pp1: photo1,
+        pp2: photo2,
+        pp3: photo3,
+        pp4: photo4,
+        pp5: photo5,
         text1: text1_en,
-        text2: text2_en,
-        text3: text3_en,
-        title: title_en,
-        topic: topic_en,
-        venue: place_en
+        title: title_en
       }
 
     }).then((data) => {
@@ -303,22 +306,20 @@ export class AdminComponent implements OnInit {
       /*   HERE COMES THE TR PART*/
 
       firebase.database().ref('/tr/events/' + key).update({
-        place: place_tr,
-        pp: photo,
+        pp: photo1,
         year: parseDate(newsDate)[0],
         month: parseDate(newsDate)[1],
         day: parseDate(newsDate)[2],
         title: title_tr,
         time: timestamp,
         eventDetail: {
-          pp: photo,
-          speaker: speaker,
+          pp1: photo1,
+          pp2: photo2,
+          pp3: photo3,
+          pp4: photo4,
+          pp5: photo5,
           text1: text1_tr,
-          text2: text2_tr,
-          text3: text3_tr,
-          title: title_tr,
-          topic: topic_tr,
-          venue: place_tr
+          title: title_tr
         }
 
       }).then(() => {
@@ -332,22 +333,20 @@ export class AdminComponent implements OnInit {
       /*   HERE COMES THE EN PART*/
 
       firebase.database().ref('/en/home/events/' + key).update({
-        place: place_en,
-        pp: photo,
+        pp: photo1,
         year: parseDate(newsDate)[0],
         month: parseDate(newsDate)[1],
         day: parseDate(newsDate)[2],
         time: timestamp,
         title: title_en,
         eventDetail: {
-          pp: photo,
-          speaker: speaker,
+          pp1: photo1,
+          pp2: photo2,
+          pp3: photo3,
+          pp4: photo4,
+          pp5: photo5,
           text1: text1_en,
-          text2: text2_en,
-          text3: text3_en,
-          title: title_en,
-          topic: topic_en,
-          venue: place_en
+          title: title_en
         }
 
       }).then((data) => {
@@ -359,22 +358,20 @@ export class AdminComponent implements OnInit {
         /*   HERE COMES THE EN PART*/
 
         firebase.database().ref('/tr/home/events/' + key).update({
-          place: place_tr,
-          pp: photo,
+          pp: photo1,
           year: parseDate(newsDate)[0],
           month: parseDate(newsDate)[1],
           day: parseDate(newsDate)[2],
           title: title_tr,
           time: timestamp,
           eventDetail: {
-            pp: photo,
-            speaker: speaker,
+            pp1: photo1,
+            pp2: photo2,
+            pp3: photo3,
+            pp4: photo4,
+            pp5: photo5,
             text1: text1_tr,
-            text2: text2_tr,
-            text3: text3_tr,
-            title: title_tr,
-            topic: topic_tr,
-            venue: place_tr
+            title: title_tr
           }
 
         }).then(() => {

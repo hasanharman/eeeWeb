@@ -16,6 +16,8 @@ export class NewsdetailComponent implements OnInit {
   photoUrl1: string;
   photoUrl2: string;
   photoUrl3: string;
+  photoUrl4: string;
+  photoUrl5: string;
   subtitle: string;
   newDate: string;
 
@@ -26,6 +28,7 @@ export class NewsdetailComponent implements OnInit {
 
       console.log(event.lang);
       this.starterLang = event.lang;
+      $(".text").empty()
 
       firebase.database().ref().child(this.starterLang).child('home').child('newsRegular').child(this.routerDirective)
         .once('value', news => {
@@ -38,6 +41,8 @@ export class NewsdetailComponent implements OnInit {
           this.photoUrl1 = news.child('newsDetail').child('photoUrl1').val();
           this.photoUrl2 = news.child('newsDetail').child('photoUrl2').val();
           this.photoUrl3 = news.child('newsDetail').child('photoUrl3').val();
+          this.photoUrl4 = news.child('newsDetail').child('photoUrl4').val();
+          this.photoUrl5 = news.child('newsDetail').child('photoUrl5').val();
           this.subtitle = news.child('newsDetail').child('subtitle').val();
           this.newDate = news.child('newDate').val();
 
@@ -48,7 +53,7 @@ export class NewsdetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.routerDirective = params['newsId'];
       console.log(this.routerDirective);
-
+      $(".text").empty()
       firebase.database().ref().child(this.starterLang).child('home').child('newsRegular').child(this.routerDirective)
         .once('value', news => {
           console.log(news.val());
@@ -60,6 +65,8 @@ export class NewsdetailComponent implements OnInit {
           this.photoUrl1 = news.child('newsDetail').child('photoUrl1').val();
           this.photoUrl2 = news.child('newsDetail').child('photoUrl2').val();
           this.photoUrl3 = news.child('newsDetail').child('photoUrl3').val();
+          this.photoUrl4 = news.child('newsDetail').child('photoUrl4').val();
+          this.photoUrl5 = news.child('newsDetail').child('photoUrl5').val();
            
           this.newDate = news.child('newDate').val();
 

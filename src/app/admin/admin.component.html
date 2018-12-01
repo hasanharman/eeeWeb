@@ -1,6 +1,6 @@
 <section>
   <!-- LOGIN PANEL -->
-  <div *ngIf="!panel" class="container entrance">
+  <div *ngIf="panel" class="container entrance">
     <div class="row marginMid">
       <div class="col-12 ">
         <div class="row centerItems">
@@ -42,7 +42,7 @@
 
 <section>
   <!-- ADMIN PANEL -->
-  <div *ngIf="panel" class="container panel">
+  <div *ngIf="!panel" class="container panel">
     <div class="row centerItems">
       <p class="panel-title"> Hello {{userName}} !</p>
     </div>
@@ -79,8 +79,9 @@
                         </div>
                         <div class="form-group">
                           <label for="notification-photo-tr">Fotoğraf:</label>
-                          <input type="text" class="form-control" id="notification-photo-tr">
+                          <input type="text" class="form-control" id="notification-photo1">
                         </div>
+                        
                       </form>
                     </div>
                     <div class="col-md-6">
@@ -94,10 +95,7 @@
                           <label for="notification-text-en">Text:</label>
                           <input type="text" class="form-control" id="notification-text-en">
                         </div>
-                        <div class="form-group">
-                          <label for="notification-photo-en">Photo:</label>
-                          <input type="text" class="form-control" id="notification-photo-en">
-                        </div>
+                       
 
                       </form>
                     </div>
@@ -138,7 +136,7 @@
                           <label for="news-title-tr">Başlık:</label>
                           <input type="text" class="form-control" id="news-title-tr">
                         </div>
-                       
+
                         <div class="form-group">
                           <label for="news-photo">Fotoğraf Url:</label>
                           <input type="text" class="form-control" id="news-photo">
@@ -150,7 +148,15 @@
                         <div class="form-group">
                           <label for="news-photo3">Fotoğraf 3 Url:</label>
                           <input type="text" class="form-control" id="news-photo3">
-                        </div> 
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo3">Fotoğraf 4 Url:</label>
+                          <input type="text" class="form-control" id="news-photo4">
+                        </div>
+                        <div class="form-group">
+                          <label for="news-photo3">Fotoğraf 5 Url:</label>
+                          <input type="text" class="form-control" id="news-photo5">
+                        </div>
                         <div class="form-group">
                           <label for="news-text-tr">Metin:</label>
                           <input type="text" class="form-control" id="news-text-tr">
@@ -172,7 +178,7 @@
                           <label for="news-title-en">Title:</label>
                           <input type="text" class="form-control" id="news-title-en">
                         </div>
-                        
+
                         <div class="form-group">
                           <label for="news-text-en">Text:</label>
                           <input type="text" class="form-control" id="news-text-en">
@@ -236,30 +242,33 @@
                           <label for="events-date-tr">Tarih:</label>
                           <input type="date" class="form-control" id="events-date-tr">
                         </div>
+
+
                         <div class="form-group">
-                          <label for="events-speaker">Konuşmacı:</label>
-                          <input type="text" class="form-control" id="events-speaker">
-                        </div>
-                        <div class="form-group">
-                          <label for="events-events-tr">Yer:</label>
-                          <input type="text" class="form-control" id="events-events-tr">
+                          <label for="events-photo">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="events-photo1">
                         </div>
                         <div class="form-group">
                           <label for="events-photo">Fotoğraf:</label>
-                          <input type="text" class="form-control" id="events-photo">
+                          <input type="text" class="form-control" id="events-photo2">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-photo">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="events-photo3">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-photo">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="events-photo4">
+                        </div>
+                        <div class="form-group">
+                          <label for="events-photo">Fotoğraf:</label>
+                          <input type="text" class="form-control" id="events-photo5">
                         </div>
                         <div class="form-group">
                           <label for="events-text1-tr">Metin1:</label>
                           <input type="text" class="form-control" id="events-text1-tr">
                         </div>
-                        <div class="form-group">
-                          <label for="events-text2-tr">Metin2:</label>
-                          <input type="text" class="form-control" id="events-text2-tr">
-                        </div>
-                        <div class="form-group">
-                          <label for="events-text3-tr">Metin3:</label>
-                          <input type="text" class="form-control" id="events-text3-tr">
-                        </div>
+
                       </form>
                     </div>
                     <div class="col-md-6">
@@ -276,31 +285,12 @@
                         <div class="form-group">
                           <label for="events-date-en">Date:</label>
                           <input type="date" class="form-control" id="events-date-en">
-                        </div>
-                        <div class="form-group">
-                          <label for="events-speaker">Speaker:</label>
-                          <input type="text" class="form-control" id="events-speaker">
-                        </div>
-                        <div class="form-group">
-                          <label for="events-events-en">Place:</label>
-                          <input type="text" class="form-control" id="events-events-en">
-                        </div>
-                        <div class="form-group">
-                          <label for="events-photo-en">Photo:</label>
-                          <input type="text" class="form-control" id="events-photo-en">
-                        </div>
+                        </div> 
                         <div class="form-group">
                           <label for="events-text1-en">Text1:</label>
                           <input type="text" class="form-control" id="events-text1-en">
                         </div>
-                        <div class="form-group">
-                          <label for="events-text2-en">Text2:</label>
-                          <input type="text" class="form-control" id="events-text2-en">
-                        </div>
-                        <div class="form-group">
-                          <label for="events-text3-en">Text3:</label>
-                          <input type="text" class="form-control" id="events-text3-en">
-                        </div>
+
 
                       </form>
                     </div>
@@ -342,21 +332,24 @@
                       <p style="color:rgb(148, 148, 148);background-color: rgb(242, 243, 230);"><b>Announcements</b></p>
 
                       <p style="background-color: rgb(230, 239, 243);border-radius: 4px" *ngFor="let item of annoEx |async">
-                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash" (click)="removeAnno(item.key)"></i>
+                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash"
+                          (click)="removeAnno(item.key)"></i>
                         <br></p>
 
 
                       <p style="color:rgb(148, 148, 148);background-color: rgb(168, 208, 224);"><b>Events</b></p>
 
                       <p style="background-color: rgb(220, 240, 234);border-radius: 4px" *ngFor="let item of eventEx |async">
-                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash" (click)="removeEvents(item.eventName)"></i>
+                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash"
+                          (click)="removeEvents(item.eventName)"></i>
                         <br></p>
 
 
                       <p style="color:rgb(148, 148, 148);background-color: rgb(188, 182, 250);"><b>News</b></p>
 
                       <p style="background-color: rgb(243, 231, 230);border-radius: 4px" *ngFor="let item of newsEx |async">
-                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash" (click)="removeNews(item.newsName)"></i>
+                        {{item.title}} &nbsp; <i title="Delete this item" style="cursor: pointer;" class="fas fa-trash"
+                          (click)="removeNews(item.newsName)"></i>
                         <br></p>
                     </div>
                   </div>

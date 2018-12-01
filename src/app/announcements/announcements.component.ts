@@ -28,6 +28,16 @@ export class AnnouncementsComponent implements OnInit {
   }
 
 
+  convertText(text,i){
+    console.log({text});
+    $(".imgText").eq(i).empty()
+
+    do {
+          $(".imgText").eq(i).append(text)
+
+    } while( false)
+    return ''
  
+  }
 
 }

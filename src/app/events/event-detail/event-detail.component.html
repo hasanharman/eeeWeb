@@ -6,20 +6,20 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2">
-      <img class="picture" src={{pp}} />
+    <div class="col-md-4">
+      <img *ngIf="pp1" class="picture" src={{pp1}} />
+      <img *ngIf="pp2" class="picture" src={{pp2}} />
+      <img *ngIf="pp3" class="picture" src={{pp3}} />
+      <img *ngIf="pp4" class="picture" src={{pp4}} />
+      <img *ngIf="pp5" class="picture" src={{pp5}} />
+
     </div>
-    <div class="col-md-2"></div>
-
-    <div class="col-md-8">
+ 
+    <div class="col-md-8 textAreas">
       <p class="sub">{{date}}</p>
-
-      <p> <span style="font-weight: 600"></span> {{topic}}</p>
-      <p><span style="font-weight: 600"></span> {{venue}}</p>
-      <p><span style="font-weight: 600"></span> {{speaker}}</p>
+ 
       <p>{{text1}}</p>
-      <p>{{text2}}</p>
-      <p>{{text3}}</p>
+       
 
     </div>
   </div>
