@@ -32,6 +32,9 @@
     animation-timing-function:ease;
 
 }
+hr.style1{
+	border-top: 1px solid black;
+}
 
 @keyframes alertAnim {
   0% {
