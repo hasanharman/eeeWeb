@@ -35,9 +35,6 @@
               <li class="dropdown-item" style="cursor: pointer;" routerLink="abouteee">{{'navbar.abouteee.title' | translate}}</li>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" style="cursor: pointer;" routerLink="administration">{{'navbar.administration' | translate}}</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="cursor: pointer;" routerLink="contact">{{'navbar.contact' | translate}}</a>
-
             </div>
           </li>
           <li id="borderForm" class="nav-item dropdown">
@@ -187,6 +184,11 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" routerLink="projectLesson">{{'navbar.projectc' | translate}}</a>
             </div>
+          </li>
+          <li id="borderForm" class="nav-item active">
+            <a routerLink="contact" class="nav-link">{{'navbar.contact' | translate}}
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
         </ul>
         <p (click)="changeLanguage(lang)" class="lang" style="cursor: pointer;">EN</p>
